@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 0.29, y: 0.39}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &117426
@@ -324,10 +324,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648ed3351bff1e248868ec3e3295dde7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getHitSource: {fileID: 0}
-  punchSource: {fileID: 0}
-  hitClip: {fileID: 8300000, guid: ae55b5632d4797e419b8d8499286166b, type: 3}
-  punchClip: {fileID: 8300000, guid: ff732fbc35b271f4f8f70623d8a71db8, type: 3}
+  getHitSource: {fileID: 4443162363309974745}
+  punchSource: {fileID: 4398978030120466865}
+  hitClip: {fileID: 8300000, guid: c886071ade5d6e749bd3ec05b1ecf11b, type: 3}
+  punchClip: {fileID: 8300000, guid: 4664c528446092d4da815ec019765ace, type: 3}
 --- !u!1 &130414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1015,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59e6fdc055c64d247a6516de6283d05d, type: 3}
+--- !u!82 &4443162363309974745 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2770455207285396158, guid: 59e6fdc055c64d247a6516de6283d05d, type: 3}
+  m_PrefabInstance: {fileID: 2007456400268686951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8660144562790158703 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7202638360458438408, guid: 59e6fdc055c64d247a6516de6283d05d, type: 3}
@@ -1080,6 +1085,11 @@ PrefabInstance:
 --- !u!4 &3125653679528113572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8436472074997137090, guid: e2f4a1dd721be4c4fa0037e4465e1c70, type: 3}
+  m_PrefabInstance: {fileID: 6806297833220508518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &4398978030120466865 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7167651324061643479, guid: e2f4a1dd721be4c4fa0037e4465e1c70, type: 3}
   m_PrefabInstance: {fileID: 6806297833220508518}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8602027960517703271

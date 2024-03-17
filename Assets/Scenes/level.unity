@@ -181,15 +181,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a053ea3274b25f4db4613599ad079d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f10b291be008fa54b899ece405ea4b57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 19.2, y: 12}
+  m_Size: {x: 19.199999, y: 12.000001}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &14699229
@@ -281,7 +281,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: aca33567bd6181640bdb7b2ec75bbe90, type: 3}
+    m_Font: {fileID: 12800000, guid: 0b3de7655386ffa4fa79689d9fa4c23d, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -883,7 +883,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: aca33567bd6181640bdb7b2ec75bbe90, type: 3}
+    m_Font: {fileID: 12800000, guid: 0b3de7655386ffa4fa79689d9fa4c23d, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -962,15 +962,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 663246f5eaa33494d8ccfa615e392439, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 473a47baa6c19b946a81f1bd570c8562, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10, y: 4.97}
+  m_Size: {x: 10.018269, y: 4.9700003}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1091713241
@@ -1062,7 +1062,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: aca33567bd6181640bdb7b2ec75bbe90, type: 3}
+    m_Font: {fileID: 12800000, guid: 0b3de7655386ffa4fa79689d9fa4c23d, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1201,15 +1201,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 663246f5eaa33494d8ccfa615e392439, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 473a47baa6c19b946a81f1bd570c8562, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10, y: 4.97}
+  m_Size: {x: 10.018269, y: 4.9700003}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1143763313
@@ -1416,7 +1416,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1268539484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6238b5453fee7ee4abd253ebcfb96120, type: 3}
+  m_Script: {fileID: 11500000, guid: e998c93cd10027e4181ba33ec185bd5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnPositions:
@@ -1424,7 +1424,7 @@ MonoBehaviour:
   - {fileID: 1247651103}
   maxTurns: 2
   countdown: 0
-  maxTurnTimer: 30
+  maxTurnTimer: 20
 --- !u!4 &1268539486
 Transform:
   m_ObjectHideFlags: 0
@@ -1449,7 +1449,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1268539484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dd5b0742273ce44aa983f6676658016, type: 3}
+  m_Script: {fileID: 11500000, guid: f9a0a18a91e2d114695ce03f084d0224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AnnouncerTextLine1: {fileID: 1787012128}
@@ -1461,7 +1461,7 @@ MonoBehaviour:
   winIndicatorGrids:
   - {fileID: 1137917083}
   - {fileID: 1644803002}
-  winIndicator: {fileID: 146484, guid: 6f0762004ec8ab8428149fcc5c9966d8, type: 3}
+  winIndicator: {fileID: 146484, guid: 48f7225414220dd4496d0bef9cc10f70, type: 3}
 --- !u!114 &1268539488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1471,7 +1471,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1268539484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48a6bd84c0ca70649bc2acb1ca74948e, type: 3}
+  m_Script: {fileID: 11500000, guid: 395d458ccfadcf143a0dbc896d5bf9c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cameraHolder: {fileID: 391518536}
@@ -1555,7 +1555,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: aca33567bd6181640bdb7b2ec75bbe90, type: 3}
+    m_Font: {fileID: 12800000, guid: 0b3de7655386ffa4fa79689d9fa4c23d, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -1634,15 +1634,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 663246f5eaa33494d8ccfa615e392439, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 473a47baa6c19b946a81f1bd570c8562, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10, y: 4.97}
+  m_Size: {x: 10.018269, y: 4.9700003}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1318242804
@@ -2237,15 +2237,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 663246f5eaa33494d8ccfa615e392439, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 473a47baa6c19b946a81f1bd570c8562, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10, y: 4.97}
+  m_Size: {x: 10.018269, y: 4.9700003}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1784557302
@@ -2337,7 +2337,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: aca33567bd6181640bdb7b2ec75bbe90, type: 3}
+    m_Font: {fileID: 12800000, guid: 0b3de7655386ffa4fa79689d9fa4c23d, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -3003,7 +3003,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: aca33567bd6181640bdb7b2ec75bbe90, type: 3}
+    m_Font: {fileID: 12800000, guid: 0b3de7655386ffa4fa79689d9fa4c23d, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -3119,16 +3119,16 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 426541409}
+  - {fileID: 1784557302}
+  - {fileID: 1143763313}
+  - {fileID: 1091713241}
+  - {fileID: 1318242804}
+  - {fileID: 14699229}
   - {fileID: 1494963065}
-  - {fileID: 1268539486}
+  - {fileID: 391518536}
   - {fileID: 1429342936}
   - {fileID: 790783046}
   - {fileID: 1242477738}
   - {fileID: 1806871759}
-  - {fileID: 391518536}
-  - {fileID: 14699229}
-  - {fileID: 1318242804}
-  - {fileID: 1091713241}
-  - {fileID: 1143763313}
-  - {fileID: 1784557302}
+  - {fileID: 1268539486}
+  - {fileID: 426541409}

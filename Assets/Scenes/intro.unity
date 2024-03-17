@@ -1386,7 +1386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2883922682340742465, guid: ccd7a23abcfb5564284bb2cf85b05c0d, type: 3}
       propertyPath: players.Array.data[1].inputId
-      value: 2
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: -2883922682340742465, guid: ccd7a23abcfb5564284bb2cf85b05c0d, type: 3}
       propertyPath: players.Array.data[0].playerId
@@ -1415,7 +1415,7 @@ PrefabInstance:
     - target: {fileID: -2883922682340742465, guid: ccd7a23abcfb5564284bb2cf85b05c0d, type: 3}
       propertyPath: characterList.Array.data[1].prefab
       value: 
-      objectReference: {fileID: 126410, guid: 1bf40ef343f200e44a35eb1a20568a1f, type: 3}
+      objectReference: {fileID: 126410, guid: aa971e23f48fc8d4d9c7440ee3af2715, type: 3}
     - target: {fileID: -2883922682340742465, guid: ccd7a23abcfb5564284bb2cf85b05c0d, type: 3}
       propertyPath: characterList.Array.data[2].charId
       value: fighter3
@@ -1423,7 +1423,7 @@ PrefabInstance:
     - target: {fileID: -2883922682340742465, guid: ccd7a23abcfb5564284bb2cf85b05c0d, type: 3}
       propertyPath: characterList.Array.data[2].prefab
       value: 
-      objectReference: {fileID: 126410, guid: 2e27b53b01654a74794c52f3ae6a8b27, type: 3}
+      objectReference: {fileID: 126410, guid: e0cc43e139dd5074cb3cbfbf0ddb87a8, type: 3}
     - target: {fileID: 108232, guid: ccd7a23abcfb5564284bb2cf85b05c0d, type: 3}
       propertyPath: m_Name
       value: CharacterManager

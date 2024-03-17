@@ -1,7 +1,82 @@
 fileFormatVersion: 2
-guid: dfad92ea48649974f9e51c845fc92ff1
+guid: 6c86bf41bc6883d488e310c6dc7cc4f3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Idle 1
+  - first:
+      213: 21300002
+    second: Idle 2
+  - first:
+      213: 21300004
+    second: Walk 1
+  - first:
+      213: 21300006
+    second: Walk 2
+  - first:
+      213: 21300008
+    second: Walk 3
+  - first:
+      213: 21300010
+    second: Crouch
+  - first:
+      213: 21300012
+    second: Jump
+  - first:
+      213: 21300014
+    second: On Air
+  - first:
+      213: 21300016
+    second: Falling
+  - first:
+      213: 21300018
+    second: Blocking
+  - first:
+      213: 21300020
+    second: Blocking Crouch
+  - first:
+      213: 21300022
+    second: Punch A 1
+  - first:
+      213: 21300024
+    second: Punch A 2
+  - first:
+      213: 21300026
+    second: Punch B
+  - first:
+      213: 21300028
+    second: Kick 1
+  - first:
+      213: 21300030
+    second: Kick 2
+  - first:
+      213: 21300032
+    second: Down
+  - first:
+      213: 21300034
+    second: Crouch Attack 1
+  - first:
+      213: 21300036
+    second: Crouch Attack 2
+  - first:
+      213: 21300038
+    second: Jump Attack 1
+  - first:
+      213: 21300040
+    second: Jump Attack 2
+  - first:
+      213: 21300042
+    second: Grapple 1
+  - first:
+      213: 21300044
+    second: Grapple 2
+  - first:
+      213: 21300046
+    second: Grapple 3
+  - first:
+      213: 21300048
+    second: Hit
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -20,26 +95,25 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMipmapLimit: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
-  textureFormat: 1
-  maxTextureSize: 2048
+  textureFormat: -3
+  maxTextureSize: 1024
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: 1
+    aniso: 16
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -48,7 +122,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,54 +137,62 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
-  swizzle: 50462976
-  cookieLightType: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blue atlas_0
+      name: Idle 1
       rect:
         serializedVersion: 2
         x: 11
@@ -118,20 +200,20 @@ TextureImporter:
         width: 22
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ed84159689094334caf43b79726e3b68
-      internalID: 912737221
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_1
+      name: Idle 2
       rect:
         serializedVersion: 2
         x: 44
@@ -139,20 +221,20 @@ TextureImporter:
         width: 22
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e56f461964d063c4b8ba5944e11e4f30
-      internalID: 532316433
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_2
+      name: Walk 1
       rect:
         serializedVersion: 2
         x: 80
@@ -160,20 +242,20 @@ TextureImporter:
         width: 19
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7ed5596fcb5a3524ebca8f6c6cd04170
-      internalID: -1186690073
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_3
+      name: Walk 2
       rect:
         serializedVersion: 2
         x: 108
@@ -181,20 +263,20 @@ TextureImporter:
         width: 20
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c8395e79a3de971449fda362e4179389
-      internalID: 928655484
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_4
+      name: Walk 3
       rect:
         serializedVersion: 2
         x: 136
@@ -202,20 +284,20 @@ TextureImporter:
         width: 17
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7f26a7c2df6910c44a17c735212f0c78
-      internalID: 369106176
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_5
+      name: Crouch
       rect:
         serializedVersion: 2
         x: 159
@@ -223,20 +305,20 @@ TextureImporter:
         width: 24
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 42abac292dbb6c646964e7e9d4b02bed
-      internalID: 398783669
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_6
+      name: Jump
       rect:
         serializedVersion: 2
         x: 197
@@ -244,20 +326,20 @@ TextureImporter:
         width: 22
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0337fc58d33840e4bbfe3b6e01885ec4
-      internalID: -1509751878
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_7
+      name: On Air
       rect:
         serializedVersion: 2
         x: 229
@@ -265,20 +347,20 @@ TextureImporter:
         width: 20
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 631c0b8a058933e4d8b18563024c353b
-      internalID: 1208737407
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_8
+      name: Falling
       rect:
         serializedVersion: 2
         x: 257
@@ -286,20 +368,20 @@ TextureImporter:
         width: 20
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 70424690d84da7d4aa17cbbf8c9b8375
-      internalID: -1374830164
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_9
+      name: Blocking
       rect:
         serializedVersion: 2
         x: 284
@@ -307,20 +389,20 @@ TextureImporter:
         width: 23
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 33728c668f187694db5e94083a1cbda8
-      internalID: -254622939
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_10
+      name: Blocking Crouch
       rect:
         serializedVersion: 2
         x: 320
@@ -328,20 +410,20 @@ TextureImporter:
         width: 19
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d41c69f48c4730846a9a950f4bce4018
-      internalID: 1960951227
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_11
+      name: Punch A 1
       rect:
         serializedVersion: 2
         x: 346
@@ -349,20 +431,20 @@ TextureImporter:
         width: 26
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ce80fd4aef597e94e970362997baeb82
-      internalID: -1860310067
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_12
+      name: Punch A 2
       rect:
         serializedVersion: 2
         x: 379
@@ -370,20 +452,20 @@ TextureImporter:
         width: 31
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fa4ca1774a5f91547b69cdf0d6d43fa0
-      internalID: 430396753
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_13
+      name: Punch B
       rect:
         serializedVersion: 2
         x: 414
@@ -391,20 +473,20 @@ TextureImporter:
         width: 33
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4d43d79c5705ce647851bce628878423
-      internalID: -407475664
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_14
+      name: Kick 1
       rect:
         serializedVersion: 2
         x: 455
@@ -412,20 +494,20 @@ TextureImporter:
         width: 22
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 36989bb44a4f6124aba0de083ddeda4a
-      internalID: -878186614
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_15
+      name: Kick 2
       rect:
         serializedVersion: 2
         x: 3
@@ -433,41 +515,41 @@ TextureImporter:
         width: 37
         height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 04e4598933fd83b42bc231ce3cd3045a
-      internalID: 2038506210
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_16
+      name: Down
       rect:
         serializedVersion: 2
         x: 56
-        y: 11
+        y: 0
         width: 43
-        height: 19
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 236967c06b24cf6419061f3aa7511e24
-      internalID: -1982806013
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_17
+      name: Crouch Attack 1
       rect:
         serializedVersion: 2
         x: 117
@@ -475,20 +557,20 @@ TextureImporter:
         width: 23
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1633ebdb239c4d84683cc5438eba48c9
-      internalID: 1956967865
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_18
+      name: Crouch Attack 2
       rect:
         serializedVersion: 2
         x: 148
@@ -496,20 +578,20 @@ TextureImporter:
         width: 32
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: de7dd16dc19ef64419fade05f4a52c58
-      internalID: -617465393
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_19
+      name: Jump Attack 1
       rect:
         serializedVersion: 2
         x: 192
@@ -517,20 +599,20 @@ TextureImporter:
         width: 27
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 049118df17d86884caef6309b58c8a73
-      internalID: -1476726842
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_20
+      name: Jump Attack 2
       rect:
         serializedVersion: 2
         x: 225
@@ -538,20 +620,20 @@ TextureImporter:
         width: 48
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9620937529e5ebf4e80c4f4be85375a4
-      internalID: 624024223
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_21
+      name: Grapple 1
       rect:
         serializedVersion: 2
         x: 282
@@ -559,20 +641,20 @@ TextureImporter:
         width: 29
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7965d069ac5951043a6f0df6f4944136
-      internalID: 1051080377
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_22
+      name: Grapple 2
       rect:
         serializedVersion: 2
         x: 322
@@ -580,20 +662,20 @@ TextureImporter:
         width: 30
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: af54c2d42bbccd140b0b026753eb7f44
-      internalID: -1790862907
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_23
+      name: Grapple 3
       rect:
         serializedVersion: 2
         x: 362
@@ -601,35 +683,35 @@ TextureImporter:
         width: 38
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3270f22019c27f44f915320dad9affb5
-      internalID: -687096809
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue atlas_24
+      name: Hit
       rect:
         serializedVersion: 2
-        x: 408
+        x: 407
         y: 6
-        width: 29
-        height: 39
+        width: 31
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6e28d3f6ab26dbf4d966663451243e64
-      internalID: 1502393424
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
       vertices: []
       indices: 
       edges: []
@@ -637,7 +719,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b4efe47e0e2d9a24db9be9d0feed4d76
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -645,33 +727,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      blue atlas_0: 912737221
-      blue atlas_1: 532316433
-      blue atlas_10: 1960951227
-      blue atlas_11: -1860310067
-      blue atlas_12: 430396753
-      blue atlas_13: -407475664
-      blue atlas_14: -878186614
-      blue atlas_15: 2038506210
-      blue atlas_16: -1982806013
-      blue atlas_17: 1956967865
-      blue atlas_18: -617465393
-      blue atlas_19: -1476726842
-      blue atlas_2: -1186690073
-      blue atlas_20: 624024223
-      blue atlas_21: 1051080377
-      blue atlas_22: -1790862907
-      blue atlas_23: -687096809
-      blue atlas_24: 1502393424
-      blue atlas_3: 928655484
-      blue atlas_4: 369106176
-      blue atlas_5: 398783669
-      blue atlas_6: -1509751878
-      blue atlas_7: 1208737407
-      blue atlas_8: -1374830164
-      blue atlas_9: -254622939
-  mipmapLimitGroupName: 
+      Blocking: 21300018
+      Blocking Crouch: 21300020
+      Crouch: 21300010
+      Crouch Attack 1: 21300034
+      Crouch Attack 2: 21300036
+      Down: 21300032
+      Falling: 21300016
+      Grapple 1: 21300042
+      Grapple 2: 21300044
+      Grapple 3: 21300046
+      Hit: 21300048
+      Idle 1: 21300000
+      Idle 2: 21300002
+      Jump: 21300012
+      Jump Attack 1: 21300038
+      Jump Attack 2: 21300040
+      Kick 1: 21300028
+      Kick 2: 21300030
+      On Air: 21300014
+      Punch A 1: 21300022
+      Punch A 2: 21300024
+      Punch B: 21300026
+      Walk 1: 21300004
+      Walk 2: 21300006
+      Walk 3: 21300008
+  spritePackingTag: 
   pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

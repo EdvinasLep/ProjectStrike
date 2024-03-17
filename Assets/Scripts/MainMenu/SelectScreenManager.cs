@@ -209,7 +209,7 @@ public class SelectScreenManager : MonoBehaviour
 
         selectorPosition = selectorPosition + new Vector2(potraitCanvas.transform.localPosition.x
             , potraitCanvas.transform.localPosition.y);
-        Debug.Log(selectorPosition);
+        //Debug.Log(selectorPosition);
         
         p1.selector.transform.localPosition = selectorPosition;
     }
