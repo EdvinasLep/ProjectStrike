@@ -4,6 +4,7 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using JetBrains.Annotations;
 
 public class StateManager : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class StateManager : MonoBehaviour
     public bool crouch;
     public bool block;
     public bool canChainAttack;
+    public bool ultimateAbility;
+    
 
     public bool canAttack;
     public bool gettingHit;
@@ -102,22 +105,24 @@ public class StateManager : MonoBehaviour
             audioManager.punch();
         }
 
-        if (energy == 100)
+        if (energy >= 100)
         {
             ultimateAvailable = true;
         }
 
-        if(gettingHit)
+        if (ultimateAbility)
         {
-            canChainAttack = false;
-            //chainAttack.chainReset();
+            StartCoroutine(ResetUltimate(0.5f));
         }
-        
+
     }
 
-    private void Update()
+    IEnumerator ResetUltimate(float timer)
     {
-        
+        yield return new WaitForSeconds(timer);
+        energy = 0;
+        ultimateAvailable = false;
+        ultimateAbility = false;
     }
 
     public void increaseEnergy(int increase)
@@ -156,6 +161,7 @@ public class StateManager : MonoBehaviour
         dontMove = false;
         block = false;
         ultimateAvailable = false;
+        ultimateAbility = false;
     }
 
     public void CloseMovementCollider(int index)
@@ -181,7 +187,15 @@ public class StateManager : MonoBehaviour
                         break;
                     case HandleDamageColliders.DamageType.heavy:
                         handleMovement.AddVelocityOnCharacter(
-                            (((!lookRight) ? Vector3.right * 2 : Vector3.right * -2) + Vector3.up * 10).normalized
+                            (((!lookRight) ? Vector3.right * 2 : Vector3.right * -2) + Vector3.up * 2).normalized
+                            , 0.5f
+                            );
+
+                        StartCoroutine(CloseImmortality(1f));
+                        break;
+                    case HandleDamageColliders.DamageType.ultimate:
+                        handleMovement.AddVelocityOnCharacter(
+                            (((!lookRight) ? Vector3.right * 4 : Vector3.right * -4) + Vector3.up * 4).normalized
                             , 0.5f
                             );
 

@@ -91,13 +91,13 @@ public class HandleMovement : MonoBehaviour
 
     IEnumerator AddVelocity(float timer, Vector3 direction)
     {
-        float t = 0;
+        float elapsedTime = 0;
 
-        while(t < timer)
+        while (elapsedTime < timer)
         {
-            t += Time.deltaTime;
+            elapsedTime += Time.deltaTime;
 
-            rb.AddForce(direction * 1.6f);
+            rb.AddForce(direction * 5);
             yield return null;
         }
     }

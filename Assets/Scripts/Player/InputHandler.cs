@@ -11,6 +11,7 @@ public class InputHandler : MonoBehaviour
     bool attack1;
     bool attack2;
     bool attack3;
+    bool ultimate;
     bool block;
 
     StateManager states;
@@ -27,6 +28,7 @@ public class InputHandler : MonoBehaviour
         attack1 = Input.GetButton("Fire1" + playerInput);
         attack2 = Input.GetButton("Fire2" + playerInput);
         attack3 = Input.GetButton("Fire3" + playerInput);
+        
         block = Input.GetButton("Block1" + playerInput);
 
         states.horizontal = horizontal;
@@ -34,6 +36,20 @@ public class InputHandler : MonoBehaviour
         states.attack1 = attack1;
         states.attack2 = attack2;
         states.attack3 = attack3;
+        
         states.block = block;
+
+        if (states.ultimateAvailable)
+        {
+            ultimate = Input.GetButton("Ultimate1" + playerInput);
+            states.ultimateAbility = ultimate;
+        }
+
+
+    }
+
+    private void Update()
+    {
+        
     }
 }

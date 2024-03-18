@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   energy: 0
-  chainCount: 0
+  combo: 0
   horizontal: 0
   vertical: 0
   attack1: 0
@@ -162,6 +162,7 @@ MonoBehaviour:
   crouch: 0
   block: 0
   canChainAttack: 0
+  ultimateAbility: 0
   canAttack: 1
   gettingHit: 0
   landed: 0
@@ -174,6 +175,7 @@ MonoBehaviour:
   energySlider: {fileID: 0}
   audioManager: {fileID: 0}
   chainAttack: {fileID: 0}
+  chainCount: {fileID: 0}
   handleDC: {fileID: 0}
   handleAnim: {fileID: 0}
   handleMovement: {fileID: 0}
@@ -193,7 +195,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chainCount: 0
+  prevCount: 0
+  comboMultiplier: 2
   attack: 0
+  reset: 0
+  interrupted: 0
   timeSinceLastAttack: 0
 --- !u!114 &8971128842607305759
 MonoBehaviour:
@@ -976,7 +982,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.29, y: 0.39}
+  m_Size: {x: 0.44, y: 0.76}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -997,6 +1003,10 @@ PrefabInstance:
     - target: {fileID: 3631443843807624060, guid: 59e6fdc055c64d247a6516de6283d05d, type: 3}
       propertyPath: m_Name
       value: HitAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631443843807624060, guid: 59e6fdc055c64d247a6516de6283d05d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7202638360458438408, guid: 59e6fdc055c64d247a6516de6283d05d, type: 3}
       propertyPath: m_LocalPosition.x
