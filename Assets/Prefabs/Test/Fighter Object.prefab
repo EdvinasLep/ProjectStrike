@@ -66,6 +66,7 @@ GameObject:
   - component: {fileID: 5080066}
   - component: {fileID: 5379504853377158563}
   - component: {fileID: 4123701908245662338}
+  - component: {fileID: 1273676841613655939}
   - component: {fileID: 8971128842607305759}
   - component: {fileID: 5919766416097328556}
   - component: {fileID: 8280122418548853606}
@@ -151,26 +152,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  energy: 0
+  chainCount: 0
   horizontal: 0
   vertical: 0
   attack1: 0
   attack2: 0
   attack3: 0
   crouch: 0
+  block: 0
+  canChainAttack: 0
   canAttack: 1
   gettingHit: 0
+  landed: 0
   currentlyAttacking: 0
+  ultimateAvailable: 0
   lookRight: 0
   dontMove: 0
   onGround: 0
   healthSlider: {fileID: 0}
+  energySlider: {fileID: 0}
   audioManager: {fileID: 0}
+  chainAttack: {fileID: 0}
   handleDC: {fileID: 0}
   handleAnim: {fileID: 0}
   handleMovement: {fileID: 0}
   movementColliders:
   - {fileID: 130414}
   - {fileID: 131368}
+--- !u!114 &1273676841613655939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c1839788a0dfe4c8df04b97a9821c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chainCount: 0
+  attack: 0
+  timeSinceLastAttack: 0
 --- !u!114 &8971128842607305759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,7 +452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &471642
 Transform:
   m_ObjectHideFlags: 0
@@ -618,7 +642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &449092
 Transform:
   m_ObjectHideFlags: 0
@@ -955,7 +979,7 @@ SpriteRenderer:
   m_Size: {x: 0.29, y: 0.39}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &2007456400268686951

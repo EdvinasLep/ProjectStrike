@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class StateManager : MonoBehaviour
 {
-    public int health = 100;
+    public int health = 200;
+    public int energy = 0;
+    public int combo = 0;
+
 
     public float horizontal;
     public float vertical;
@@ -13,20 +18,28 @@ public class StateManager : MonoBehaviour
     public bool attack2;
     public bool attack3;
     public bool crouch;
+    public bool block;
+    public bool canChainAttack;
+    public bool showCombo;
 
     public bool canAttack;
     public bool gettingHit;
+    public bool landed;
     public bool currentlyAttacking;
+    public bool ultimateAvailable;
 
     public bool lookRight;
     public bool dontMove;
     public bool onGround;
     
-
     public Slider healthSlider;
+    public Slider energySlider;
     SpriteRenderer sRenderer;
 
     public AudioManager audioManager;
+
+    public ChainAttack chainAttack;
+    public TMP_Text chainCount;
 
     [HideInInspector]
     public HandleDamageColliders handleDC;
@@ -47,6 +60,7 @@ public class StateManager : MonoBehaviour
         sRenderer = GetComponentInChildren<SpriteRenderer>();
         blood = GetComponentInChildren<ParticleSystem>();
         audioManager = AudioManager.GetInstance();
+        chainAttack = GetComponent<ChainAttack>();
     }
 
     // Update is called once per frame
@@ -57,10 +71,23 @@ public class StateManager : MonoBehaviour
 
         onGround = isOnGround();
 
-        if (healthSlider != null)
+        if (healthSlider != null || energySlider != null)
         {
             healthSlider.value = health * 0.01f;
+            energySlider.value = energy * 0.01f;
         }
+
+
+        if(chainCount != null)
+        {
+            chainCount.text = "Combo x" + combo.ToString();
+        }
+
+        if(showCombo)
+        {
+            chainCount.gameObject.SetActive(true);
+        }
+        else chainCount.gameObject.SetActive(false);
 
         if (health <= 0)
         {
@@ -75,7 +102,32 @@ public class StateManager : MonoBehaviour
         {
             audioManager.punch();
         }
+
+        if (energy == 100)
+        {
+            ultimateAvailable = true;
+        }
+
+        if(gettingHit)
+        {
+            canChainAttack = false;
+            //chainAttack.chainReset();
+        }
+        
     }
+
+    private void Update()
+    {
+        
+    }
+
+    public void increaseEnergy(int increase)
+    {
+        if(energy <= 100)
+            energy += increase;
+    }
+
+
 
     bool isOnGround()
     {
@@ -91,6 +143,7 @@ public class StateManager : MonoBehaviour
     {
         horizontal = 0;
         vertical = 0;
+        combo = 0;
         attack1 = false;
         attack2 = false;
         attack3 = false;
@@ -98,6 +151,9 @@ public class StateManager : MonoBehaviour
         gettingHit = false;
         currentlyAttacking = false;
         dontMove = false;
+        block = false;
+        ultimateAvailable = false;
+        showCombo = false;
     }
 
     public void CloseMovementCollider(int index)
@@ -110,31 +166,37 @@ public class StateManager : MonoBehaviour
         movementColliders[index].SetActive(true);
     }
 
-    public void TakeDamage(int damage, HandleDamageColliders.DamageType damageType)
+    public void TakeDamage(int damage, int energyInc, HandleDamageColliders.DamageType damageType, StateManager otherChar)
     {
-        if(!gettingHit)
+        if (!block)
         {
-            switch(damageType)
+            if (!gettingHit)
             {
-                case HandleDamageColliders.DamageType.light:
-                    StartCoroutine(CloseImmortality(0.3f));
-                    break;
-                case HandleDamageColliders.DamageType.heavy:
-                    handleMovement.AddVelocityOnCharacter(
-                        (((!lookRight) ? Vector3.right * 2 : Vector3.right * -2) + Vector3.up * 10).normalized
-                        , 0.5f
-                        );
+                switch (damageType)
+                {
+                    case HandleDamageColliders.DamageType.light:
+                        StartCoroutine(CloseImmortality(0.3f));
+                        break;
+                    case HandleDamageColliders.DamageType.heavy:
+                        handleMovement.AddVelocityOnCharacter(
+                            (((!lookRight) ? Vector3.right * 2 : Vector3.right * -2) + Vector3.up * 10).normalized
+                            , 0.5f
+                            );
 
-                    StartCoroutine(CloseImmortality(1));
-                    break;
+                        StartCoroutine(CloseImmortality(1f));
+                        break;
+                }
+                if (blood != null)
+                {
+                    blood.Emit(30);
+                }
+                health -= damage;
+                otherChar.increaseEnergy(energyInc);
+                otherChar.canChainAttack = true;
+                otherChar.chainAttack.attack = true;
+                gettingHit = true;
+                audioManager.getHit();
             }
-            if(blood != null)
-            {
-                blood.Emit(30);
-            }
-            health -= damage;
-            gettingHit = true;
-            audioManager.getHit();
         }
     }
     
@@ -143,6 +205,7 @@ public class StateManager : MonoBehaviour
         yield return new WaitForSeconds(timer);
         gettingHit = false;
     }
-   
-    
+
+
+
 }

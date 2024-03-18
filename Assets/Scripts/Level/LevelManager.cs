@@ -35,6 +35,9 @@ public class LevelManager : MonoBehaviour
         levelUI.AnnouncerTextLine1.gameObject.SetActive(false);
         levelUI.AnnouncerTextLine2.gameObject.SetActive(false);
 
+        //levelUI.ChainCounters[0].gameObject.SetActive(false);
+        //levelUI.ChainCounters[1].gameObject.SetActive(false);
+
         StartCoroutine("StartGame");
     }
 
@@ -51,6 +54,9 @@ public class LevelManager : MonoBehaviour
             charM.players[0].playerStates.lookRight = false;
             charM.players[1].playerStates.lookRight = true;
         }
+
+        
+
     }
 
     private void Update()
@@ -59,6 +65,15 @@ public class LevelManager : MonoBehaviour
         {
             HandleTurnTimer();
         }
+
+        //if (charM.players[0].playerStates.gettingHit)
+        //{
+        //    charM.players[0].playerStates.landed = true;
+        //}
+        //else if (charM.players[1].playerStates.gettingHit)
+        //{
+        //    charM.players[0].playerStates.landed = true;
+        //}
     }
 
     void HandleTurnTimer()
@@ -108,6 +123,9 @@ public class LevelManager : MonoBehaviour
 
             charM.players[i].playerStates = go.GetComponent<StateManager>();
             charM.players[i].playerStates.healthSlider = levelUI.healthSliders[i];
+            charM.players[i].playerStates.energySlider = levelUI.energySliders[i];
+            
+            charM.players[i].playerStates.chainCount = levelUI.ChainCounters[i];
             camM.players.Add(go.transform);
         }
         yield return null;

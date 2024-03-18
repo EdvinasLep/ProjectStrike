@@ -11,6 +11,7 @@ public class InputHandler : MonoBehaviour
     bool attack1;
     bool attack2;
     bool attack3;
+    bool block;
 
     StateManager states;
 
@@ -26,11 +27,13 @@ public class InputHandler : MonoBehaviour
         attack1 = Input.GetButton("Fire1" + playerInput);
         attack2 = Input.GetButton("Fire2" + playerInput);
         attack3 = Input.GetButton("Fire3" + playerInput);
+        block = Input.GetButton("Block1" + playerInput);
 
         states.horizontal = horizontal;
         states.vertical = vertical;
         states.attack1 = attack1;
         states.attack2 = attack2;
         states.attack3 = attack3;
+        states.block = block;
     }
 }

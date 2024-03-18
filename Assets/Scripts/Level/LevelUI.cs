@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 
 public class LevelUI : MonoBehaviour {
 
@@ -8,7 +9,10 @@ public class LevelUI : MonoBehaviour {
     public Text AnnouncerTextLine2;
     public Text LevelTimer;
 
+    public TMP_Text[] ChainCounters;
+
     public Slider[] healthSliders;
+    public Slider[] energySliders;
 
     public GameObject[] winIndicatorGrids;
     public GameObject winIndicator;
