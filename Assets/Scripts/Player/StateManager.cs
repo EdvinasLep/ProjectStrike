@@ -20,7 +20,6 @@ public class StateManager : MonoBehaviour
     public bool crouch;
     public bool block;
     public bool canChainAttack;
-    public bool showCombo;
 
     public bool canAttack;
     public bool gettingHit;
@@ -83,7 +82,7 @@ public class StateManager : MonoBehaviour
             chainCount.text = "Combo x" + combo.ToString();
         }
 
-        if(showCombo)
+        if(combo > 0)
         {
             chainCount.gameObject.SetActive(true);
         }
@@ -123,8 +122,12 @@ public class StateManager : MonoBehaviour
 
     public void increaseEnergy(int increase)
     {
-        if(energy <= 100)
+        if(energy <= 100) 
+        {
             energy += increase;
+            Debug.Log(increase);
+        }
+            
     }
 
 
@@ -153,7 +156,6 @@ public class StateManager : MonoBehaviour
         dontMove = false;
         block = false;
         ultimateAvailable = false;
-        showCombo = false;
     }
 
     public void CloseMovementCollider(int index)
@@ -192,8 +194,9 @@ public class StateManager : MonoBehaviour
                 }
                 health -= damage;
                 otherChar.increaseEnergy(energyInc);
-                otherChar.canChainAttack = true;
                 otherChar.chainAttack.attack = true;
+                chainAttack.attack = false;
+                chainAttack.interrupted = true;
                 gettingHit = true;
                 audioManager.getHit();
             }

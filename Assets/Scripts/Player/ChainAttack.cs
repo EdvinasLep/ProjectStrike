@@ -9,7 +9,10 @@ public class ChainAttack : MonoBehaviour
 {
     public int chainCount;
     public int prevCount;
+    public int comboMultiplier = 2;
     public bool attack;
+    public bool reset;
+    public bool interrupted;
 
     public float timeSinceLastAttack = 0f;
     private float chainWindow = 2.0f;
@@ -20,6 +23,7 @@ public class ChainAttack : MonoBehaviour
         states = GetComponent<StateManager>();
         chainCount = 0;
         prevCount = 0;
+        interrupted = false;
     }
 
     void Update()
@@ -29,7 +33,10 @@ public class ChainAttack : MonoBehaviour
         {
             timeSinceLastAttack += Time.deltaTime;
         }
-        else chainCount = 0;
+        else
+        {
+            chainReset();
+        }
 
         if (attack)
         {
@@ -37,28 +44,28 @@ public class ChainAttack : MonoBehaviour
             {               
                 chainCount++;
                 attack = false;
-                states.showCombo = true;
-
-            }
-            else if (timeSinceLastAttack > chainWindow)
-            {
-                chainReset();
-                attack = false;
             }
             timeSinceLastAttack = 0f;
         }
 
-        if(prevCount != chainCount)
+        if (prevCount != chainCount)
         {
             states.combo = chainCount;
             prevCount = chainCount;
         }
 
+        if (interrupted)
+        {
+            chainReset();
+            interrupted = false;
+        }
     }
 
-    public void chainReset()
+    private void chainReset()
     {
-        chainCount = 0;
-        states.showCombo = false;
+        if(!interrupted)
+            states.increaseEnergy(chainCount * comboMultiplier);
+
+        chainCount = 0;   
     }
 }

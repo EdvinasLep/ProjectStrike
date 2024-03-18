@@ -24,7 +24,7 @@ public class DoDamage : MonoBehaviour
                     switch (damageType)
                     {
                         case HandleDamageColliders.DamageType.light:
-                            oState.TakeDamage(10, 10, damageType, states);
+                            oState.TakeDamage(10, 5, damageType, states);
                             //states.increaseEnergy(10);
                             Debug.Log(damageType.ToString());
                             break;
