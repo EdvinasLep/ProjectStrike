@@ -28,22 +28,28 @@ public class InputHandler : MonoBehaviour
         attack1 = Input.GetButton("Fire1" + playerInput);
         attack2 = Input.GetButton("Fire2" + playerInput);
         attack3 = Input.GetButton("Fire3" + playerInput);
-        
-        block = Input.GetButton("Block1" + playerInput);
 
         states.horizontal = horizontal;
         states.vertical = vertical;
         states.attack1 = attack1;
         states.attack2 = attack2;
         states.attack3 = attack3;
-        
-        states.block = block;
 
         if (states.ultimateAvailable)
         {
             ultimate = Input.GetButton("Ultimate1" + playerInput);
             states.ultimateAbility = ultimate;
         }
+        else ultimate = false;
+
+        if (states.canBlock)
+        {
+            block = Input.GetButton("Block1" + playerInput);
+        }
+        else block = false;
+
+        states.ultimateAbility = ultimate;
+        states.block = block;
 
 
     }

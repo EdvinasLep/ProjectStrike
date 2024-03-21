@@ -69,6 +69,7 @@ public class PlayerBase
     public bool hasCharacter;
     public GameObject playerPrefab;
     public StateManager playerStates;
+    public SmoothSlider sliders;
     public int score;
 
     public enum PlayerType

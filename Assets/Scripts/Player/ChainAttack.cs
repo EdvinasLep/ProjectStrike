@@ -26,7 +26,7 @@ public class ChainAttack : MonoBehaviour
         interrupted = false;
     }
 
-    void Update()
+    void FixedUpdate()
     {
 
         if (timeSinceLastAttack < chainWindow)

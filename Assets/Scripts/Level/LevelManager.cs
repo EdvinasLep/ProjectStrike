@@ -23,6 +23,8 @@ public class LevelManager : MonoBehaviour
     public int maxTurnTimer = 20;
     int currentTimer;
     float internalTimer;
+
+    SmoothSlider smoothSlider;
   
     void Start()
     {
@@ -37,6 +39,8 @@ public class LevelManager : MonoBehaviour
 
         //levelUI.ChainCounters[0].gameObject.SetActive(false);
         //levelUI.ChainCounters[1].gameObject.SetActive(false);
+
+        smoothSlider = GetComponent<SmoothSlider>();
 
         StartCoroutine("StartGame");
     }
@@ -122,10 +126,16 @@ public class LevelManager : MonoBehaviour
                 Quaternion.identity) as GameObject;
 
             charM.players[i].playerStates = go.GetComponent<StateManager>();
-            charM.players[i].playerStates.healthSlider = levelUI.healthSliders[i];
-            charM.players[i].playerStates.energySlider = levelUI.energySliders[i];
-            
             charM.players[i].playerStates.chainCount = levelUI.ChainCounters[i];
+            //charM.players[i].playerStates.healthSlider = levelUI.healthSliders[i];
+            //charM.players[i].playerStates.energySlider = levelUI.energySliders[i];
+            //charM.players[i].playerStates.blockSlider = levelUI.blockSliders[i];
+
+            charM.players[i].sliders = go.GetComponent<SmoothSlider>();
+            charM.players[i].sliders.healthSlider = levelUI.healthSliders[i];
+            charM.players[i].sliders.energySlider = levelUI.energySliders[i];
+            charM.players[i].sliders.blockSlider = levelUI.blockSliders[i];
+            charM.players[i].sliders.delayedHealthSlider = levelUI.delayedHealthSlider[i];
             camM.players.Add(go.transform);
         }
         yield return null;

@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\HandleAnimations.cs" />
+    <Compile Include="Assets\Scripts\Player\BlockSystem.cs" />
     <Compile Include="Assets\Scripts\Player\ChainAttack.cs" />
     <Compile Include="Assets\Scripts\MainMenu\ButtonRef.cs" />
     <Compile Include="Assets\Scripts\Util\FollowTransform.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Scripts\MainMenu\SelectScreenManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu\CharacterManager.cs" />
     <Compile Include="Assets\Scripts\Player\HandleMovementCollider_ASB.cs" />
+    <Compile Include="Assets\Scripts\Util\SmoothSlider.cs" />
     <Compile Include="Assets\Scripts\MainMenu\IntroSceneManager.cs" />
     <Compile Include="Assets\Scripts\Util\CameraManager.cs" />
     <Compile Include="Assets\Scripts\Player\ChangeBool.cs" />

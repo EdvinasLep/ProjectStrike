@@ -11,6 +11,7 @@ public class StateManager : MonoBehaviour
     public int health = 200;
     public int energy = 0;
     public int combo = 0;
+    public int blockHealth = 0;
 
 
     public float horizontal;
@@ -29,19 +30,22 @@ public class StateManager : MonoBehaviour
     public bool landed;
     public bool currentlyAttacking;
     public bool ultimateAvailable;
+    public bool canBlock = true;
 
     public bool lookRight;
     public bool dontMove;
     public bool onGround;
     
-    public Slider healthSlider;
-    public Slider energySlider;
+    //public Slider healthSlider;
+    //public Slider energySlider;
+    //public Slider blockSlider;
     SpriteRenderer sRenderer;
 
     public AudioManager audioManager;
 
     public ChainAttack chainAttack;
     public TMP_Text chainCount;
+    public BlockSystem blockSystem;
 
     [HideInInspector]
     public HandleDamageColliders handleDC;
@@ -63,6 +67,7 @@ public class StateManager : MonoBehaviour
         blood = GetComponentInChildren<ParticleSystem>();
         audioManager = AudioManager.GetInstance();
         chainAttack = GetComponent<ChainAttack>();
+        blockSystem = GetComponent<BlockSystem>();
     }
 
     // Update is called once per frame
@@ -73,11 +78,12 @@ public class StateManager : MonoBehaviour
 
         onGround = isOnGround();
 
-        if (healthSlider != null || energySlider != null)
-        {
-            healthSlider.value = health * 0.01f;
-            energySlider.value = energy * 0.01f;
-        }
+        //if (healthSlider != null && energySlider != null && blockSlider != null)
+        //{
+        //    healthSlider.value = health * 0.01f;
+        //    //energySlider.value = energy * 0.01f;
+        //    //blockSlider.value = blockHealth * 0.01f;
+        //}
 
 
         if(chainCount != null)
@@ -90,6 +96,7 @@ public class StateManager : MonoBehaviour
             chainCount.gameObject.SetActive(true);
         }
         else chainCount.gameObject.SetActive(false);
+
 
         if (health <= 0)
         {
@@ -130,7 +137,7 @@ public class StateManager : MonoBehaviour
         if(energy <= 100) 
         {
             energy += increase;
-            Debug.Log(increase);
+            //Debug.Log(increase);
         }
             
     }
@@ -152,6 +159,7 @@ public class StateManager : MonoBehaviour
         horizontal = 0;
         vertical = 0;
         combo = 0;
+        blockHealth = 0;
         attack1 = false;
         attack2 = false;
         attack3 = false;
@@ -162,6 +170,7 @@ public class StateManager : MonoBehaviour
         block = false;
         ultimateAvailable = false;
         ultimateAbility = false;
+        canBlock = true;
     }
 
     public void CloseMovementCollider(int index)
@@ -176,7 +185,7 @@ public class StateManager : MonoBehaviour
 
     public void TakeDamage(int damage, int energyInc, HandleDamageColliders.DamageType damageType, StateManager otherChar)
     {
-        if (!block)
+        if (!block )
         {
             if (!gettingHit)
             {
@@ -214,6 +223,10 @@ public class StateManager : MonoBehaviour
                 gettingHit = true;
                 audioManager.getHit();
             }
+        }
+        else
+        {
+            blockSystem.isHit = true;  
         }
     }
     

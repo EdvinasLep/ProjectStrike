@@ -150,11 +150,13 @@ GameObject:
   - component: {fileID: 5080066}
   - component: {fileID: 5379504853377158563}
   - component: {fileID: 4123701908245662338}
+  - component: {fileID: 9111382586199246491}
   - component: {fileID: 6644588336947522372}
   - component: {fileID: 8971128842607305759}
   - component: {fileID: 5919766416097328556}
   - component: {fileID: 8280122418548853606}
   - component: {fileID: 2898954981980864606}
+  - component: {fileID: 7328495931302763930}
   m_Layer: 8
   m_Name: Fighter Object 2
   m_TagString: Untagged
@@ -238,6 +240,7 @@ MonoBehaviour:
   health: 100
   energy: 0
   combo: 0
+  blockHealth: 0
   horizontal: 0
   vertical: 0
   attack1: 0
@@ -252,20 +255,41 @@ MonoBehaviour:
   landed: 0
   currentlyAttacking: 0
   ultimateAvailable: 0
+  canBlock: 1
   lookRight: 0
   dontMove: 0
   onGround: 0
   healthSlider: {fileID: 0}
   energySlider: {fileID: 0}
+  blockSlider: {fileID: 0}
   audioManager: {fileID: 0}
   chainAttack: {fileID: 0}
   chainCount: {fileID: 0}
+  blockSystem: {fileID: 0}
   handleDC: {fileID: 0}
   handleAnim: {fileID: 0}
   handleMovement: {fileID: 0}
   movementColliders:
   - {fileID: 130414}
   - {fileID: 131368}
+--- !u!114 &9111382586199246491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5464903f49c59734bb0474f052fc5dd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockHealth: 0
+  block: 0
+  isHit: 0
+  blockOvercharge: 0
+  downTime: 0
+  cooldown: 0.5
 --- !u!114 &6644588336947522372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,6 +382,21 @@ MonoBehaviour:
   punchSource: {fileID: 4398978030120466865}
   hitClip: {fileID: 8300000, guid: c886071ade5d6e749bd3ec05b1ecf11b, type: 3}
   punchClip: {fileID: 8300000, guid: 4664c528446092d4da815ec019765ace, type: 3}
+--- !u!114 &7328495931302763930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a74af999b82f08f45bd7cc248579d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockHealth: 0
+  oldSlider: 0
+  blockSlider: {fileID: 0}
 --- !u!1 &130414
 GameObject:
   m_ObjectHideFlags: 0

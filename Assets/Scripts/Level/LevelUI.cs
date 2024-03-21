@@ -12,7 +12,9 @@ public class LevelUI : MonoBehaviour {
     public TMP_Text[] ChainCounters;
 
     public Slider[] healthSliders;
+    public Slider[] delayedHealthSlider;
     public Slider[] energySliders;
+    public Slider[] blockSliders;
 
     public GameObject[] winIndicatorGrids;
     public GameObject winIndicator;
