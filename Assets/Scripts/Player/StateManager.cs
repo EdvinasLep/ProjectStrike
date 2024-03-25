@@ -8,7 +8,7 @@ using JetBrains.Annotations;
 
 public class StateManager : MonoBehaviour
 {
-    public int health = 200;
+    public int health = 100;
     public int energy = 0;
     public int combo = 0;
     public int blockHealth = 0;

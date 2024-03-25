@@ -10,18 +10,16 @@ public class SmoothSlider : MonoBehaviour
     public float energy = 0;
     public float health = 0;
 
-    StateManager states;
     public Slider blockSlider;
     public Slider energySlider;
     public Slider healthSlider;
     public Slider delayedHealthSlider;
 
+    StateManager states;
+
     void Start()
     {
         states = GetComponent<StateManager>();
-        //blockSlider = states.blockSlider;
-        //energySlider = states.energySlider;
-        //healthSlider = states.healthSlider;
         delayedHealthSlider.value = healthSlider.value;
     }
 
@@ -41,7 +39,7 @@ public class SmoothSlider : MonoBehaviour
 
         if(delayedHealthSlider.value != healthSlider.value) 
         {
-            delayedHealthSlider.value = Mathf.Lerp(delayedHealthSlider.value, healthTargetValue, Time.deltaTime * 2);
+            delayedHealthSlider.value = Mathf.Lerp(delayedHealthSlider.value, healthTargetValue, Time.deltaTime * 1);
         }
 
         if (blockHealth > 0)

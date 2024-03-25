@@ -16,7 +16,6 @@ public class BlockSystem : MonoBehaviour
 
     StateManager states;
 
-    // Start is called before the first frame update
     void Start()
     {
         states = GetComponent<StateManager>();
@@ -27,7 +26,6 @@ public class BlockSystem : MonoBehaviour
         blockOvercharge = false;
     }
 
-    // Update is called once per frame
     private void FixedUpdate()
     {       
         if(blockHealth >= 100)
