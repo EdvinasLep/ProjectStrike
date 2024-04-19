@@ -153,7 +153,6 @@ public class SpineAnimHandler : MonoBehaviour
             if (states.health <= 0)
             {
                 SetAnimation(death, false, 1f);
-                
             }
         }
             
@@ -191,7 +190,7 @@ public class SpineAnimHandler : MonoBehaviour
                 SetAnimation(walkback, true, 1f); return;
             }
         }
-        else if(!isDead)SetAnimation(idle, true, 1f);
+        else if(!isDead) SetAnimation(idle, true, 1f);
 
         if (states.ultimateAbility)
         {
@@ -216,11 +215,5 @@ public class SpineAnimHandler : MonoBehaviour
         else return false;
     }
 }
-[System.Serializable]
-public class AttacksBase
-{
-    public bool attack;
-    public float attackTimer;
-    public int timesPressed;
-}
+
 
