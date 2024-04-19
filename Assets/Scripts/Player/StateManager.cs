@@ -14,11 +14,15 @@ public class StateManager : MonoBehaviour
     public int blockHealth = 0;
 
 
+
     public float horizontal;
     public float vertical;
     public bool attack1;
     public bool attack2;
     public bool attack3;
+    public bool attack1ready;
+    public bool attack2ready;
+    public bool attack3ready;
     public bool crouch;
     public bool block;
     public bool canChainAttack;
@@ -31,15 +35,11 @@ public class StateManager : MonoBehaviour
     public bool currentlyAttacking;
     public bool ultimateAvailable;
     public bool canBlock = true;
+    public bool isDead;
 
     public bool lookRight;
     public bool dontMove;
     public bool onGround;
-    
-    //public Slider healthSlider;
-    //public Slider energySlider;
-    //public Slider blockSlider;
-    SpriteRenderer sRenderer;
 
     public AudioManager audioManager;
 
@@ -50,7 +50,8 @@ public class StateManager : MonoBehaviour
     [HideInInspector]
     public HandleDamageColliders handleDC;
     [HideInInspector]
-    public HandleAnimations handleAnim;
+    //public HandleAnimations handleAnim;
+    public SpineAnimHandler handleAnim;
     [HideInInspector]
     public HandleMovement handleMovement;
 
@@ -61,9 +62,9 @@ public class StateManager : MonoBehaviour
     void Start()
     {
         handleDC = GetComponent<HandleDamageColliders>();
-        handleAnim = GetComponent<HandleAnimations>();
+        handleAnim = GetComponent<SpineAnimHandler>();
         handleMovement = GetComponent<HandleMovement>();
-        sRenderer = GetComponentInChildren<SpriteRenderer>();
+
         blood = GetComponentInChildren<ParticleSystem>();
         audioManager = AudioManager.GetInstance();
         chainAttack = GetComponent<ChainAttack>();
@@ -73,8 +74,11 @@ public class StateManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
-        sRenderer.flipX = lookRight;
+
+        if (lookRight)
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        else
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
 
         onGround = isOnGround();
 
@@ -103,13 +107,13 @@ public class StateManager : MonoBehaviour
             if(LevelManager.GetInstance().countdown)
             {
                 LevelManager.GetInstance().EndTurnFunction();
-                handleAnim.anim.Play("Dead");
+                
             }
         }
 
         if(attack1 || attack2 || attack3)
         {
-            audioManager.punch();
+            //audioManager.punch();
         }
 
         if (energy >= 100)
@@ -171,6 +175,7 @@ public class StateManager : MonoBehaviour
         ultimateAvailable = false;
         ultimateAbility = false;
         canBlock = true;
+        canAttack = true;
     }
 
     public void CloseMovementCollider(int index)
@@ -185,48 +190,51 @@ public class StateManager : MonoBehaviour
 
     public void TakeDamage(int damage, int energyInc, HandleDamageColliders.DamageType damageType, StateManager otherChar)
     {
-        if (!block )
+        if (!currentlyAttacking)
         {
-            if (!gettingHit)
+            if (!block)
             {
-                switch (damageType)
+                if (!gettingHit)
                 {
-                    case HandleDamageColliders.DamageType.light:
-                        StartCoroutine(CloseImmortality(0.3f));
-                        break;
-                    case HandleDamageColliders.DamageType.heavy:
-                        handleMovement.AddVelocityOnCharacter(
-                            (((!lookRight) ? Vector3.right * 2 : Vector3.right * -2) + Vector3.up * 2).normalized
-                            , 0.5f
-                            );
+                    switch (damageType)
+                    {
+                        case HandleDamageColliders.DamageType.punch:
+                            StartCoroutine(CloseImmortality(0.3f));
+                            break;
+                        case HandleDamageColliders.DamageType.kick:
+                            handleMovement.AddVelocityOnCharacter(
+                                (((!lookRight) ? Vector3.right * 2 : Vector3.right * -2) + Vector3.up * 2).normalized
+                                , 0.5f
+                                );
 
-                        StartCoroutine(CloseImmortality(1f));
-                        break;
-                    case HandleDamageColliders.DamageType.ultimate:
-                        handleMovement.AddVelocityOnCharacter(
-                            (((!lookRight) ? Vector3.right * 4 : Vector3.right * -4) + Vector3.up * 4).normalized
-                            , 0.5f
-                            );
+                            StartCoroutine(CloseImmortality(1f));
+                            break;
+                        case HandleDamageColliders.DamageType.ultimate:
+                            handleMovement.AddVelocityOnCharacter(
+                                (((!lookRight) ? Vector3.right * 4 : Vector3.right * -4) + Vector3.up * 4).normalized
+                                , 0.5f
+                                );
 
-                        StartCoroutine(CloseImmortality(1f));
-                        break;
+                            StartCoroutine(CloseImmortality(1f));
+                            break;
+                    }
+                    if (blood != null)
+                    {
+                        blood.Emit(30);
+                    }
+                    health -= damage;
+                    otherChar.increaseEnergy(energyInc);
+                    otherChar.chainAttack.attack = true;
+                    chainAttack.attack = false;
+                    chainAttack.interrupted = true;
+                    gettingHit = true;
+                    //audioManager.getHit();
                 }
-                if (blood != null)
-                {
-                    blood.Emit(30);
-                }
-                health -= damage;
-                otherChar.increaseEnergy(energyInc);
-                otherChar.chainAttack.attack = true;
-                chainAttack.attack = false;
-                chainAttack.interrupted = true;
-                gettingHit = true;
-                audioManager.getHit();
             }
-        }
-        else
-        {
-            blockSystem.isHit = true;  
+            else
+            {
+                blockSystem.isHit = true;
+            }
         }
     }
     

@@ -146,7 +146,8 @@ public class LevelManager : MonoBehaviour
         for(int i = 0; i < charM.players.Count; i++)
         {
             charM.players[i].playerStates.health = 100;
-            charM.players[i].playerStates.handleAnim.anim.Play("Locomotion");
+            charM.players[i].playerStates.handleAnim.isDead = false;
+            //charM.players[i].playerStates.handleAnim.anim.Play("Locomotion");
             charM.players[i].playerStates.transform.position = SpawnPositions[i].position; // reset player position, if not in next round spawns in last position
         }
         yield return null;

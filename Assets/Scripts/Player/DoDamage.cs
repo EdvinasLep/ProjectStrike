@@ -23,11 +23,12 @@ public class DoDamage : MonoBehaviour
                 {
                     switch (damageType)
                     {
-                        case HandleDamageColliders.DamageType.light:
+                        case HandleDamageColliders.DamageType.punch:
                             oState.TakeDamage(10, 5, damageType, states);
                             Debug.Log(damageType.ToString());
+                            Debug.Log(oState.ToString());
                             break;
-                        case HandleDamageColliders.DamageType.heavy:
+                        case HandleDamageColliders.DamageType.kick:
                             oState.TakeDamage(15, 20, damageType, states);
                             Debug.Log(damageType.ToString());
                             break;

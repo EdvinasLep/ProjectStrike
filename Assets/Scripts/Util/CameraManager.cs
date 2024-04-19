@@ -12,15 +12,17 @@ public class CameraManager : MonoBehaviour
     Transform p1;
     Transform p2;
 
-    Vector3 middlePoint;
+    public Vector3 middlePoint;
 
     public float orthoMin = 2;
     public float orthoMax = 2;
 
     float targetZ;
 
-    public float zMin = 5;
+    public float zMin = -1.4f;
     public float zMax = 5;
+
+    public float yOffset = 0.3f;
 
     Camera cam;
 
@@ -46,6 +48,7 @@ public class CameraManager : MonoBehaviour
 
         middlePoint = (players[1].position - players[0].position).normalized * half;
         middlePoint += players[0].position;
+        middlePoint.y += yOffset;
 
         switch (cType)
         {

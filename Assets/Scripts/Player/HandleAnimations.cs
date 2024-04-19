@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class HandleAnimations : MonoBehaviour
 {
     public Animator anim;
@@ -108,10 +109,10 @@ public class HandleAnimations : MonoBehaviour
     }
 }
 
-[System.Serializable]
-public class AttacksBase
-{
-    public bool attack;
-    public float attackTimer;
-    public int timesPressed;
-}
+//[System.Serializable]
+//public class AttacksBase
+//{
+//    public bool attack;
+//    public float attackTimer;
+//    public int timesPressed;
+//}

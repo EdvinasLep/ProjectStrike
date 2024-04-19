@@ -6,7 +6,7 @@ public class HandleMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     StateManager states;
-    HandleAnimations anim;
+    SpineAnimHandler anim;
 
     public float accelaration = 30;
     public float airAccelaration = 15;
@@ -22,7 +22,7 @@ public class HandleMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         states = GetComponent<StateManager>();
-        anim = GetComponent<HandleAnimations>();
+        anim = GetComponent<SpineAnimHandler>();
         rb.freezeRotation = true;
     }
 
@@ -60,7 +60,7 @@ public class HandleMovement : MonoBehaviour
                 justJumped = true;
                 if(states.onGround)
                 {
-                    anim.JumpAnim();
+                    //anim.JumpAnim();
                     rb.velocity = new Vector3(rb.velocity.x, this.jumpSpeed);
                     jmpTimer = 0;
                     canVariableJump = true;

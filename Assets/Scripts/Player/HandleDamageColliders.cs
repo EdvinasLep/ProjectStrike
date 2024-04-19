@@ -9,8 +9,9 @@ public class HandleDamageColliders : MonoBehaviour
 
     public enum DamageType
     {
-        light,
-        heavy,
+        punch,
+        kick,
+        special,
         ultimate
     }
 
@@ -61,6 +62,7 @@ public class HandleDamageColliders : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         array[index].SetActive(true);
+        Debug.Log("Opening Collider " ,array[index]);
         array[index].GetComponent<DoDamage>().damageType = damageType;
     }
 
