@@ -44,6 +44,7 @@ public class ChainAttack : MonoBehaviour
             {               
                 chainCount++;
                 attack = false;
+                StartCoroutine(states.ComboLerp());
             }
             timeSinceLastAttack = 0f;
         }

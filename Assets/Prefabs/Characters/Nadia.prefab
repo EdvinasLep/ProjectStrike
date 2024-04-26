@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 579134608422890631}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.041, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -106,7 +106,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.6072, y: -3.9084, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2780066811731481480}
@@ -203,7 +203,7 @@ MonoBehaviour:
   unscaledTime: 0
   _animationName: 
   loop: 1
-  timeScale: 2
+  timeScale: 1
 --- !u!114 &4418234425049811175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787970928093318169}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0eee5d3c1838f5d4aa63d4ffd45ddedc, type: 3}
   m_Name: 
@@ -261,6 +261,7 @@ MonoBehaviour:
   currentlyAttacking: 0
   ultimateAvailable: 0
   canBlock: 1
+  isDead: 0
   lookRight: 0
   dontMove: 0
   onGround: 0
@@ -323,10 +324,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2acaf8f61d0aae14eb2b3a58c7900bea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accelaration: 30
+  jumpForce: 1000
+  move: 10
+  accelaration: 60
   airAccelaration: 15
-  maxSpeed: 60
-  jumpSpeed: 8
+  maxSpeed: 240
+  jumpSpeed: 12
   jumpDuration: 150
 --- !u!114 &9068754816831385553
 MonoBehaviour:
@@ -344,19 +347,22 @@ MonoBehaviour:
   idle: {fileID: 11400000, guid: c254ae6fb33a97048899410008958713, type: 2}
   walkfwd: {fileID: 11400000, guid: 80bcfa699a0e2be4a9de14f9e8c9c5ab, type: 2}
   walkback: {fileID: 11400000, guid: fa46ce2f80b383e4f9896469c22feb18, type: 2}
-  attack1: {fileID: 11400000, guid: 2a37f0e8428499b4dae611d6b1220c82, type: 2}
-  attack2: {fileID: 11400000, guid: ffe63bc60876ec9449b30712e91b4cdf, type: 2}
+  attack1: {fileID: 11400000, guid: 31b53c46f88c83143b3c034f960af15f, type: 2}
+  attack2: {fileID: 11400000, guid: b932ccad35652bb478672c36fb40f72b, type: 2}
   attack3: {fileID: 11400000, guid: fd69095429276194d96e6121dcc51699, type: 2}
   gettingHit: {fileID: 11400000, guid: d5e34bb00ee347249a48270eefd7b732, type: 2}
   death: {fileID: 11400000, guid: 12dc86a2cc5384d4a932040dae6d195c, type: 2}
   win: {fileID: 11400000, guid: e8f1ca4d74f8c0f4d9d055b876b5f0d1, type: 2}
+  block: {fileID: 11400000, guid: 1f0284ccc8d593749a95f13889d874af, type: 2}
   currentState: 
   currentAnimation: 
   handleDC: {fileID: 0}
   att1: 0
   att2: 0
   att3: 0
+  blok: 0
   gotHit: 0
+  isDead: 0
 --- !u!114 &6045256890730377904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,7 +415,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -585,8 +591,8 @@ Transform:
   m_GameObject: {fileID: 4431779471569090349}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9920002, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.945, y: 0, z: 0}
+  m_LocalScale: {x: 1.51, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6650661661812869705}
@@ -676,8 +682,8 @@ Transform:
   m_GameObject: {fileID: 4858537404215528665}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.992, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.9449998, y: 0, z: 0}
+  m_LocalScale: {x: 1.51, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6650661661812869705}

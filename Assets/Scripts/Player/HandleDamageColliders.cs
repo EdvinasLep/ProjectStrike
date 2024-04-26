@@ -31,30 +31,48 @@ public class HandleDamageColliders : MonoBehaviour
 
     public void OpenCollider(DCtype type, float delay, DamageType damageType)
     {
-        if (!states.lookRight)
+        if (type == DCtype.bottom)
         {
-            switch (type)
-            {
-                case DCtype.bottom:
-                    StartCoroutine(OpenCollider(damageCollidersLeft, 0, delay, damageType));
-                    break;
-                    case DCtype.up:
-                    StartCoroutine(OpenCollider(damageCollidersLeft, 1, delay, damageType));
-                    break;
-            }
+            StartCoroutine(OpenCollider(damageCollidersRight, 0, delay, damageType));
         }
         else
         {
-            switch (type)
-            {
-                case DCtype.bottom:
-                    StartCoroutine(OpenCollider(damageCollidersRight, 0, delay, damageType));
-                    break;
-                case DCtype.up:
-                    StartCoroutine(OpenCollider(damageCollidersRight, 1, delay, damageType));
-                    break;
-            }
+            StartCoroutine(OpenCollider(damageCollidersRight, 1, delay, damageType));
         }
+        //if (states.lookRight)
+        //{
+        //    if(type == DCtype.bottom)
+        //    {
+        //        StartCoroutine(OpenCollider(damageCollidersLeft, 0, delay, damageType));
+        //    }
+        //    else
+        //    {
+        //        StartCoroutine(OpenCollider(damageCollidersLeft, 1, delay, damageType));
+        //    }
+        //    //switch (type)
+        //    //{
+        //    //    case DCtype.bottom:
+        //    //        StartCoroutine(OpenCollider(damageCollidersLeft, 0, delay, damageType));
+        //    //        break;
+        //    //        case DCtype.up:
+        //    //        StartCoroutine(OpenCollider(damageCollidersLeft, 1, delay, damageType));
+        //    //        break;
+        //    //}
+        //}
+        //else
+        //{
+        //    Debug.Log("AllhamDullilah");
+            
+        //    //switch (type)
+        //    //{
+        //    //    case DCtype.bottom:
+        //    //        StartCoroutine(OpenCollider(damageCollidersRight, 0, delay, damageType));
+        //    //        break;
+        //    //    case DCtype.up:
+        //    //        StartCoroutine(OpenCollider(damageCollidersRight, 1, delay, damageType));
+        //    //        break;
+        //    //}
+        //}
 
     }
 
@@ -62,7 +80,7 @@ public class HandleDamageColliders : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         array[index].SetActive(true);
-        Debug.Log("Opening Collider " ,array[index]);
+        Debug.Log("Opening Collider " + index);
         array[index].GetComponent<DoDamage>().damageType = damageType;
     }
 

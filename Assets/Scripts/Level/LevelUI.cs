@@ -5,9 +5,9 @@ using TMPro;
 
 public class LevelUI : MonoBehaviour {
 
-    public Text AnnouncerTextLine1;
-    public Text AnnouncerTextLine2;
-    public Text LevelTimer;
+    public TMP_Text AnnouncerTextLine1;
+    public TMP_Text AnnouncerTextLine2;
+    public TMP_Text LevelTimer;
 
     public TMP_Text[] ChainCounters;
 

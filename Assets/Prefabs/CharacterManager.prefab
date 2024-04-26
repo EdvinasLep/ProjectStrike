@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5987112176347606861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1956972351635004945}
+  - component: {fileID: 6807172164683175040}
+  m_Layer: 0
+  m_Name: CharacterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1956972351635004945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987112176347606861}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 890.60547, y: 370.56497, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6807172164683175040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987112176347606861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6463f8dc21ea4d840891fa6b8cb70195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfUsers: 2
+  players:
+  - playerId: 
+    inputId: 1
+    playerType: 0
+    hasCharacter: 0
+    playerPrefab: {fileID: 0}
+    playerStates: {fileID: 0}
+    sliders: {fileID: 0}
+    score: 0
+  - playerId: 
+    inputId: 
+    playerType: 0
+    hasCharacter: 0
+    playerPrefab: {fileID: 0}
+    playerStates: {fileID: 0}
+    sliders: {fileID: 0}
+    score: 0
+  characterList:
+  - charId: Nadia
+    prefab: {fileID: 787970928093318169, guid: 2a641ca90e022be46ab792f31d5fe85f, type: 3}
+  - charId: Mike
+    prefab: {fileID: 787970928093318169, guid: c91ec749c4265e84f9c2f0316b809be6, type: 3}
+  - charId: Ivan
+    prefab: {fileID: 1182957740529642209, guid: 1816af3a1a9ffa84db1b6df74864e538, type: 3}
+  - charId: Hikaru
+    prefab: {fileID: 1182957740529642209, guid: ee7332a233fa1d44394f233cbdcc4918, type: 3}
+  - charId: Luna
+    prefab: {fileID: 1182957740529642209, guid: 463edf1b3986d5d4fb03594c5c2e2386, type: 3}
+  - charId: Marek
+    prefab: {fileID: 1182957740529642209, guid: 8f0628cd19bd7ea49bdbc6456de29daa, type: 3}

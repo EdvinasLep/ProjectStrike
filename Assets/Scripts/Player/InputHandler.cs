@@ -27,6 +27,11 @@ public class InputHandler : MonoBehaviour
         attack2 = Input.GetButton("Fire2" + playerInput);
         attack3 = Input.GetButton("Fire3" + playerInput);
 
+        if (states.canBlock)
+        {
+            block = Input.GetButton("Block1" + playerInput);
+        }
+        else block = false;
 
         UpdateStates();
     }

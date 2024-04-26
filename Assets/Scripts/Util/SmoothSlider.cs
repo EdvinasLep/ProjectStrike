@@ -20,7 +20,7 @@ public class SmoothSlider : MonoBehaviour
     void Start()
     {
         states = GetComponent<StateManager>();
-        delayedHealthSlider.value = healthSlider.value;
+        if(healthSlider != null ) delayedHealthSlider.value = healthSlider.value;
     }
 
     void FixedUpdate()
@@ -33,20 +33,27 @@ public class SmoothSlider : MonoBehaviour
         float energyTargetValue = energy * 0.01f;
         float healthTargetValue = health * 0.01f;
 
-        blockSlider.value = Mathf.Lerp(blockSlider.value, blockTargetValue, Time.deltaTime * 10);
-        energySlider.value = Mathf.Lerp(energySlider.value, energyTargetValue, Time.deltaTime * 10);
-        healthSlider.value = health * 0.01f;
+        if (blockSlider != null) blockSlider.value = Mathf.Lerp(blockSlider.value, blockTargetValue, Time.deltaTime * 10);
+        if(energySlider != null) energySlider.value = Mathf.Lerp(energySlider.value, energyTargetValue, Time.deltaTime * 10);
+        if(healthSlider != null) healthSlider.value = health * 0.01f;
 
-        if(delayedHealthSlider.value != healthSlider.value) 
+        if(healthSlider != null)
         {
-            delayedHealthSlider.value = Mathf.Lerp(delayedHealthSlider.value, healthTargetValue, Time.deltaTime * 1);
+            if (delayedHealthSlider.value != healthSlider.value)
+            {
+                delayedHealthSlider.value = Mathf.Lerp(delayedHealthSlider.value, healthTargetValue, Time.deltaTime * 1);
+            }
         }
 
-        if (blockHealth > 0)
+        if (blockSlider != null)
         {
-            blockSlider.gameObject.SetActive(true);
+            if (blockHealth > 0)
+            {
+                blockSlider.gameObject.SetActive(true);
+            }
+            else blockSlider.gameObject.SetActive(false);
         }
-        else blockSlider.gameObject.SetActive(false);
+        
     }
 }
 

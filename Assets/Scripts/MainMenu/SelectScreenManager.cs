@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
+using UnityEngine.EventSystems;
+using TMPro;
+//using UnityEngine.UIElements;
 
-public class SelectScreenManager : MonoBehaviour
+public class SelectScreenManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public int numberOfPlayers = 1;
     public List<PlayerInterfaces> plInterfaces = new List<PlayerInterfaces>();
@@ -12,12 +16,25 @@ public class SelectScreenManager : MonoBehaviour
     public int maxX;
     public int maxY;
     PotraitInfo[,] charGrid;
+    public GameObject[] portraitScale;
     
     public GameObject potraitCanvas;
 
     bool loadLevel;
     public bool bothPlayersSelected;
     CharacterManager charManager;
+
+    public Vector2 SelectorPos1;
+    public Vector2 SelectorPos2;
+
+    public Image selectedBackground;
+    public Sprite selectedBackgroundSprite;
+    public SpriteRenderer selectedBackgroundRenderer;
+
+    public TMP_Text char1;
+    public TMP_Text char2;
+
+
 
     #region Singleton
     public static SelectScreenManager instance;
@@ -82,9 +99,9 @@ public class SelectScreenManager : MonoBehaviour
                     {
                         plInterfaces[i].playerBase = charManager.players[i];
 
-                        HandleSelectorPosition(plInterfaces[i]);
+                        HandleSelectorPosition(plInterfaces[i],i);
                         HandleSelecScreenInput(plInterfaces[i], charManager.players[i].inputId);
-                        HandleCharacterPreview(plInterfaces[i]);
+                        HandleCharacterPreview(plInterfaces[i], i);
                     }
                 }
                 else
@@ -96,7 +113,7 @@ public class SelectScreenManager : MonoBehaviour
 
         if(bothPlayersSelected)
         {
-            Debug.Log("loading");
+            
             StartCoroutine("LoadLevel");
             loadLevel = true;
         }
@@ -138,11 +155,11 @@ public class SelectScreenManager : MonoBehaviour
             { 
                 if (horizontal > 0)
                 {
-                    p1.activeX = (p1.activeX > 0) ? p1.activeX - 1 : maxX - 1;
+                    p1.activeX = (p1.activeX < maxX - 1) ? p1.activeX + 1 : maxX - 1;
                 }
-                else
+                else if(horizontal <0)
                 {
-                    p1.activeX = (p1.activeX < maxX - 1) ? p1.activeX + 1 : 0;
+                    p1.activeX = (p1.activeX > 0) ? p1.activeX - 1 : 0;
                 }
                 p1.timerToReset = 0;
                 p1.hitInputOnce = true;
@@ -167,13 +184,22 @@ public class SelectScreenManager : MonoBehaviour
         #endregion
         if (Input.GetButtonUp("Fire1" + playerId))
         {
-            p1.createdCharacter.GetComponentInChildren<Animator>().Play("Kick");
+            //p1.createdCharacter.GetComponentInChildren<Animator>().Play("Kick");
 
             p1.playerBase.playerPrefab =
                 charManager.returnCharacterWithID(p1.activePotrait.characterId).prefab;
 
             p1.playerBase.hasCharacter = true;
+
+            toggleSelectedPortrait(p1);
+
         }
+    }
+
+    private void toggleSelectedPortrait(PlayerInterfaces p1)
+    {
+        p1.activePotrait.GetComponent<Image>().sprite = selectedBackgroundRenderer.sprite;
+
     }
     IEnumerator LoadLevel()
     {
@@ -193,15 +219,28 @@ public class SelectScreenManager : MonoBehaviour
                 }
             }
         }
-        yield return new WaitForSeconds(5);
-        SceneManager.LoadSceneAsync("level", LoadSceneMode.Single);
+        Debug.Log("loading");
+        yield return new WaitForSeconds(0);
+
+        if(charManager.siberia)
+        {
+            Debug.Log("loading");
+            SceneManager.LoadSceneAsync("Siberia", LoadSceneMode.Single);
+        }
+        else if(charManager.egypt)
+        {
+            Debug.Log("loading");
+            SceneManager.LoadSceneAsync("Egyot", LoadSceneMode.Single);
+        }
+        
 
     }
-    void HandleSelectorPosition(PlayerInterfaces p1)
+    void HandleSelectorPosition(PlayerInterfaces p1, int i)
     {
         p1.selector.SetActive(true);
 
         p1.activePotrait = charGrid[p1.activeX, p1.activeY]; // find active position
+        
         
 
         //place selector over its position
@@ -211,10 +250,26 @@ public class SelectScreenManager : MonoBehaviour
             , potraitCanvas.transform.localPosition.y);
         //Debug.Log(selectorPosition);
         
+        
         p1.selector.transform.localPosition = selectorPosition;
+
+        if (i == 0)
+        {
+            SelectorPos1.x = p1.activeX;
+            SelectorPos1.y = p1.activeY;
+        }
+        else if (i == 1)
+        {
+            SelectorPos2.x = p1.activeX;
+            SelectorPos2.y = p1.activeY;
+        }
+
+        
+        togglePortrait(p1);
+
     }
 
-    void HandleCharacterPreview(PlayerInterfaces p1)
+    void HandleCharacterPreview(PlayerInterfaces p1,int i)
     {
         if(p1.previewPotrait != p1.activePotrait)
         {
@@ -230,12 +285,58 @@ public class SelectScreenManager : MonoBehaviour
 
             p1.createdCharacter = go;
             p1.previewPotrait = p1.activePotrait;
-            if (string.Equals(p1.playerBase.playerId, charManager.players[0].playerId))
+            //if (string.Equals(p1.playerBase.playerId, charManager.players[0].playerId)) 
+            if (i == 0)
             {
                 p1.createdCharacter.GetComponent<StateManager>().lookRight = true;
             }
+            else p1.createdCharacter.GetComponent<StateManager>().lookRight = false;
+
+
+
         }
     }
+    //private void selectButton(UnityEngine.UI.Button button)
+    //{
+    //    EventSystem.current.SetSelectedGameObject(button.gameObject, new BaseEventData(EventSystem.current));
+    //}
+    private void togglePortrait(PlayerInterfaces p1)
+    {
+        for (int i = 0; i < portraitScale.Length; i++)
+        {
+            bool isSelectedByAnySelector = (portraitScale[i].GetComponent<SelectScale>().x == SelectorPos1.x && portraitScale[i].GetComponent<SelectScale>().y == SelectorPos1.y) ||
+                                      (portraitScale[i].GetComponent<SelectScale>().x == SelectorPos2.x && portraitScale[i].GetComponent<SelectScale>().y == SelectorPos2.y);
+            portraitScale[i].GetComponent<SelectScale>().isToggled = isSelectedByAnySelector;
+
+
+
+            if (portraitScale[i].GetComponent<SelectScale>().x == SelectorPos1.x && portraitScale[i].GetComponent<SelectScale>().y == SelectorPos1.y)
+            {
+                char1.text = portraitScale[i].GetComponent<SelectScale>().charName;
+            }
+            else if(portraitScale[i].GetComponent<SelectScale>().x == SelectorPos2.x && portraitScale[i].GetComponent<SelectScale>().y == SelectorPos2.y)
+            {
+                char2.text = portraitScale[i].GetComponent<SelectScale>().charName;
+                
+            }
+
+        
+        }
+
+        
+    }
+
+   
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
+    }
+
     [System.Serializable]
     public class PlayerInterfaces
     {
@@ -244,6 +345,7 @@ public class SelectScreenManager : MonoBehaviour
         public GameObject selector; // selector indicator for player 1
         public Transform charVisPos; // visualization pos for player1
         public GameObject createdCharacter; // creater char for player 1
+
 
         public int activeX;
         public int activeY;

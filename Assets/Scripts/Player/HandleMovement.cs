@@ -8,15 +8,18 @@ public class HandleMovement : MonoBehaviour
     StateManager states;
     SpineAnimHandler anim;
 
-    public float accelaration = 30;
+    public float jumpForce = 400f;
+    public float move = 10f;
+    public float accelaration = 60;
     public float airAccelaration = 15;
-    public float maxSpeed = 60;
-    public float jumpSpeed = 8;
+    public float maxSpeed = 240;
+    public float jumpSpeed = 14;
     public float jumpDuration = 150;
     float actualSpeed;
     bool justJumped;
     bool canVariableJump;
     float jmpTimer;
+    private Vector3 m_Velocity = Vector3.zero;
 
     private void Start()
     {
@@ -41,7 +44,10 @@ public class HandleMovement : MonoBehaviour
 
         if(states.onGround && !states.currentlyAttacking)
         {
-            rb.AddForce(new Vector2((states.horizontal * actualSpeed) - rb.velocity.x * this.accelaration, 0));
+            //rb.AddForce(new Vector2((states.horizontal * actualSpeed) - rb.velocity.x * this.accelaration, 0));
+            Vector3 targetVelocity = new Vector2(states.horizontal * move, rb.velocity.y);
+            // And then smoothing it out and applying it to the character
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, 0.05f);
         }
 
         // sliding fix
@@ -61,7 +67,8 @@ public class HandleMovement : MonoBehaviour
                 if(states.onGround)
                 {
                     //anim.JumpAnim();
-                    rb.velocity = new Vector3(rb.velocity.x, this.jumpSpeed);
+                    //rb.velocity = new Vector3(rb.velocity.x, this.jumpSpeed);
+                    rb.AddForce(new Vector2(0f, jumpForce));
                     jmpTimer = 0;
                     canVariableJump = true;
                 }
@@ -73,7 +80,7 @@ public class HandleMovement : MonoBehaviour
                     jmpTimer += Time.deltaTime;
                     if (jmpTimer < this.jumpDuration / 1000)
                     {
-                        rb.velocity = new Vector3(rb.velocity.x, this.jumpSpeed);
+                        //rb.velocity = new Vector3(rb.velocity.x, this.jumpSpeed);
                     }
                 }
             }

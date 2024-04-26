@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
+//using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -92,14 +92,15 @@ public class StateManager : MonoBehaviour
 
         if(chainCount != null)
         {
-            chainCount.text = "Combo x" + combo.ToString();
+            
+            chainCount.text = "COMBO X" + combo.ToString();
         }
 
-        if(combo > 0)
+        if(chainCount != null && combo > 0)
         {
             chainCount.gameObject.SetActive(true);
         }
-        else chainCount.gameObject.SetActive(false);
+        else if(chainCount != null) chainCount.gameObject.SetActive(false);
 
 
         if (health <= 0)
@@ -128,6 +129,18 @@ public class StateManager : MonoBehaviour
 
     }
 
+    public IEnumerator ComboLerp()
+    {
+        float time = 0f;
+        
+        while(time < 0.15f)
+        {
+            time += Time.deltaTime;
+            chainCount.fontSize = Mathf.Lerp(90, 30, time/0.2f);
+            yield return null;
+        }
+    }
+
     IEnumerator ResetUltimate(float timer)
     {
         yield return new WaitForSeconds(timer);
@@ -154,7 +167,10 @@ public class StateManager : MonoBehaviour
 
         LayerMask layer = ~(1 << gameObject.layer | 1 << 3);
         retVal = Physics2D.Raycast(transform.position, -Vector2.up, 0.1f, layer);
-
+        if(vertical == 0)
+        {
+            return true;
+        }
         return retVal;
     }
 

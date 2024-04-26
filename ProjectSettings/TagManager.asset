@@ -11,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Portrait
+  - Indicator
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Portrait
+    uniqueID: 101810909
+    locked: 0
+  - name: Indicator
+    uniqueID: 1849165419
     locked: 0

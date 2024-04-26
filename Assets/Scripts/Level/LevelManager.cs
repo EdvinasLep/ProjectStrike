@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
@@ -264,6 +265,16 @@ public class LevelManager : MonoBehaviour
             {
                 charM.players[i].score = 0;
                 charM.players[i].hasCharacter = false;
+            }
+            if(charM.egypt)
+            {
+                charM.egypt = false;
+                charM.siberia = true;
+            }
+            else if( charM.siberia)
+            {
+                charM.siberia = false;
+                charM.egypt = true;
             }
             SceneManager.LoadSceneAsync("select");
         }

@@ -135,8 +135,8 @@
     <Compile Include="Assets\Spine Examples\Scripts\Getting Started Scripts\SpineboyBeginnerViewGraphic.cs" />
     <Compile Include="Assets\Spine Examples\Scripts\Sample Components\OutlineSkeletonGraphic.cs" />
     <Compile Include="Assets\Spine Examples\Scripts\MecanimAnimationMatchModifier\AnimationMatchModifierAsset.cs" />
-    <Compile Include="Assets\Spine Examples\Scripts\Mecanim as Logic\SkeletonAnimationHandleExample.cs" />
     <Compile Include="Assets\Spine Examples\Scripts\SpineboyPoleGraphic.cs" />
+    <Compile Include="Assets\Spine Examples\Scripts\Mecanim as Logic\SkeletonAnimationHandleExample.cs" />
     <Compile Include="Assets\Spine Examples\Scripts\Sample Components\SetRigidbodySolverIterations.cs" />
   </ItemGroup>
   <ItemGroup>

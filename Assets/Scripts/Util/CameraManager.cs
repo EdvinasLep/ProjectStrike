@@ -23,6 +23,8 @@ public class CameraManager : MonoBehaviour
     public float zMax = 5;
 
     public float yOffset = 0.3f;
+    public float xOffset = 0.3f;
+    public float zOffset;
 
     Camera cam;
 
@@ -49,21 +51,23 @@ public class CameraManager : MonoBehaviour
         middlePoint = (players[1].position - players[0].position).normalized * half;
         middlePoint += players[0].position;
         middlePoint.y += yOffset;
+        middlePoint.x += xOffset;
+        middlePoint.z += zOffset;
 
         switch (cType)
         {
-            case CameraType.ortho:
-                cam.orthographicSize = 2 * (half / 2);
-                if (cam.orthographicSize > orthoMax)
-                {
-                    cam.orthographicSize = orthoMax;
-                }
+            //case CameraType.ortho:
+            //    cam.orthographicSize = 2 * (half / 2);
+            //    if (cam.orthographicSize > orthoMax)
+            //    {
+            //        cam.orthographicSize = orthoMax;
+            //    }
 
-                if (cam.orthographicSize < orthoMin)
-                {
-                    cam.orthographicSize = orthoMin;
-                }
-                break;
+            //    if (cam.orthographicSize < orthoMin)
+            //    {
+            //        cam.orthographicSize = orthoMin;
+            //    }
+            //    break;
             case CameraType.persp:
                 targetZ = -(2 * (half / 2));
 

@@ -6,6 +6,8 @@ using UnityEngine;
 public class CharacterManager : MonoBehaviour
 {
     public int numberOfUsers;
+    public bool egypt;
+    public bool siberia;
     public List<PlayerBase> players = new List<PlayerBase>(); // list of players and their types
 
     public List<CharacterBase> characterList = new List<CharacterBase>();

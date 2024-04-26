@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -8,6 +9,7 @@ public class IntroSceneManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject startText;
+    public GameObject startScreen;
     float timer;
     bool loadingLevel = false;
     bool init = false;
@@ -35,7 +37,7 @@ public class IntroSceneManager : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 init = true;
-                startText.SetActive(false);
+                startScreen.SetActive(false);
                 menuObj.SetActive(true); // closes text and opens menu
             }
         }
@@ -68,10 +70,27 @@ public class IntroSceneManager : MonoBehaviour
             //selecting an option
             if(Input.GetKeyUp(KeyCode.Space))
             {
+                switch(activeElement)
+                {
+                    case 0:
+                        loadingLevel = true;
+                        StartCoroutine("LoadLevel");
+                        menuOptions[activeElement].transform.localScale *= 1.2f;
+                        CharacterManager.GetInstance().egypt = true;
+
+                        break;
+                    case 1:
+                        loadingLevel = true;
+                        StartCoroutine("LoadLevel");
+                        menuOptions[activeElement].transform.localScale *= 1.2f;
+                        CharacterManager.GetInstance().siberia = true;
+                        break;
+                    case 2:
+                        Application.Quit();
+                        break;
+                }
                 Debug.Log("load");
-                loadingLevel = true;
-                StartCoroutine("LoadLevel");
-                menuOptions[activeElement].transform.localScale *= 1.2f;
+                
             }
         }
     }
@@ -81,7 +100,8 @@ public class IntroSceneManager : MonoBehaviour
         switch (activeElement)
         {
             case 0:
-                CharacterManager.GetInstance().numberOfUsers = 1;
+                CharacterManager.GetInstance().numberOfUsers = 2;
+                CharacterManager.GetInstance().players[1].playerType = PlayerBase.PlayerType.user;
                 break;
             case 1:
                 CharacterManager.GetInstance().numberOfUsers = 2;

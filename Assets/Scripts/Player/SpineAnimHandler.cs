@@ -11,7 +11,7 @@ public class SpineAnimHandler : MonoBehaviour
 
     StateManager states;
     SkeletonAnimation skeletonAnimation;
-    public AnimationReferenceAsset idle, walkfwd, walkback, attack1, attack2, attack3, gettingHit, death, win;
+    public AnimationReferenceAsset idle, walkfwd, walkback, attack1, attack2, attack3, gettingHit, death, win, block;
     InputHandler inputHandler;
     public string currentState;
     public string currentAnimation;
@@ -21,6 +21,7 @@ public class SpineAnimHandler : MonoBehaviour
     public bool att1;
     public bool att2;
     public bool att3;
+    public bool blok;
 
     public bool gotHit;
     public bool isDead;
@@ -75,12 +76,12 @@ public class SpineAnimHandler : MonoBehaviour
         
         switch (trackEntry.Animation.Name)
         {
-            case "Huk_L":
+            case "Hit_L":
                 Debug.Log("COLLIDER ATTACK!");
                 states.handleDC.OpenCollider(HandleDamageColliders.DCtype.up, 0.1f, HandleDamageColliders.DamageType.punch);
                 Debug.Log("Opening Collider");
                 break;
-            case "Huk_R":
+            case "Hit_R":
                 states.handleDC.OpenCollider(HandleDamageColliders.DCtype.bottom, 0.1f, HandleDamageColliders.DamageType.punch);
                 break;
             case "Kik_R":
@@ -177,6 +178,12 @@ public class SpineAnimHandler : MonoBehaviour
                 states.currentlyAttacking = true;
                 return;
             }
+        }
+
+        if(states.block)
+        {
+            SetAnimation(block, false, 1f);
+            return;
         }
         
         if (Mathf.Abs(states.horizontal) > 0.1f)
