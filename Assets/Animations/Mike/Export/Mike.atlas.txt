@@ -1,0 +1,16 @@
+Mike.png
+size:512,1024
+filter:Linear,Linear
+pma:true
+Arm_L
+bounds:2,2,123,412
+rotate:270
+Arm_R
+bounds:355,76,136,443
+Body
+bounds:258,520,234,408
+offsets:0,0,236,408
+Leg_L
+bounds:2,265,212,663
+Leg_R
+bounds:167,141,186,723
