@@ -1,0 +1,455 @@
+Using pre-set license
+Built from '2022.3/release' branch; Version is '2022.3.18f1 (d29bea25151d) revision 13802474'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Professional' Language: 'en' Physical Memory: 14188 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.18f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker9
+-projectPath
+C:/Users/Edvinasas/Desktop/GraduationGG/UnProject/ProjectStrike
+-logFile
+Logs/AssetImportWorker9.log
+-srvPort
+53691
+Successfully changed project path to: C:/Users/Edvinasas/Desktop/GraduationGG/UnProject/ProjectStrike
+C:/Users/Edvinasas/Desktop/GraduationGG/UnProject/ProjectStrike
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [38952] Host "[IP] 192.168.109.37 [Port] 0 [Flags] 2 [Guid] 3547737930 [EditorId] 3547737930 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5G9T523) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [38952] Host "[IP] 192.168.109.37 [Port] 0 [Flags] 2 [Guid] 3547737930 [EditorId] 3547737930 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5G9T523) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
+Refreshing native plugins compatible for Editor in 221.26 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.18f1 (d29bea25151d)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Edvinasas/Desktop/GraduationGG/UnProject/ProjectStrike/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2560)
+    Vendor:   NVIDIA
+    VRAM:     6009 MB
+    Driver:   31.0.15.3699
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56036
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.009773 seconds.
+- Loaded All Assemblies, in  0.424 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.284 seconds
+Domain Reload Profiling: 707ms
+	BeginReloadAssembly (143ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (76ms)
+	LoadAllAssembliesAndSetupDomain (149ms)
+		LoadAssemblies (140ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (147ms)
+			TypeCache.Refresh (145ms)
+				TypeCache.ScanAssembly (131ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (285ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (220ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (147ms)
+			ProcessInitializeOnLoadMethodAttributes (53ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.902 seconds
+Refreshing native plugins compatible for Editor in 8.18 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.899 seconds
+Domain Reload Profiling: 1794ms
+	BeginReloadAssembly (148ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (22ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (664ms)
+		LoadAssemblies (525ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (228ms)
+			TypeCache.Refresh (190ms)
+				TypeCache.ScanAssembly (173ms)
+			ScanForSourceGeneratedMonoScriptInfo (29ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (900ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (642ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (14ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (150ms)
+			ProcessInitializeOnLoadAttributes (414ms)
+			ProcessInitializeOnLoadMethodAttributes (44ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 7.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5093 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 83 unused Assets / (1.6 MB). Loaded Objects now: 5542.
+Memory consumption went from 191.3 MB to 189.7 MB.
+Total: 5.380400 ms (FindLiveObjects: 0.455000 ms CreateObjectMapping: 0.379500 ms MarkObjects: 3.566300 ms  DeleteObjects: 0.978800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/ShakePreset.cs: 351e5a62be5aa6a059907e726ad1475a -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTransitionsFXEditor.cs: 000453296324d3a7e9124b5a7a752b3a -> 
+  custom:scripting/monoscript/fileName/IPositionDeltaChanger.cs: 1214739dffd67399d0217cc9ed5d17a8 -> 
+  custom:scripting/monoscript/fileName/ConstantShakePreset.cs: 238884a54d8216a04b21243c1493d07d -> 
+  custom:scripting/monoscript/fileName/RenderPipelineDefines.cs: 1c45d48be747725818112decb6cc409e -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DGeometryBoundariesEditor.cs: b4e9cc368e76134073353413a3a8d6fe -> 
+  custom:scripting/monoscript/fileName/ProCamera2DHierarchyIcon.cs: ce5c4edd4f6500df0d9ca19f9a2093bf -> 
+  custom:scripting/monoscript/fileName/ObjectRotate.cs: 05a82779ab16c8f4027c0b4dfcf93dbc -> 
+  custom:scripting/monoscript/fileName/ProCamera2DEditorResources.cs: 504fc86520e0cda5b588816a46f9d1fc -> 
+  custom:scripting/monoscript/fileName/ProCamera2DLimitSpeed.cs: 3f03c3e12c730bbb35ab4aa98ba90a09 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DRepeater.cs: f3a018a60069022f6f0e081fff1c00ef -> 
+  custom:scripting/monoscript/fileName/MinMaxSliderDrawer.cs: ae19c3250d1c759c57a670682e3c91f2 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPanAndZoom.cs: 99b349ca7d4234163832577f28ad73dd -> 
+  custom:scripting/monoscript/fileName/ProCamera2DContentFitterEditor.cs: 20803b19926b6f3f18f3cd2e2603a9a1 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DZoomToFitTargetsEditor.cs: 12c6b6868270cf45c4eb794bd433dc08 -> 
+  custom:scripting/monoscript/fileName/PrefsData.cs: c2064cfa46df8ad6289e1e3d0ad8fdad -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/PoolMember.cs: f65cb39697897102b3ca9bdc1520e03c -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerZoomEditor.cs: 2cd3b1c372812b381f71cc6c35d2a592 -> 
+  custom:scripting/monoscript/fileName/PlayerInputBot.cs: 9a758a2e128e66a08abe41cb78d06b5c -> 
+  custom:scripting/monoscript/fileName/RotateTowardsMouse.cs: f2c87eeb244fbd0fdb15e138b9e11407 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/EnemyWander.cs: 3b8a9ce762611b3ec48e1a88eafcc87f -> 
+  custom:scripting/monoscript/fileName/ProCamera2DRails.cs: 0c1f3f06a5c40123a9ef15ee407c09d3 -> 
+  custom:scripting/monoscript/fileName/EnemySight.cs: 1cb9c81c0c718e5cd2cc9ae4237606f8 -> 
+  custom:scripting/monoscript/fileName/KDTree.cs: c76e73f76b43d5c1033b6bf818c450f7 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPointerInfluenceEditor.cs: 836215ce32115c541e0bec994c44f7e1 -> 
+  custom:scripting/monoscript/fileName/BoundariesAnimator.cs: 5dc73f5963ff57c7d20d155471e3dad5 -> 
+  custom:scripting/monoscript/fileName/BasePC2D.cs: 783c55b4f1c8189dbfb406aeec1b6acd -> 
+  custom:scripting/monoscript/fileName/GameOver.cs: a7460cd466cf204fc62b126bdf9bfdca -> 
+  custom:scripting/monoscript/fileName/ProCamera2DCameraWindowEditor.cs: 992b07fcad7f99d9b36653f632156d8f -> 
+  custom:scripting/monoscript/fileName/EnemyPatrol.cs: 634efd560278967c197d4dfcb2e6dadc -> 
+  custom:scripting/monoscript/fileName/ProCamera2DLetterbox.cs: 13d018c3bb7093622a76225d936ba0c9 -> 
+  custom:scripting/monoscript/fileName/Utils.cs: bda1ae8a7bf790a386b5795f6e1b2600 -> 40c528c300bfc0733192292a788cb076
+  custom:scripting/monoscript/fileName/ProCamera2DRooms.cs: 595aac24fa3c788892d9642a4edd41b7 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPanAndZoomEditor.cs: 52b6936447eb2477cf4cf870c8fe94e3 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DSpeedBasedZoomEditor.cs: 6ca9df08ea8f701f4bf4386fa4ccb2a3 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerBoundaries.cs: 845e55b66c82d02916c116f94011ac97 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DLimitDistance.cs: 64de34df606b91de5d8b25cda225cd2a -> 
+  custom:scripting/monoscript/fileName/ISizeOverrider.cs: 3be8d01ab861cca019f7f3b7b1a75d0c -> 
+  custom:scripting/monoscript/fileName/ShakeExample.cs: eca7ac3702545f991c74b9147d90313a -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTransitionsFX.cs: b28621885f658c2cbd6b3068d5a0d591 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DLimitDistanceEditor.cs: 46be52cae7cdb0becf9f44116f789739 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DContentFitter.cs: 9715069fec76c695f4e8d26b7912ed6a -> 
+  custom:scripting/monoscript/fileName/ObjectMove.cs: 5631b397dd8c5c15aa905ae098d5f5a4 -> 
+  custom:scripting/monoscript/fileName/IPreMover.cs: 7184283a4b26e2b2f17917e45aa11cb3 -> 
+  custom:scripting/monoscript/fileName/Door.cs: 44bc32a878dcbf49bbbc9c6b955b6fdc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/ProCamera2DForwardFocusEditor.cs: aaddf5ba5fe0cab336df4717bdc0bd5e -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/IPostMover.cs: afad6c17b8a4b72aa14bb5351ce69ac7 -> 
+  custom:scripting/monoscript/fileName/SwitchCameraProjection.cs: fbbed694d79bba87195a28f4656a843b -> 
+  custom:scripting/monoscript/fileName/ProCamera2DRepeaterEditor.cs: bf263d5ee6f44e865b79fb08c2c4fe0d -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerZoom.cs: ad0785ec11996b2c313c6fb812e3f20c -> 
+  custom:scripting/monoscript/fileName/ConstantShakePresetEditor.cs: f91642fccc8357bdc275c06f76b18b04 -> 
+  custom:scripting/monoscript/fileName/DoorKey.cs: 57724e7f4e1f6da248ff2ed6e3578699 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DForwardFocus.cs: fad4c32dd6ea87c25677364e31d4ed62 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/PlayerInput.cs: cc2fd01d563f12d3322a1104586e6cd4 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerInfluenceEditor.cs: 4d6b0892e35bc1a8ea8e5c3da01f0c4f -> 
+  custom:scripting/monoscript/fileName/EnemyFSM.cs: 2f51d57b9da56ca23c8f31d1576ff6ac -> 
+  custom:scripting/monoscript/fileName/PlayerHealth.cs: 2821131a2c8ab9ca03c5f8517c5a79f1 -> 
+  custom:scripting/monoscript/fileName/ISizeDeltaChanger.cs: 78a47d18c85e8d5251f41ad1b14171be -> 
+  custom:scripting/monoscript/fileName/EnemyAttack.cs: 419acd70f557cd82d0c52aaacb0dc733 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPixelPerfect.cs: 59c0ff012f8525d428a51acd80b32ec3 -> 
+  custom:scripting/monoscript/fileName/ScriptableObjectUtility.cs: 66a98d64a8afabca5c9e1e4f9584dfc4 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DRoomsEditor.cs: 211e9135005e8d94271cf49992c0c004 -> 
+  custom:scripting/monoscript/fileName/RoomsEventsExample.cs: 18b5bfdec0a448ff4fcf573a998d6554 -> 
+  custom:scripting/monoscript/fileName/EditorPrefsX.cs: b394801a4fe0ad26b618d163d96bdd85 -> 
+  custom:scripting/monoscript/fileName/ToggleTransitionsFX.cs: 402d027aab6d2ce8909a33024156ee57 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPointerInfluence.cs: 824e7a2e13762d02bab08f40a9f81d36 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DParallax.cs: 6f3d390800acca9c81e16ca18b253f0d -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPixelPerfectSprite.cs: 26e544fd4a2aa5d84fcad037ae0d7e31 -> 
+  custom:scripting/monoscript/fileName/CleanupMissingScripts.cs: c3a87154f3e24cab2f3281abd689d841 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DCameraWindow.cs: 2befe3f612ef7f9bd0721d6ac084c1f7 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DGeometryBoundaries.cs: 8ec903cf77956bed5338c3a1df971623 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DParallaxEditor.cs: 108c8bee4466bfeacfc0fdc1e13a7c34 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/BasicBlit.cs: 108afccc7eb4a9c8b816282a3cd5b5c4 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DShakeEditor.cs: 15fb4c60aa3eb0f83635d618ff79fa9e -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerRails.cs: 4256ab779ab2d2fa4ef1d8dbbd460fa2 -> 
+  custom:scripting/monoscript/fileName/Goal.cs: 31fefa627459a88a73781b8cb57d56b4 -> 
+  custom:scripting/monoscript/fileName/PlayerFire.cs: 6947c8b7ce2137d27f79bee76cd95f77 -> 
+  custom:scripting/monoscript/fileName/PatrolWaypoint.cs: b16392585b3654b0e5ec6ab1f9e4d98f -> 
+  custom:scripting/monoscript/fileName/ProCamera2DCinematicsEditor.cs: 22b6a3845391601385600726b6da65ed -> 
+  custom:scripting/monoscript/fileName/Bullet.cs: 7917d0c738471bbcafae87d5b3d4b08f -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPixelPerfectSpriteEditor.cs: 6328a0a873563577fdfc5b32f82f0866 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DZoomToFitTargets.cs: 0537cfc56c5db2364e0dd5e08e220aad -> 
+  custom:scripting/monoscript/fileName/ProCamera2DLimitSpeedEditor.cs: da2c078a07f98dbd2397c49a74e10618 -> 
+  custom:scripting/monoscript/fileName/DollyZoomExample.cs: fc7f269236a4351367bd930ecbe27946 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DCinematics.cs: c5f332886e09c37505f619efbb393d6b -> 
+  custom:scripting/monoscript/fileName/ShakePresetEditor.cs: 78db16c06ddd69b29eab8d41912e73b9 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DEditor.cs: 36e9cb1a257214bd77af473f201d7681 -> 
+  custom:scripting/monoscript/fileName/ProCamera2D.cs: 04971cca3a98a380eb9f44ccee30f2f0 -> 
+  custom:scripting/monoscript/fileName/MoveInColliderBoundaries.cs: 96760e4300de9f9b67960216edce33b2 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DRailsEditor.cs: 4e4e55ac33ecfb006f6d0483b54f1c73 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DNumericBoundaries.cs: ff2c70965e0034425379ec36a215dee9 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DParallaxObject.cs: a690641d684f2ba79c1e02ec68ed817a -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPixelPerfectEditor.cs: a67d847cd9613684a0a15f727f427792 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DSpeedBasedZoom.cs: 3df528b036dbef81f4515995338f894b -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerBoundariesEditor.cs: 8bb8a0ae5f1b8b432677148dc7219b41 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerRailsEditor.cs: 834614a750a67a3b32ac9dbe9cdd6d83 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DNumericBoundariesEditor.cs: f349b53335194dde60d3c9f62f1ea9aa -> 
+  custom:scripting/monoscript/fileName/ToggleCinematics.cs: 91cf057a6b312a06b0efef6ab13e07b2 -> 
+  custom:scripting/monoscript/fileName/MinMaxSliderAttribute.cs: bd7a2dd398b7e40a683ab5872df9a15e -> 
+  custom:scripting/monoscript/fileName/IPositionOverrider.cs: 4ac80a00daa263626d77b133d51e4415 -> 
+  custom:scripting/monoscript/fileName/Pool.cs: 3bf0b6f923d0879fb845fad73796bfb4 -> 
+  custom:scripting/monoscript/fileName/BaseTrigger.cs: c6ce88646c200f6caf8b6b6b1a9f8f8c -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerInfluence.cs: c470367137a71118e77aba34c18b7e5b -> 
+  custom:scripting/monoscript/fileName/ProCamera2DShake.cs: 88547a506c59a7c59b0a775707358114 -> 
+  custom:scripting/monoscript/fileName/CameraTarget.cs: a6c0d93840f076a8ee2569aa8deaa74b -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.685 seconds
+Refreshing native plugins compatible for Editor in 6.96 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.162 seconds
+Domain Reload Profiling: 2842ms
+	BeginReloadAssembly (190ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (14ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (44ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (406ms)
+		LoadAssemblies (489ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (15ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (2162ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (694ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (12ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (181ms)
+			ProcessInitializeOnLoadAttributes (436ms)
+			ProcessInitializeOnLoadMethodAttributes (45ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Refreshing native plugins compatible for Editor in 11.93 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5042 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 56 unused Assets / (1.6 MB). Loaded Objects now: 5547.
+Memory consumption went from 180.5 MB to 178.9 MB.
+Total: 12.032200 ms (FindLiveObjects: 2.674300 ms CreateObjectMapping: 0.790300 ms MarkObjects: 6.794200 ms  DeleteObjects: 1.771200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/ShakePreset.cs: 351e5a62be5aa6a059907e726ad1475a -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTransitionsFXEditor.cs: 000453296324d3a7e9124b5a7a752b3a -> 
+  custom:scripting/monoscript/fileName/IPositionDeltaChanger.cs: 1214739dffd67399d0217cc9ed5d17a8 -> 
+  custom:scripting/monoscript/fileName/ConstantShakePreset.cs: 238884a54d8216a04b21243c1493d07d -> 
+  custom:scripting/monoscript/fileName/RenderPipelineDefines.cs: 1c45d48be747725818112decb6cc409e -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DGeometryBoundariesEditor.cs: b4e9cc368e76134073353413a3a8d6fe -> 
+  custom:scripting/monoscript/fileName/ProCamera2DHierarchyIcon.cs: ce5c4edd4f6500df0d9ca19f9a2093bf -> 
+  custom:scripting/monoscript/fileName/ObjectRotate.cs: 05a82779ab16c8f4027c0b4dfcf93dbc -> 
+  custom:scripting/monoscript/fileName/ProCamera2DEditorResources.cs: 504fc86520e0cda5b588816a46f9d1fc -> 
+  custom:scripting/monoscript/fileName/ProCamera2DLimitSpeed.cs: 3f03c3e12c730bbb35ab4aa98ba90a09 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DRepeater.cs: f3a018a60069022f6f0e081fff1c00ef -> 
+  custom:scripting/monoscript/fileName/MinMaxSliderDrawer.cs: ae19c3250d1c759c57a670682e3c91f2 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPanAndZoom.cs: 99b349ca7d4234163832577f28ad73dd -> 
+  custom:scripting/monoscript/fileName/ProCamera2DContentFitterEditor.cs: 20803b19926b6f3f18f3cd2e2603a9a1 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DZoomToFitTargetsEditor.cs: 12c6b6868270cf45c4eb794bd433dc08 -> 
+  custom:scripting/monoscript/fileName/PrefsData.cs: c2064cfa46df8ad6289e1e3d0ad8fdad -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/PoolMember.cs: f65cb39697897102b3ca9bdc1520e03c -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerZoomEditor.cs: 2cd3b1c372812b381f71cc6c35d2a592 -> 
+  custom:scripting/monoscript/fileName/PlayerInputBot.cs: 9a758a2e128e66a08abe41cb78d06b5c -> 
+  custom:scripting/monoscript/fileName/RotateTowardsMouse.cs: f2c87eeb244fbd0fdb15e138b9e11407 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/EnemyWander.cs: 3b8a9ce762611b3ec48e1a88eafcc87f -> 
+  custom:scripting/monoscript/fileName/ProCamera2DRails.cs: 0c1f3f06a5c40123a9ef15ee407c09d3 -> 
+  custom:scripting/monoscript/fileName/EnemySight.cs: 1cb9c81c0c718e5cd2cc9ae4237606f8 -> 
+  custom:scripting/monoscript/fileName/KDTree.cs: c76e73f76b43d5c1033b6bf818c450f7 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPointerInfluenceEditor.cs: 836215ce32115c541e0bec994c44f7e1 -> 
+  custom:scripting/monoscript/fileName/BoundariesAnimator.cs: 5dc73f5963ff57c7d20d155471e3dad5 -> 
+  custom:scripting/monoscript/fileName/BasePC2D.cs: 783c55b4f1c8189dbfb406aeec1b6acd -> 
+  custom:scripting/monoscript/fileName/GameOver.cs: a7460cd466cf204fc62b126bdf9bfdca -> 
+  custom:scripting/monoscript/fileName/ProCamera2DCameraWindowEditor.cs: 992b07fcad7f99d9b36653f632156d8f -> 
+  custom:scripting/monoscript/fileName/EnemyPatrol.cs: 634efd560278967c197d4dfcb2e6dadc -> 
+  custom:scripting/monoscript/fileName/ProCamera2DLetterbox.cs: 13d018c3bb7093622a76225d936ba0c9 -> 
+  custom:scripting/monoscript/fileName/Utils.cs: bda1ae8a7bf790a386b5795f6e1b2600 -> 40c528c300bfc0733192292a788cb076
+  custom:scripting/monoscript/fileName/ProCamera2DRooms.cs: 595aac24fa3c788892d9642a4edd41b7 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPanAndZoomEditor.cs: 52b6936447eb2477cf4cf870c8fe94e3 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DSpeedBasedZoomEditor.cs: 6ca9df08ea8f701f4bf4386fa4ccb2a3 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerBoundaries.cs: 845e55b66c82d02916c116f94011ac97 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DLimitDistance.cs: 64de34df606b91de5d8b25cda225cd2a -> 
+  custom:scripting/monoscript/fileName/ISizeOverrider.cs: 3be8d01ab861cca019f7f3b7b1a75d0c -> 
+  custom:scripting/monoscript/fileName/ShakeExample.cs: eca7ac3702545f991c74b9147d90313a -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTransitionsFX.cs: b28621885f658c2cbd6b3068d5a0d591 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DLimitDistanceEditor.cs: 46be52cae7cdb0becf9f44116f789739 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DContentFitter.cs: 9715069fec76c695f4e8d26b7912ed6a -> 
+  custom:scripting/monoscript/fileName/ObjectMove.cs: 5631b397dd8c5c15aa905ae098d5f5a4 -> 
+  custom:scripting/monoscript/fileName/IPreMover.cs: 7184283a4b26e2b2f17917e45aa11cb3 -> 
+  custom:scripting/monoscript/fileName/Door.cs: 44bc32a878dcbf49bbbc9c6b955b6fdc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/ProCamera2DForwardFocusEditor.cs: aaddf5ba5fe0cab336df4717bdc0bd5e -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/IPostMover.cs: afad6c17b8a4b72aa14bb5351ce69ac7 -> 
+  custom:scripting/monoscript/fileName/SwitchCameraProjection.cs: fbbed694d79bba87195a28f4656a843b -> 
+  custom:scripting/monoscript/fileName/ProCamera2DRepeaterEditor.cs: bf263d5ee6f44e865b79fb08c2c4fe0d -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerZoom.cs: ad0785ec11996b2c313c6fb812e3f20c -> 
+  custom:scripting/monoscript/fileName/ConstantShakePresetEditor.cs: f91642fccc8357bdc275c06f76b18b04 -> 
+  custom:scripting/monoscript/fileName/DoorKey.cs: 57724e7f4e1f6da248ff2ed6e3578699 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DForwardFocus.cs: fad4c32dd6ea87c25677364e31d4ed62 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/PlayerInput.cs: cc2fd01d563f12d3322a1104586e6cd4 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerInfluenceEditor.cs: 4d6b0892e35bc1a8ea8e5c3da01f0c4f -> 
+  custom:scripting/monoscript/fileName/EnemyFSM.cs: 2f51d57b9da56ca23c8f31d1576ff6ac -> 
+  custom:scripting/monoscript/fileName/PlayerHealth.cs: 2821131a2c8ab9ca03c5f8517c5a79f1 -> 
+  custom:scripting/monoscript/fileName/ISizeDeltaChanger.cs: 78a47d18c85e8d5251f41ad1b14171be -> 
+  custom:scripting/monoscript/fileName/EnemyAttack.cs: 419acd70f557cd82d0c52aaacb0dc733 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPixelPerfect.cs: 59c0ff012f8525d428a51acd80b32ec3 -> 
+  custom:scripting/monoscript/fileName/ScriptableObjectUtility.cs: 66a98d64a8afabca5c9e1e4f9584dfc4 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DRoomsEditor.cs: 211e9135005e8d94271cf49992c0c004 -> 
+  custom:scripting/monoscript/fileName/RoomsEventsExample.cs: 18b5bfdec0a448ff4fcf573a998d6554 -> 
+  custom:scripting/monoscript/fileName/EditorPrefsX.cs: b394801a4fe0ad26b618d163d96bdd85 -> 
+  custom:scripting/monoscript/fileName/ToggleTransitionsFX.cs: 402d027aab6d2ce8909a33024156ee57 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPointerInfluence.cs: 824e7a2e13762d02bab08f40a9f81d36 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DParallax.cs: 6f3d390800acca9c81e16ca18b253f0d -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPixelPerfectSprite.cs: 26e544fd4a2aa5d84fcad037ae0d7e31 -> 
+  custom:scripting/monoscript/fileName/CleanupMissingScripts.cs: c3a87154f3e24cab2f3281abd689d841 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DCameraWindow.cs: 2befe3f612ef7f9bd0721d6ac084c1f7 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DGeometryBoundaries.cs: 8ec903cf77956bed5338c3a1df971623 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DParallaxEditor.cs: 108c8bee4466bfeacfc0fdc1e13a7c34 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/BasicBlit.cs: 108afccc7eb4a9c8b816282a3cd5b5c4 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DShakeEditor.cs: 15fb4c60aa3eb0f83635d618ff79fa9e -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerRails.cs: 4256ab779ab2d2fa4ef1d8dbbd460fa2 -> 
+  custom:scripting/monoscript/fileName/Goal.cs: 31fefa627459a88a73781b8cb57d56b4 -> 
+  custom:scripting/monoscript/fileName/PlayerFire.cs: 6947c8b7ce2137d27f79bee76cd95f77 -> 
+  custom:scripting/monoscript/fileName/PatrolWaypoint.cs: b16392585b3654b0e5ec6ab1f9e4d98f -> 
+  custom:scripting/monoscript/fileName/ProCamera2DCinematicsEditor.cs: 22b6a3845391601385600726b6da65ed -> 
+  custom:scripting/monoscript/fileName/Bullet.cs: 7917d0c738471bbcafae87d5b3d4b08f -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPixelPerfectSpriteEditor.cs: 6328a0a873563577fdfc5b32f82f0866 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DZoomToFitTargets.cs: 0537cfc56c5db2364e0dd5e08e220aad -> 
+  custom:scripting/monoscript/fileName/ProCamera2DLimitSpeedEditor.cs: da2c078a07f98dbd2397c49a74e10618 -> 
+  custom:scripting/monoscript/fileName/DollyZoomExample.cs: fc7f269236a4351367bd930ecbe27946 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DCinematics.cs: c5f332886e09c37505f619efbb393d6b -> 
+  custom:scripting/monoscript/fileName/ShakePresetEditor.cs: 78db16c06ddd69b29eab8d41912e73b9 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DEditor.cs: 36e9cb1a257214bd77af473f201d7681 -> 
+  custom:scripting/monoscript/fileName/ProCamera2D.cs: 04971cca3a98a380eb9f44ccee30f2f0 -> 
+  custom:scripting/monoscript/fileName/MoveInColliderBoundaries.cs: 96760e4300de9f9b67960216edce33b2 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DRailsEditor.cs: 4e4e55ac33ecfb006f6d0483b54f1c73 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DNumericBoundaries.cs: ff2c70965e0034425379ec36a215dee9 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DParallaxObject.cs: a690641d684f2ba79c1e02ec68ed817a -> 
+  custom:scripting/monoscript/fileName/ProCamera2DPixelPerfectEditor.cs: a67d847cd9613684a0a15f727f427792 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DSpeedBasedZoom.cs: 3df528b036dbef81f4515995338f894b -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerBoundariesEditor.cs: 8bb8a0ae5f1b8b432677148dc7219b41 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerRailsEditor.cs: 834614a750a67a3b32ac9dbe9cdd6d83 -> 
+  custom:scripting/monoscript/fileName/ProCamera2DNumericBoundariesEditor.cs: f349b53335194dde60d3c9f62f1ea9aa -> 
+  custom:scripting/monoscript/fileName/ToggleCinematics.cs: 91cf057a6b312a06b0efef6ab13e07b2 -> 
+  custom:scripting/monoscript/fileName/MinMaxSliderAttribute.cs: bd7a2dd398b7e40a683ab5872df9a15e -> 
+  custom:scripting/monoscript/fileName/IPositionOverrider.cs: 4ac80a00daa263626d77b133d51e4415 -> 
+  custom:scripting/monoscript/fileName/Pool.cs: 3bf0b6f923d0879fb845fad73796bfb4 -> 
+  custom:scripting/monoscript/fileName/BaseTrigger.cs: c6ce88646c200f6caf8b6b6b1a9f8f8c -> 
+  custom:scripting/monoscript/fileName/ProCamera2DTriggerInfluence.cs: c470367137a71118e77aba34c18b7e5b -> 
+  custom:scripting/monoscript/fileName/ProCamera2DShake.cs: 88547a506c59a7c59b0a775707358114 -> 
+  custom:scripting/monoscript/fileName/CameraTarget.cs: a6c0d93840f076a8ee2569aa8deaa74b -> 

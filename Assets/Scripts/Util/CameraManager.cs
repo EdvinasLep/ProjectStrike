@@ -26,21 +26,19 @@ public class CameraManager : MonoBehaviour
     public float xOffset = 0.3f;
     public float zOffset;
 
+    public float ambientMoveAmount = 0.5f;  
+    public float ambientMoveSpeed = 0.5f;   
+
+    private float ambientPhase = 0.0f;
+
     Camera cam;
 
-    public CameraType cType;
 
-    public enum CameraType
-    {
-        ortho,
-        persp
-    }
 
     private void Start()
     {
         cam = Camera.main;
         cameraHolder = cam.transform.parent;
-        cType = (cam.orthographic) ? CameraType.ortho : CameraType.persp;
     }
 
     private void FixedUpdate()
@@ -54,38 +52,26 @@ public class CameraManager : MonoBehaviour
         middlePoint.x += xOffset;
         middlePoint.z += zOffset;
 
-        switch (cType)
+        targetZ = -(2 * (half / 2));
+
+        if (Mathf.Abs(targetZ) < Mathf.Abs(zMin))
         {
-            //case CameraType.ortho:
-            //    cam.orthographicSize = 2 * (half / 2);
-            //    if (cam.orthographicSize > orthoMax)
-            //    {
-            //        cam.orthographicSize = orthoMax;
-            //    }
-
-            //    if (cam.orthographicSize < orthoMin)
-            //    {
-            //        cam.orthographicSize = orthoMin;
-            //    }
-            //    break;
-            case CameraType.persp:
-                targetZ = -(2 * (half / 2));
-
-                if (Mathf.Abs(targetZ) < Mathf.Abs(zMin))
-                {
-                    targetZ = zMin;
-                }
-
-                if (Mathf.Abs(targetZ) > Mathf.Abs(zMax))
-                {
-                    targetZ = zMax;
-                }
-
-                cam.transform.localPosition = new Vector3(0, 0.5f, targetZ);
-                break;
+            targetZ = zMin;
         }
 
-        cameraHolder.transform.position = Vector3.Lerp(cameraHolder.transform.position, middlePoint, Time.deltaTime * 5);
+        if (Mathf.Abs(targetZ) > Mathf.Abs(zMax))
+        {
+            targetZ = zMax;
+        }
+
+        cam.transform.localPosition = new Vector3(0, 0.5f, targetZ);
+
+        float ambientX = Mathf.Sin(ambientPhase) * ambientMoveAmount;
+        float ambientY = Mathf.Cos(ambientPhase) * ambientMoveAmount;
+        ambientPhase += ambientMoveSpeed * Time.deltaTime;
+
+        Vector3 ambientPosition = new Vector3(middlePoint.x + ambientX, middlePoint.y + ambientY, middlePoint.z);
+        cameraHolder.transform.position = Vector3.Lerp(cameraHolder.transform.position, ambientPosition, Time.deltaTime * 5);
     }
 
     public static CameraManager instance;
