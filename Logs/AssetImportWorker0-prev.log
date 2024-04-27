@@ -15,7 +15,7 @@ C:/Users/Edvinasas/Desktop/GraduationGG/UnProject/ProjectStrike
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49990
+57193
 Successfully changed project path to: C:/Users/Edvinasas/Desktop/GraduationGG/UnProject/ProjectStrike
 C:/Users/Edvinasas/Desktop/GraduationGG/UnProject/ProjectStrike
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/Edvinasas/Desktop/GraduationGG/UnProject/ProjectStrike
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [32044] Host "[IP] 192.168.109.37 [Port] 0 [Flags] 2 [Guid] 3213740553 [EditorId] 3213740553 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5G9T523) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [43084] Host "[IP] 192.168.109.37 [Port] 0 [Flags] 2 [Guid] 3810119961 [EditorId] 3810119961 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5G9T523) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [32044] Host "[IP] 192.168.109.37 [Port] 0 [Flags] 2 [Guid] 3213740553 [EditorId] 3213740553 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5G9T523) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [43084] Host "[IP] 192.168.109.37 [Port] 0 [Flags] 2 [Guid] 3810119961 [EditorId] 3810119961 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5G9T523) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 20.87 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 14.24 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.18f1 (d29bea25151d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56144
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56728
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007537 seconds.
-- Loaded All Assemblies, in  0.406 seconds
+Registered in 0.010188 seconds.
+- Loaded All Assemblies, in  0.401 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.348 seconds
-Domain Reload Profiling: 752ms
-	BeginReloadAssembly (124ms)
+- Finished resetting the current domain, in  0.305 seconds
+Domain Reload Profiling: 704ms
+	BeginReloadAssembly (130ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (40ms)
+	RebuildCommonClasses (42ms)
 	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (63ms)
-	LoadAllAssembliesAndSetupDomain (166ms)
-		LoadAssemblies (122ms)
+	initialDomainReloadingComplete (68ms)
+	LoadAllAssembliesAndSetupDomain (150ms)
+		LoadAssemblies (128ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (164ms)
-			TypeCache.Refresh (163ms)
-				TypeCache.ScanAssembly (147ms)
+		AnalyzeDomain (147ms)
+			TypeCache.Refresh (145ms)
+				TypeCache.ScanAssembly (130ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (349ms)
+	FinalizeReload (306ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (283ms)
+		SetupLoadedEditorAssemblies (240ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (14ms)
+			SetLoadedEditorAssemblies (9ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (5ms)
-			ProcessInitializeOnLoadAttributes (185ms)
-			ProcessInitializeOnLoadMethodAttributes (68ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (166ms)
+			ProcessInitializeOnLoadMethodAttributes (51ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,55 +115,55 @@ Domain Reload Profiling: 752ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.876 seconds
-Refreshing native plugins compatible for Editor in 5.50 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.958 seconds
+Refreshing native plugins compatible for Editor in 6.32 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.829 seconds
-Domain Reload Profiling: 1698ms
-	BeginReloadAssembly (151ms)
+- Finished resetting the current domain, in  0.831 seconds
+Domain Reload Profiling: 1784ms
+	BeginReloadAssembly (190ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (25ms)
-	RebuildCommonClasses (33ms)
+		CreateAndSetChildDomain (33ms)
+	RebuildCommonClasses (37ms)
 	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (44ms)
-	LoadAllAssembliesAndSetupDomain (633ms)
-		LoadAssemblies (492ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (665ms)
+		LoadAssemblies (527ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (228ms)
-			TypeCache.Refresh (194ms)
-				TypeCache.ScanAssembly (178ms)
-			ScanForSourceGeneratedMonoScriptInfo (26ms)
+		AnalyzeDomain (242ms)
+			TypeCache.Refresh (207ms)
+				TypeCache.ScanAssembly (188ms)
+			ScanForSourceGeneratedMonoScriptInfo (28ms)
 			ResolveRequiredComponents (6ms)
-	FinalizeReload (829ms)
+	FinalizeReload (831ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (654ms)
+		SetupLoadedEditorAssemblies (648ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (6ms)
-			SetLoadedEditorAssemblies (7ms)
+			SetLoadedEditorAssemblies (10ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (132ms)
-			ProcessInitializeOnLoadAttributes (452ms)
-			ProcessInitializeOnLoadMethodAttributes (47ms)
-			AfterProcessingInitializeOnLoad (9ms)
+			BeforeProcessingInitializeOnLoad (138ms)
+			ProcessInitializeOnLoadAttributes (439ms)
+			ProcessInitializeOnLoadMethodAttributes (46ms)
+			AfterProcessingInitializeOnLoad (7ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 7.41 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 6.35 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5092 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 83 unused Assets / (1.6 MB). Loaded Objects now: 5541.
-Memory consumption went from 191.1 MB to 189.5 MB.
-Total: 5.982500 ms (FindLiveObjects: 0.720000 ms CreateObjectMapping: 0.414900 ms MarkObjects: 3.791300 ms  DeleteObjects: 1.055000 ms)
+Unloading 5093 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 83 unused Assets / (1.5 MB). Loaded Objects now: 5542.
+Memory consumption went from 191.0 MB to 189.5 MB.
+Total: 5.378600 ms (FindLiveObjects: 0.495300 ms CreateObjectMapping: 0.435300 ms MarkObjects: 3.590100 ms  DeleteObjects: 0.856900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -178,232 +178,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 856043.530225 seconds.
-  path: Assets/Graphics/UI/Saira_ExtraCondensed-ExtraBoldItalic SDF.asset
-  artifactKey: Guid(2898ae8fe0682dd40a2cbde9bd4b9620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphics/UI/Saira_ExtraCondensed-ExtraBoldItalic SDF.asset using Guid(2898ae8fe0682dd40a2cbde9bd4b9620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cfa82d4661a2225feabb582222d4bfb') in 0.150879 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 6
-========================================================================
-Received Import Request.
-  Time since last request: 6.844263 seconds.
-  path: Assets/Graphics/UI/splash.png
-  artifactKey: Guid(d8d6f331dcfa9f146a30ff8b7e2ebb76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphics/UI/splash.png using Guid(d8d6f331dcfa9f146a30ff8b7e2ebb76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22bf61a0db109b10b9202624d3aceed3') in 0.028347 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 20.275576 seconds.
-  path: Assets/Graphics/UI/splash.png
-  artifactKey: Guid(d8d6f331dcfa9f146a30ff8b7e2ebb76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphics/UI/splash.png using Guid(d8d6f331dcfa9f146a30ff8b7e2ebb76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90942c48fa72597895f0aee0401b9b16') in 0.042858 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 821.767985 seconds.
-  path: Assets/Graphics/Material
-  artifactKey: Guid(a1d79823afbf5544283f3f5d8edfe576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphics/Material using Guid(a1d79823afbf5544283f3f5d8edfe576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3f184affa1e0a645965b4a19e87588a') in 0.000878 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 50.578207 seconds.
-  path: Assets/Graphics/Material/Alham.physicsMaterial2D
-  artifactKey: Guid(f204f4264caf7564b914a52e896d52de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphics/Material/Alham.physicsMaterial2D using Guid(f204f4264caf7564b914a52e896d52de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c0b709c546b75c63d41ae82eff4d90b') in 0.001117 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 86.231737 seconds.
-  path: Assets/Graphics/Material/Outline.mat
-  artifactKey: Guid(a8685c3d441a01e41b9fd24ae8c53c14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphics/Material/Outline.mat using Guid(a8685c3d441a01e41b9fd24ae8c53c14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31f791ffc14010504e631134187c622c') in 0.032041 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 21.663132 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/Goblins/dagger.png
-  artifactKey: Guid(2412d1d8498463f49ae6ebe3a66ffae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/Goblins/dagger.png using Guid(2412d1d8498463f49ae6ebe3a66ffae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '520bc6db83829a138d7c1aebefbd791f') in 0.025089 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/Dragon/dragon.png
-  artifactKey: Guid(6bc52290ef03f2846ba38d67e2823598) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/Dragon/dragon.png using Guid(6bc52290ef03f2846ba38d67e2823598) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e958341ff8f63ef93f06d58676059342') in 0.029242 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/Dragon/dragon3.png
-  artifactKey: Guid(9a960996718ee9a4a9872c1a38fc3946) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/Dragon/dragon3.png using Guid(9a960996718ee9a4a9872c1a38fc3946) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1b80b570bdc5925600bbded89e4cf24') in 0.026087 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/Dragon/dragon_dragon.mat
-  artifactKey: Guid(3277fd5561d95724e83c6ca4a1dd28a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/Dragon/dragon_dragon.mat using Guid(3277fd5561d95724e83c6ca4a1dd28a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75d48fd57ef3b7b3c314ab1b3293c4bf') in 0.044184 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/Dragon/dragon4.png
-  artifactKey: Guid(390eb45b86ad95d40855f1cedc5ebe86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/Dragon/dragon4.png using Guid(390eb45b86ad95d40855f1cedc5ebe86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7af2e863677ccd8d27e71e54eb26c8b7') in 0.023021 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/Gauge/Gauge_Material.mat
-  artifactKey: Guid(9ab9bdbda020b3e46b5a3b0558ef591d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/Gauge/Gauge_Material.mat using Guid(9ab9bdbda020b3e46b5a3b0558ef591d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8e94572cfcfef738c69a3e8adc2746c') in 0.016163 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/Gauge/Gauge_SkeletonData.asset
-  artifactKey: Guid(22b19a38b21c15a48854f0db86b0b7d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/Gauge/Gauge_SkeletonData.asset using Guid(22b19a38b21c15a48854f0db86b0b7d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22b9758b185a20e4f5a910924b8f3875') in 0.308080 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 92
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Spine Examples/Other Examples/Mix and Match Equip Assets/Goggles Tactical.asset
-  artifactKey: Guid(518292925164b9849b22d3ab5c86de18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Other Examples/Mix and Match Equip Assets/Goggles Tactical.asset using Guid(518292925164b9849b22d3ab5c86de18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edb2155c0bf9b6e78d146bfa6fab4744') in 0.002817 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/spineboy-unity/Equips/gun-freeze.png
-  artifactKey: Guid(02c4cbcce432ae74bb2d965060e64d29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/spineboy-unity/Equips/gun-freeze.png using Guid(02c4cbcce432ae74bb2d965060e64d29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9222462c1cf377bcc0d5844de15bf41') in 0.030073 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Spine/Editor/spine-unity/Editor/GUI/icon-clipping.png
-  artifactKey: Guid(f5fff1b5caee03642ab77c9984b4bb6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine/Editor/spine-unity/Editor/GUI/icon-clipping.png using Guid(f5fff1b5caee03642ab77c9984b4bb6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05bbe0d730542d5faebbfe05a09438b0') in 0.020174 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Spine/Editor/spine-unity/Editor/GUI/icon-warning.png
-  artifactKey: Guid(754d724c1bd750048852e8cf3d4a05ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine/Editor/spine-unity/Editor/GUI/icon-warning.png using Guid(754d724c1bd750048852e8cf3d4a05ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87443e87ea81ee3376cca85c697f71cd') in 0.022956 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Spine Examples/Other Examples/Mix and Match Equip Assets/Goggles Normal.asset
-  artifactKey: Guid(29c2d64b97744934bb20199d1de50ced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Other Examples/Mix and Match Equip Assets/Goggles Normal.asset using Guid(29c2d64b97744934bb20199d1de50ced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ff159aa78764b8d39118e2a48269f73') in 0.001910 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/Goblins/goblins_Atlas.asset
-  artifactKey: Guid(bb54bdab69af2bb49b35577b80dcaad9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/Goblins/goblins_Atlas.asset using Guid(bb54bdab69af2bb49b35577b80dcaad9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9ceaf186ecbffa5d82bbf4a73a55510') in 0.002113 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/Dragon/dragon_SkeletonData.asset
-  artifactKey: Guid(76506fa7fbeed084ab2dfb084648c628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/Dragon/dragon_SkeletonData.asset using Guid(76506fa7fbeed084ab2dfb084648c628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26244dece2c02347b0aba89611d4488f') in 0.065889 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 22
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/spineboy-unity/ReferenceAssets/idlebag.asset
-  artifactKey: Guid(305a9a349ff5861408c923de95b10585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/spineboy-unity/ReferenceAssets/idlebag.asset using Guid(305a9a349ff5861408c923de95b10585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fcca536d7b20c3798fb73a1ecdd22fb') in 0.077295 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 14
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/spineboy-unity/ReferenceAssets/gun toss.asset
-  artifactKey: Guid(7e027f92ba53df14da2f0814877d1069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/spineboy-unity/ReferenceAssets/gun toss.asset using Guid(7e027f92ba53df14da2f0814877d1069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3d03a2ab489e8cb0bf19eafaffdb162') in 0.056736 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 14
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Spine/Editor/spine-unity/Editor/GUI/icon-boundingBox.png
-  artifactKey: Guid(955aed20030d0504b8a9c6934a5cb47a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine/Editor/spine-unity/Editor/GUI/icon-boundingBox.png using Guid(955aed20030d0504b8a9c6934a5cb47a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3abc6f7315925882702cf9f6656550dd') in 0.020357 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/Dragon/dragon_dragon6.mat
-  artifactKey: Guid(df19a30178772d14895780e0cbd7c25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/Dragon/dragon_dragon6.mat using Guid(df19a30178772d14895780e0cbd7c25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cf13115f2ef818baba03026c28ed6b1') in 0.016451 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/Goblins/goblins_SkeletonData.asset
-  artifactKey: Guid(2e4e11d4dd87d844a876d18c4d76a612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/Goblins/goblins_SkeletonData.asset using Guid(2e4e11d4dd87d844a876d18c4d76a612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bf529a05b5e306cc0b9a60d0fa212dc') in 0.049577 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/Gauge/Gauge.png
-  artifactKey: Guid(a11301aad15ed6b4995485a02a81b132) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/Gauge/Gauge.png using Guid(a11301aad15ed6b4995485a02a81b132) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d4bc092619525d7a6770d8fbc350c43') in 0.021488 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/Raptor/ReferenceAssets/gungrab.asset
-  artifactKey: Guid(f8a357da5599fa342beda596bc86bc35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/Raptor/ReferenceAssets/gungrab.asset using Guid(f8a357da5599fa342beda596bc86bc35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c566b3696755ad813cdbf654a46c7c3d') in 0.077476 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 14
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Spine Examples/Spine Skeletons/Raptor/ReferenceAssets/gunkeep.asset
-  artifactKey: Guid(d1426f136e8d57343a64e6be7454418b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Spine Examples/Spine Skeletons/Raptor/ReferenceAssets/gunkeep.asset using Guid(d1426f136e8d57343a64e6be7454418b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c07d0cf161e20eb337614693ad4bcfc5') in 0.048921 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 14
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0

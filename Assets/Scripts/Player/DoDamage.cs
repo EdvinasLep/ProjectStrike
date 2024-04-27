@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static HandleDamageColliders;
+using static UnityEditor.VersionControl.Asset;
 
 public class DoDamage : MonoBehaviour
 {
@@ -12,14 +14,16 @@ public class DoDamage : MonoBehaviour
     {
         states = GetComponentInParent<StateManager>();
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponentInParent<StateManager>())
+        if (collision.GetComponentInParent<StateManager>())
         {
             StateManager oState = collision.GetComponentInParent<StateManager>();
-            if(oState != states)
+            if (oState != states)
             {
-                if(!oState.currentlyAttacking)
+                Debug.Log("TriggerEntered");
+                if (!oState.currentlyAttacking)
                 {
                     switch (damageType)
                     {
@@ -37,9 +41,16 @@ public class DoDamage : MonoBehaviour
                             Debug.Log(damageType.ToString());
                             break;
                     }
-                    
+
                 }
             }
         }
     }
 }
+
+
+
+
+
+
+

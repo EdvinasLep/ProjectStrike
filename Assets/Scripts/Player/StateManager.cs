@@ -82,14 +82,6 @@ public class StateManager : MonoBehaviour
 
         onGround = isOnGround();
 
-        //if (healthSlider != null && energySlider != null && blockSlider != null)
-        //{
-        //    healthSlider.value = health * 0.01f;
-        //    //energySlider.value = energy * 0.01f;
-        //    //blockSlider.value = blockHealth * 0.01f;
-        //}
-
-
         if(chainCount != null)
         {
             
@@ -223,7 +215,7 @@ public class StateManager : MonoBehaviour
                                 , 0.5f
                                 );
 
-                            StartCoroutine(CloseImmortality(1f));
+                            //StartCoroutine(CloseImmortality(1f));
                             break;
                         case HandleDamageColliders.DamageType.ultimate:
                             handleMovement.AddVelocityOnCharacter(
@@ -231,7 +223,7 @@ public class StateManager : MonoBehaviour
                                 , 0.5f
                                 );
 
-                            StartCoroutine(CloseImmortality(1f));
+                            //StartCoroutine(CloseImmortality(1f));
                             break;
                     }
                     if (blood != null)

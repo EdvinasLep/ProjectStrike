@@ -35,7 +35,6 @@ public class SelectScreenManager : MonoBehaviour, IPointerEnterHandler, IPointer
     public TMP_Text char2;
 
 
-
     #region Singleton
     public static SelectScreenManager instance;
     public static SelectScreenManager GetInstance()
@@ -47,6 +46,7 @@ public class SelectScreenManager : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         instance = this;
     }
+
     #endregion
     void Start()
     {
@@ -77,6 +77,8 @@ public class SelectScreenManager : MonoBehaviour, IPointerEnterHandler, IPointer
                 y++;
             }
         }
+
+
     }
 
     // Update is called once per frame

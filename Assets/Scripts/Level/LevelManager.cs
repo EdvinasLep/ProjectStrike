@@ -309,13 +309,13 @@ public class LevelManager : MonoBehaviour
             {
                 charM.players[1].score++;
                 targetPlayer = charM.players[1].playerStates;
-                levelUI.AddWinIndicator(1);
+                levelUI.AddWinIndicator(1, charM.players[1].score);
             }
             else
             {
                 charM.players[0].score++;
                 targetPlayer = charM.players[0].playerStates;
-                levelUI.AddWinIndicator(0);
+                levelUI.AddWinIndicator(0, (int)charM.players[1].score);
             }
 
             retVal = charM.returnPlayerFromStates(targetPlayer);

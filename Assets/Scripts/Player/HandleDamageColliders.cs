@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static HandleDamageColliders;
 
 public class HandleDamageColliders : MonoBehaviour
 {
     public GameObject[] damageCollidersLeft;
     public GameObject[] damageCollidersRight;
+    public DoDamage     doDamage;
+    DamageType damageType;
+
+    private bool activated;
 
     public enum DamageType
     {
@@ -26,6 +31,7 @@ public class HandleDamageColliders : MonoBehaviour
     private void Start()
     {
         states = GetComponent<StateManager>();
+        doDamage = GetComponent<DoDamage>();
         CloseCollliders();
     }
 
@@ -39,41 +45,14 @@ public class HandleDamageColliders : MonoBehaviour
         {
             StartCoroutine(OpenCollider(damageCollidersRight, 1, delay, damageType));
         }
-        //if (states.lookRight)
-        //{
-        //    if(type == DCtype.bottom)
-        //    {
-        //        StartCoroutine(OpenCollider(damageCollidersLeft, 0, delay, damageType));
-        //    }
-        //    else
-        //    {
-        //        StartCoroutine(OpenCollider(damageCollidersLeft, 1, delay, damageType));
-        //    }
-        //    //switch (type)
-        //    //{
-        //    //    case DCtype.bottom:
-        //    //        StartCoroutine(OpenCollider(damageCollidersLeft, 0, delay, damageType));
-        //    //        break;
-        //    //        case DCtype.up:
-        //    //        StartCoroutine(OpenCollider(damageCollidersLeft, 1, delay, damageType));
-        //    //        break;
-        //    //}
-        //}
-        //else
-        //{
-        //    Debug.Log("AllhamDullilah");
-            
-        //    //switch (type)
-        //    //{
-        //    //    case DCtype.bottom:
-        //    //        StartCoroutine(OpenCollider(damageCollidersRight, 0, delay, damageType));
-        //    //        break;
-        //    //    case DCtype.up:
-        //    //        StartCoroutine(OpenCollider(damageCollidersRight, 1, delay, damageType));
-        //    //        break;
-        //    //}
-        //}
+    }
 
+    public void FixedUpdate()
+    {
+        if(activated)
+        {
+            //doDamage.checkOverlap();
+        }
     }
 
     IEnumerator OpenCollider(GameObject[] array, int index, float delay, DamageType damageType)
@@ -86,6 +65,7 @@ public class HandleDamageColliders : MonoBehaviour
 
     public void CloseCollliders()
     {
+
         for(int i = 0; i < damageCollidersLeft.Length; i++)
         {
             damageCollidersLeft[i].SetActive(false);

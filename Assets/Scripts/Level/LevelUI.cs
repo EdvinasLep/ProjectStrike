@@ -30,9 +30,25 @@ public class LevelUI : MonoBehaviour {
         instance = this;
     }
 
-    public void AddWinIndicator(int player)
+    public void AddWinIndicator(int player, int score)
     {
+        //if (score == 0)
+        //{
+        //    Transform existingIndicator = winIndicatorGrids[player].transform.GetChild(0);
+        //    Destroy(existingIndicator.gameObject);
+        //    Debug.Log("INDICATOR REMOVED");
+        //}
+        //else if (score == 1)
+        //{
+        //    Transform existingIndicator = winIndicatorGrids[player].transform.GetChild(1);
+        //    Destroy(existingIndicator.gameObject);
+        //}
+        Transform existingIndicator = winIndicatorGrids[player].transform.GetChild(0);
+        Destroy(existingIndicator.gameObject);
+        Debug.Log("INDICATOR REMOVED");
+
         GameObject go = Instantiate(winIndicator, transform.position, Quaternion.identity) as GameObject;
         go.transform.SetParent(winIndicatorGrids[player].transform);
+        go.transform.localScale = Vector3.one;
     }
 }

@@ -381,6 +381,7 @@ MonoBehaviour:
   damageCollidersRight:
   - {fileID: 4858537404215528665}
   - {fileID: 4431779471569090349}
+  doDamage: {fileID: 0}
 --- !u!114 &788669069436367580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,7 +425,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &8028678545946463239
@@ -440,6 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 0
+  activated: 0
 --- !u!1 &2050512616377710356
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,6 +533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 0
+  activated: 0
 --- !u!1 &2669840163113218350
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +578,7 @@ GameObject:
   - component: {fileID: 7375402693231200044}
   - component: {fileID: 9116753671669162187}
   - component: {fileID: 6624843037720162257}
+  - component: {fileID: 1803374111623993082}
   m_Layer: 8
   m_Name: Up (1)
   m_TagString: Untagged
@@ -655,6 +659,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 0
+  activated: 0
+--- !u!50 &1803374111623993082
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431779471569090349}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4858537404215528665
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,6 +778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 0
+  activated: 0
 --- !u!1 &6926648014305424025
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,6 +870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 1
+  activated: 0
 --- !u!1 &7541437217566301619
 GameObject:
   m_ObjectHideFlags: 0
