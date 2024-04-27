@@ -8,11 +8,12 @@ public class ButtonRef : MonoBehaviour {
     public GameObject selectIndicator;
     private TextMeshProUGUI tmpText;
 
-    public bool selected;
+    public bool selected = false;
 
     void Start()
     {
         tmpText = selectIndicator.GetComponentInChildren<TextMeshProUGUI>();
+        //tmpText.fontMaterial.SetFloat(ShaderUtilities.ID_UnderlayOffsetX, 0);
     }
 
     void Update()
@@ -20,10 +21,12 @@ public class ButtonRef : MonoBehaviour {
         if(selected)
         {
             tmpText.fontMaterial.SetFloat(ShaderUtilities.ID_UnderlayOffsetX, 1);
+            tmpText.fontMaterial.SetFloat(ShaderUtilities.ID_UnderlayDilate, 1);
         }
         else
         {
             tmpText.fontMaterial.SetFloat(ShaderUtilities.ID_UnderlayOffsetX, 0);
+            tmpText.fontMaterial.SetFloat(ShaderUtilities.ID_UnderlayDilate, 0);
         }
     }
 }

@@ -19,6 +19,8 @@ public class LevelUI : MonoBehaviour {
     public GameObject[] winIndicatorGrids;
     public GameObject winIndicator;
 
+    public GameObject[] portraitContainer;
+
     public static LevelUI instance;
     public static LevelUI GetInstance()
     {
@@ -50,5 +52,19 @@ public class LevelUI : MonoBehaviour {
         GameObject go = Instantiate(winIndicator, transform.position, Quaternion.identity) as GameObject;
         go.transform.SetParent(winIndicatorGrids[player].transform);
         go.transform.localScale = Vector3.one;
+    }
+
+    public void AddPortrait(int player, GameObject portrait)
+    {
+        GameObject go = Instantiate(portrait, transform.position, Quaternion.identity)as GameObject;
+        go.transform.SetParent(portraitContainer[player].transform);
+        go.transform.localScale = Vector3.one * 1.2f;
+
+        if (player == 1)
+        {
+            Vector3 flip = go.transform.localScale;
+            flip.x *= -1;
+            go.transform.localScale = flip;
+        }
     }
 }

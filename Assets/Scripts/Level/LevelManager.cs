@@ -137,6 +137,8 @@ public class LevelManager : MonoBehaviour
             charM.players[i].sliders.energySlider = levelUI.energySliders[i];
             charM.players[i].sliders.blockSlider = levelUI.blockSliders[i];
             charM.players[i].sliders.delayedHealthSlider = levelUI.delayedHealthSlider[i];
+
+            levelUI.AddPortrait(i, charM.players[i].portraitPrefab);
             camM.players.Add(go.transform);
         }
         yield return null;

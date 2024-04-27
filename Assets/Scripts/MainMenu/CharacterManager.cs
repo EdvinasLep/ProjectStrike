@@ -60,6 +60,7 @@ public class CharacterBase
 {
     public string charId;
     public GameObject prefab;
+    public GameObject portrait;
 }
 
 [System.Serializable]
@@ -70,6 +71,7 @@ public class PlayerBase
     public PlayerType playerType;
     public bool hasCharacter;
     public GameObject playerPrefab;
+    public GameObject portraitPrefab;
     public StateManager playerStates;
     public SmoothSlider sliders;
     public int score;

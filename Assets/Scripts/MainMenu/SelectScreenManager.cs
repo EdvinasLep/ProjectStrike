@@ -191,6 +191,9 @@ public class SelectScreenManager : MonoBehaviour, IPointerEnterHandler, IPointer
             p1.playerBase.playerPrefab =
                 charManager.returnCharacterWithID(p1.activePotrait.characterId).prefab;
 
+            p1.playerBase.portraitPrefab =
+                charManager.returnCharacterWithID(p1.activePotrait.characterId).portrait;
+
             p1.playerBase.hasCharacter = true;
 
             toggleSelectedPortrait(p1);
@@ -215,6 +218,9 @@ public class SelectScreenManager : MonoBehaviour, IPointerEnterHandler, IPointer
                     int ranValue = Random.Range(0, potraitPrefabs.Length);
 
                     charManager.players[i].playerPrefab =
+                        charManager.returnCharacterWithID(potraitPrefabs[ranValue].characterId).prefab;
+
+                    charManager.players[i].portraitPrefab =
                         charManager.returnCharacterWithID(potraitPrefabs[ranValue].characterId).prefab;
 
                     Debug.Log(potraitPrefabs[ranValue].characterId);

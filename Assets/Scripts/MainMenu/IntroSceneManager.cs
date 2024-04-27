@@ -20,6 +20,10 @@ public class IntroSceneManager : MonoBehaviour
     void Start()
     {
         menuObj.SetActive(false);
+
+        menuOptions[0].selected = true;
+        menuOptions[1].selected = false;
+        menuOptions[2].selected = false;
     }
 
     // Update is called once per frame

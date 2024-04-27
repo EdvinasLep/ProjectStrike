@@ -45,12 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfUsers: 2
+  egypt: 0
+  siberia: 0
   players:
   - playerId: 
     inputId: 1
     playerType: 0
     hasCharacter: 0
     playerPrefab: {fileID: 0}
+    portraitPrefab: {fileID: 0}
     playerStates: {fileID: 0}
     sliders: {fileID: 0}
     score: 0
@@ -59,19 +62,26 @@ MonoBehaviour:
     playerType: 0
     hasCharacter: 0
     playerPrefab: {fileID: 0}
+    portraitPrefab: {fileID: 0}
     playerStates: {fileID: 0}
     sliders: {fileID: 0}
     score: 0
   characterList:
   - charId: Nadia
     prefab: {fileID: 787970928093318169, guid: 2a641ca90e022be46ab792f31d5fe85f, type: 3}
+    portrait: {fileID: 8484401764059374396, guid: 8961e9db9a675b2459846567a68ad432, type: 3}
   - charId: Mike
     prefab: {fileID: 787970928093318169, guid: c91ec749c4265e84f9c2f0316b809be6, type: 3}
+    portrait: {fileID: 2662661548141331952, guid: d1553713194717d41bd212002bf79917, type: 3}
   - charId: Ivan
     prefab: {fileID: 1182957740529642209, guid: 1816af3a1a9ffa84db1b6df74864e538, type: 3}
+    portrait: {fileID: 513509762315531827, guid: 6395bb025e175c0428afc6f5770b73bd, type: 3}
   - charId: Hikaru
     prefab: {fileID: 1182957740529642209, guid: ee7332a233fa1d44394f233cbdcc4918, type: 3}
+    portrait: {fileID: 705621382961800304, guid: 2cbd530448960a94293aa33d34ff346b, type: 3}
   - charId: Luna
     prefab: {fileID: 1182957740529642209, guid: 463edf1b3986d5d4fb03594c5c2e2386, type: 3}
+    portrait: {fileID: 0}
   - charId: Marek
     prefab: {fileID: 1182957740529642209, guid: 8f0628cd19bd7ea49bdbc6456de29daa, type: 3}
+    portrait: {fileID: 0}
