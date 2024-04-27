@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spine-unity", "spine-unity.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spine-unity-editor", "spine-unity-editor.csproj", "{5286DAD7-70CF-A58F-31D7-7A2125BD48C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{6A67324C-38F0-C49F-B9F2-F6C7BD8616EF}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spine-csharp", "spine-csharp.csproj", "{ECA9A1A6-B14C-EEF3-16F5-1A612A907E4F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{97AB6AF5-73C1-1EF0-3E73-7DA1A3B5911A}"
@@ -31,6 +33,10 @@ Global
 		{5286DAD7-70CF-A58F-31D7-7A2125BD48C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5286DAD7-70CF-A58F-31D7-7A2125BD48C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5286DAD7-70CF-A58F-31D7-7A2125BD48C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A67324C-38F0-C49F-B9F2-F6C7BD8616EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A67324C-38F0-C49F-B9F2-F6C7BD8616EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A67324C-38F0-C49F-B9F2-F6C7BD8616EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A67324C-38F0-C49F-B9F2-F6C7BD8616EF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ECA9A1A6-B14C-EEF3-16F5-1A612A907E4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ECA9A1A6-B14C-EEF3-16F5-1A612A907E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECA9A1A6-B14C-EEF3-16F5-1A612A907E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU

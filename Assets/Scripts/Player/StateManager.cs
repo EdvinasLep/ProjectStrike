@@ -215,7 +215,7 @@ public class StateManager : MonoBehaviour
                                 , 0.5f
                                 );
 
-                            //StartCoroutine(CloseImmortality(1f));
+                            StartCoroutine(CloseImmortality(1f));
                             break;
                         case HandleDamageColliders.DamageType.ultimate:
                             handleMovement.AddVelocityOnCharacter(
@@ -223,7 +223,7 @@ public class StateManager : MonoBehaviour
                                 , 0.5f
                                 );
 
-                            //StartCoroutine(CloseImmortality(1f));
+                            StartCoroutine(CloseImmortality(1f));
                             break;
                     }
                     if (blood != null)
