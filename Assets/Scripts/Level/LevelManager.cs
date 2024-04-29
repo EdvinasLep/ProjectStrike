@@ -184,6 +184,13 @@ public class LevelManager : MonoBehaviour
                 ih.playerInput = charM.players[i].inputId;
                 ih.enabled = true;
             }
+            if (charM.players[i].playerType == PlayerBase.PlayerType.ai)
+            {
+                AiController ai = charM.players[i].playerStates.gameObject.GetComponent<AiController>();
+                ai.enabled = true;
+
+                ai.enemyStates = charM.returnOppositePlayer(charM.players[i]).playerStates;
+            }
         }
 
         yield return oneSec;
@@ -199,6 +206,11 @@ public class LevelManager : MonoBehaviour
             if (charM.players[i].playerType == PlayerBase.PlayerType.user)
             {
                 charM.players[i].playerStates.GetComponent<InputHandler>().enabled = false;
+            }
+
+            if (charM.players[i].playerType == PlayerBase.PlayerType.ai)
+            {
+                charM.players[i].playerStates.gameObject.GetComponent<AiController>().enabled = false;
             }
         }
     }

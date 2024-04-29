@@ -20,4 +20,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Egyot.unity
     guid: 1109ac653581fe2419e8b6360af7ba9e
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: fe9916462b3f12740b89e3911836a166, type: 2}

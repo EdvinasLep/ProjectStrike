@@ -42,6 +42,22 @@ public class CharacterManager : MonoBehaviour
         return retval;
     }
 
+    public PlayerBase returnOppositePlayer(PlayerBase p1)
+    {
+        PlayerBase retVal = null;
+
+        for(int i = 0; i < players.Count; i++)
+        {
+            if (players[i] != p1)
+            {
+                retVal = players[i];
+                break;
+            }
+        }
+        
+        return retVal;
+    }
+
     public static CharacterManager instance;
     public static CharacterManager GetInstance()
     {

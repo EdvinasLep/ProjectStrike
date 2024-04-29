@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 6045256890730377904}
   - component: {fileID: 788669069436367580}
   - component: {fileID: 6443046666984134790}
+  - component: {fileID: -7468529594886374302}
   m_Layer: 0
   m_Name: Mike
   m_TagString: Untagged
@@ -427,6 +428,37 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-7468529594886374302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787970928093318169}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54889d892945fee41aedb2fb3970c97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStates: {fileID: 0}
+  closeCombatTolerance: 5
+  normalRate: 1
+  closeRate: 0.5
+  blockingRate: 1.5
+  aiStateReset: 1
+  jumpRate: 1
+  attackPatterns:
+  - attacks:
+    - attack1: 1
+      attack2: 0
+      delay: 0
+    - attack1: 0
+      attack2: 1
+      delay: 0
+    - attack1: 1
+      attack2: 1
+      delay: 0
+  currentState: 0
 --- !u!1 &2050512616377710356
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +550,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 0
-  activated: 0
 --- !u!1 &2669840163113218350
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +674,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 0
-  activated: 0
 --- !u!1 &4858537404215528665
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,7 +765,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 0
-  activated: 0
 --- !u!1 &6926648014305424025
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +856,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 1
-  activated: 0
 --- !u!1 &7541437217566301619
 GameObject:
   m_ObjectHideFlags: 0
