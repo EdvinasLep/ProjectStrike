@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 876700274}
   - component: {fileID: 876700273}
   - component: {fileID: 876700272}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LEVEL1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -789,6 +789,7 @@ GameObject:
   - component: {fileID: 1268539485}
   - component: {fileID: 1268539487}
   - component: {fileID: 1268539488}
+  - component: {fileID: 1268539489}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -890,6 +891,50 @@ MonoBehaviour:
   zOffset: -2
   ambientMoveAmount: 0.3
   ambientMoveSpeed: 1.8
+--- !u!114 &1268539489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268539484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NotificationBehavior: 0
+  m_MaxPlayerCount: 2
+  m_AllowJoining: 1
+  m_JoinBehavior: 2
+  m_PlayerJoinedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_PlayerLeftEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_JoinAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Join
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: da2135b5-3547-4e50-a434-194eab9f5845
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_PlayerPrefab: {fileID: 0}
+  m_SplitScreen: 0
+  m_MaintainAspectRatioInSplitScreen: 0
+  m_FixedNumberOfSplitScreens: -1
+  m_SplitScreenRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &1292462596 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 449286242085132849, guid: d85d00d2fba481a4db21ea883c4ff995, type: 3}
@@ -1082,16 +1127,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6807172164683175040, guid: c7a349685ebc3c546a792058c5197ac8, type: 3}
       propertyPath: players.Array.data[0].playerType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6807172164683175040, guid: c7a349685ebc3c546a792058c5197ac8, type: 3}
+      propertyPath: characterList.Array.data[0].prefab
+      value: 
+      objectReference: {fileID: 114948540150754297, guid: 2a641ca90e022be46ab792f31d5fe85f, type: 3}
     - target: {fileID: 6807172164683175040, guid: c7a349685ebc3c546a792058c5197ac8, type: 3}
       propertyPath: players.Array.data[0].playerPrefab
       value: 
-      objectReference: {fileID: 787970928093318169, guid: c91ec749c4265e84f9c2f0316b809be6, type: 3}
+      objectReference: {fileID: 114948540150754297, guid: 2a641ca90e022be46ab792f31d5fe85f, type: 3}
     - target: {fileID: 6807172164683175040, guid: c7a349685ebc3c546a792058c5197ac8, type: 3}
       propertyPath: players.Array.data[1].playerPrefab
       value: 
-      objectReference: {fileID: 787970928093318169, guid: 2a641ca90e022be46ab792f31d5fe85f, type: 3}
+      objectReference: {fileID: 787970928093318169, guid: c91ec749c4265e84f9c2f0316b809be6, type: 3}
     - target: {fileID: 6807172164683175040, guid: c7a349685ebc3c546a792058c5197ac8, type: 3}
       propertyPath: players.Array.data[0].portraitPrefab
       value: 

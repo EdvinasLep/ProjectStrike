@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using JetBrains.Annotations;
+using UnityEditor;
 
 public class StateManager : MonoBehaviour
 {
@@ -13,10 +14,8 @@ public class StateManager : MonoBehaviour
     public int combo = 0;
     public int blockHealth = 0;
 
+    public Vector2 movement;
 
-
-    public float horizontal;
-    public float vertical;
     public bool attack1;
     public bool attack2;
     public bool attack3;
@@ -159,17 +158,13 @@ public class StateManager : MonoBehaviour
 
         LayerMask layer = ~(1 << gameObject.layer | 1 << 3);
         retVal = Physics2D.Raycast(transform.position, -Vector2.up, 0.1f, layer);
-        if(vertical == 0)
-        {
-            return true;
-        }
         return retVal;
+
+
     }
 
     public void ResetStateInputs()
     {
-        horizontal = 0;
-        vertical = 0;
         combo = 0;
         blockHealth = 0;
         attack1 = false;

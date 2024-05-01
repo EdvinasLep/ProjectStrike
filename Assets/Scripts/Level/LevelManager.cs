@@ -149,7 +149,7 @@ public class LevelManager : MonoBehaviour
         for(int i = 0; i < charM.players.Count; i++)
         {
             charM.players[i].playerStates.health = 100;
-            charM.players[i].playerStates.handleAnim.isDead = false;
+            charM.players[i].playerStates.isDead = false;
             //charM.players[i].playerStates.handleAnim.anim.Play("Locomotion");
             charM.players[i].playerStates.transform.position = SpawnPositions[i].position; // reset player position, if not in next round spawns in last position
         }
@@ -180,9 +180,9 @@ public class LevelManager : MonoBehaviour
         {
             if (charM.players[i].playerType == PlayerBase.PlayerType.user)
             {
-                InputHandler ih = charM.players[i].playerStates.gameObject.GetComponent<InputHandler>();
-                ih.playerInput = charM.players[i].inputId;
-                ih.enabled = true;
+                InputManager im = charM.players[i].playerStates.gameObject.GetComponent<InputManager>();
+                //ih.playerInput = charM.players[i].inputId;
+                im.enabled = true;
             }
             if (charM.players[i].playerType == PlayerBase.PlayerType.ai)
             {
@@ -205,7 +205,7 @@ public class LevelManager : MonoBehaviour
 
             if (charM.players[i].playerType == PlayerBase.PlayerType.user)
             {
-                charM.players[i].playerStates.GetComponent<InputHandler>().enabled = false;
+                charM.players[i].playerStates.GetComponent<InputManager>().enabled = false;
             }
 
             if (charM.players[i].playerType == PlayerBase.PlayerType.ai)

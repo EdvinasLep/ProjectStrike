@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Player\InputHandler.cs" />
     <Compile Include="Assets\Scripts\Player\DoDamage.cs" />
     <Compile Include="Assets\Scripts\Level\LevelUI.cs" />
+    <Compile Include="Assets\Scripts\Player\InputManager.cs" />
     <Compile Include="Assets\Scripts\Util\LightFlicker.cs" />
     <Compile Include="Assets\Scripts\Player\StateManager.cs" />
     <Compile Include="Assets\CutoutMaskUI.cs" />

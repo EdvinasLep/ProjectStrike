@@ -45,13 +45,14 @@ public class HandleMovement : MonoBehaviour
         if(states.onGround && !states.currentlyAttacking)
         {
             //rb.AddForce(new Vector2((states.horizontal * actualSpeed) - rb.velocity.x * this.accelaration, 0));
-            Vector3 targetVelocity = new Vector2(states.horizontal * move, rb.velocity.y);
+            //Vector3 targetVelocity = new Vector2(states.horizontal * move, rb.velocity.y);
             // And then smoothing it out and applying it to the character
-            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, 0.05f);
+            //rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, 0.05f);
+            rb.velocity = new Vector2(states.movement.x * actualSpeed, rb.velocity.y);
         }
 
         // sliding fix
-        if(states.horizontal == 0 && states.onGround)
+        if(states.movement.x == 0 && states.onGround)
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
@@ -59,36 +60,36 @@ public class HandleMovement : MonoBehaviour
     
     void Jump()
     {
-        if(states.vertical > 0)
-        {
-            if(!justJumped)
-            {
-                justJumped = true;
-                if(states.onGround)
-                {
-                    //anim.JumpAnim();
-                    //rb.velocity = new Vector3(rb.velocity.x, this.jumpSpeed);
-                    rb.AddForce(new Vector2(0f, jumpForce));
-                    jmpTimer = 0;
-                    canVariableJump = true;
-                }
-            }
-            else
-            {
-                if (canVariableJump)
-                {
-                    jmpTimer += Time.deltaTime;
-                    if (jmpTimer < this.jumpDuration / 1000)
-                    {
-                        //rb.velocity = new Vector3(rb.velocity.x, this.jumpSpeed);
-                    }
-                }
-            }
-        }     
-        else
-        {
-            justJumped = false;
-        }
+        //if(states.vertical > 0)
+        //{
+        //    if(!justJumped)
+        //    {
+        //        justJumped = true;
+        //        if(states.onGround)
+        //        {
+        //            //anim.JumpAnim();
+        //            //rb.velocity = new Vector3(rb.velocity.x, this.jumpSpeed);
+        //            rb.AddForce(new Vector2(0f, jumpForce));
+        //            jmpTimer = 0;
+        //            canVariableJump = true;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        if (canVariableJump)
+        //        {
+        //            jmpTimer += Time.deltaTime;
+        //            if (jmpTimer < this.jumpDuration / 1000)
+        //            {
+        //                //rb.velocity = new Vector3(rb.velocity.x, this.jumpSpeed);
+        //            }
+        //        }
+        //    }
+        //}     
+        //else
+        //{
+        //    justJumped = false;
+        //}
     }
 
     public void AddVelocityOnCharacter(Vector3 direction, float timer)

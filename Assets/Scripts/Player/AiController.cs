@@ -167,22 +167,22 @@ public class AiController : MonoBehaviour
         {
             if (enemyStates.transform.position.x < transform.position.x) // move towards enemy
             {
-                states.horizontal = -1;
+                states.movement.x = -1;
             }
             else
             {
-                states.horizontal = 1;
+                states.movement.x = 1;
             }
         }
         else
         {
             if (enemyStates.transform.position.x < transform.position.x) // move away from enemy
             {
-                states.horizontal = 1;
+                states.movement.x = 1;
             }
             else
             {
-                states.horizontal = -1;
+                states.movement.x = -1;
             }
 
         }
@@ -195,8 +195,8 @@ public class AiController : MonoBehaviour
         if(aiTimer > aiStateReset)
         {
             initiateAI = false;
-            states.horizontal = 0;
-            states.vertical = 0;
+            states.movement.x = 0;
+            //states.vertical = 0;
             aiTimer = 0;
             gotRandom = false;
 
@@ -317,13 +317,13 @@ public class AiController : MonoBehaviour
 
         if(jump)
         {
-            states.vertical = 1;
+            //states.vertical = 1;
             jRate = ReturnRandom();
             jump = false;
         }
         else
         {
-            states.vertical = 0;
+            //states.vertical = 0;
         }
 
         jTimer = Time.deltaTime;

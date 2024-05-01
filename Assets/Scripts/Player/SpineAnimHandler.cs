@@ -12,7 +12,6 @@ public class SpineAnimHandler : MonoBehaviour
     StateManager states;
     SkeletonAnimation skeletonAnimation;
     public AnimationReferenceAsset idle, walkfwd, walkback, attack1, attack2, attack3, gettingHit, death, win, block;
-    InputHandler inputHandler;
     public string currentState;
     public string currentAnimation;
 
@@ -149,13 +148,12 @@ public class SpineAnimHandler : MonoBehaviour
 
         }
 
-        if (!isDead)
-        {
-            if (states.health <= 0)
+
+            if (states.isDead)
             {
                 SetAnimation(death, false, 1f);
             }
-        }
+
             
 
         if (states.canAttack)
@@ -186,9 +184,9 @@ public class SpineAnimHandler : MonoBehaviour
             return;
         }
         
-        if (Mathf.Abs(states.horizontal) > 0.1f)
+        if (Mathf.Abs(states.movement.x) > 0.1f)
         {
-            if (states.horizontal > 0)
+            if (states.movement.x > 0)
             {
                 SetAnimation(walkfwd, true, 1f); return;
             }
@@ -197,7 +195,7 @@ public class SpineAnimHandler : MonoBehaviour
                 SetAnimation(walkback, true, 1f); return;
             }
         }
-        else if(!isDead) SetAnimation(idle, true, 1f);
+        else if(!states.isDead) SetAnimation(idle, true, 1f);
 
         if (states.ultimateAbility)
         {

@@ -78,8 +78,8 @@ GameObject:
   - component: {fileID: 7101801895193589452}
   - component: {fileID: 3301233461763432816}
   - component: {fileID: 6217805706045180555}
+  - component: {fileID: 111820423517086170}
   - component: {fileID: 645653936524669914}
-  - component: {fileID: 4418234425049811175}
   - component: {fileID: 631913250168642084}
   - component: {fileID: 4483140929266354574}
   - component: {fileID: 8413331282355919955}
@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 788669069436367580}
   - component: {fileID: 6443046666984134790}
   - component: {fileID: -7468529594886374302}
+  - component: {fileID: -75321367889635655}
   m_Layer: 0
   m_Name: Mike
   m_TagString: Untagged
@@ -164,6 +165,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &111820423517086170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787970928093318169}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb74f2f9f492c44a9daaddd7f2eae66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack1: 0
+  attack2: 0
+  attack3: 0
+  ultimate: 0
+  block: 0
+  horizontal: 0
+  vertical: 0
+  movement: {x: 0, y: 0}
 --- !u!114 &645653936524669914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,29 +225,6 @@ MonoBehaviour:
   _animationName: 
   loop: 1
   timeScale: 1
---- !u!114 &4418234425049811175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787970928093318169}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eee5d3c1838f5d4aa63d4ffd45ddedc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInput: 
-  attack1: 0
-  attack1Handled: 0
-  attack2: 0
-  attack2Handled: 0
-  attack3: 0
-  attack3Handled: 0
-  horizontal: 0
-  vertical: 0
-  ultimate: 0
-  block: 0
 --- !u!114 &631913250168642084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,8 +241,7 @@ MonoBehaviour:
   energy: 0
   combo: 0
   blockHealth: 0
-  horizontal: 0
-  vertical: 0
+  movement: {x: 0, y: 0}
   attack1: 0
   attack2: 0
   attack3: 0
@@ -328,7 +325,7 @@ MonoBehaviour:
   move: 10
   accelaration: 60
   airAccelaration: 15
-  maxSpeed: 240
+  maxSpeed: 10
   jumpSpeed: 12
   jumpDuration: 150
 --- !u!114 &9068754816831385553
@@ -459,6 +456,148 @@ MonoBehaviour:
       attack2: 1
       delay: 0
   currentState: 0
+--- !u!114 &-75321367889635655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787970928093318169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: e141b2018e6582e4686057e18a4ddc1c, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 111820423517086170}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: Attack1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bbbe4739-6bca-4db5-8f16-e37ec848d8ef
+    m_ActionName: Gameplay/Attack1[/Keyboard/r,/Keyboard/p]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 111820423517086170}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: Attack2
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 72b7dfad-b8a1-405a-bd53-d2d1291fda15
+    m_ActionName: Gameplay/Attack2[/Keyboard/t,/Keyboard/o]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 111820423517086170}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: Attack3
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9c67584e-8a87-47ca-a111-91f9996e11f5
+    m_ActionName: Gameplay/Attack3[/Keyboard/y,/Keyboard/i]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 111820423517086170}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: Block
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bb788b26-ca89-4fcf-9687-900c753a7e20
+    m_ActionName: Gameplay/Block[/Keyboard/q,/Keyboard/leftBracket]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 111820423517086170}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: Movement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1e483be3-9d1d-4fbb-b5d1-56f5118960f8
+    m_ActionName: Gameplay/Movement[/Keyboard/a,/Keyboard/d,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 685743d4-8933-4643-82cd-d21fafd31d34
+    m_ActionName: Gameplay/Jump[/Keyboard/w,/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 111820423517086170}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9badf3ef-dde9-47c8-ad98-66c19882e9f8
+    m_ActionName: Gameplay/Crouch[/Keyboard/s,/Keyboard/downArrow]
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Keyboard
+  m_DefaultActionMap: Gameplay
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &2050512616377710356
 GameObject:
   m_ObjectHideFlags: 0
