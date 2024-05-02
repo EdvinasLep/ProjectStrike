@@ -79,17 +79,18 @@ GameObject:
   - component: {fileID: 3301233461763432816}
   - component: {fileID: 6217805706045180555}
   - component: {fileID: 111820423517086170}
-  - component: {fileID: 645653936524669914}
   - component: {fileID: 631913250168642084}
   - component: {fileID: 4483140929266354574}
   - component: {fileID: 8413331282355919955}
   - component: {fileID: 9168005207539125266}
-  - component: {fileID: 9068754816831385553}
   - component: {fileID: 6045256890730377904}
   - component: {fileID: 788669069436367580}
   - component: {fileID: 6443046666984134790}
   - component: {fileID: -7468529594886374302}
   - component: {fileID: -75321367889635655}
+  - component: {fileID: -8397751090704898613}
+  - component: {fileID: -31242599115323250}
+  - component: {fileID: 4927315351239835472}
   m_Layer: 0
   m_Name: Mike
   m_TagString: Untagged
@@ -185,46 +186,6 @@ MonoBehaviour:
   horizontal: 0
   vertical: 0
   movement: {x: 0, y: 0}
---- !u!114 &645653936524669914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787970928093318169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 8a897d97971827b45b46d66a2bd7f782, type: 2}
-  initialSkinName: 
-  fixPrefabOverrideViaMeshFilter: 2
-  initialFlipX: 0
-  initialFlipY: 0
-  updateWhenInvisible: 3
-  separatorSlotNames: []
-  zSpacing: 0
-  useClipping: 1
-  immutableTriangles: 0
-  pmaVertexColors: 1
-  clearStateOnDisable: 0
-  tintBlack: 0
-  singleSubmesh: 0
-  fixDrawOrder: 0
-  addNormals: 0
-  calculateTangents: 0
-  maskInteraction: 0
-  maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
-    materialsOutsideMask: []
-  disableRenderingOnOverride: 1
-  updateTiming: 1
-  unscaledTime: 0
-  _animationName: 
-  loop: 1
-  timeScale: 1
 --- !u!114 &631913250168642084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,7 +228,7 @@ MonoBehaviour:
   chainCount: {fileID: 0}
   blockSystem: {fileID: 0}
   handleDC: {fileID: 0}
-  handleAnim: {fileID: 0}
+  anim: {fileID: 0}
   handleMovement: {fileID: 0}
   movementColliders:
   - {fileID: 579134608422890631}
@@ -328,38 +289,6 @@ MonoBehaviour:
   maxSpeed: 10
   jumpSpeed: 12
   jumpDuration: 150
---- !u!114 &9068754816831385553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787970928093318169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34634942f6821914a918295b3cad7508, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRate: 0.3
-  idle: {fileID: 11400000, guid: 9942f0c284f6ea041bf206c3b26bb55e, type: 2}
-  walkfwd: {fileID: 11400000, guid: 79352d2103d33b34cbfa87f899d08137, type: 2}
-  walkback: {fileID: 11400000, guid: 5f725c6c33e3ecb4ca30b21f89268591, type: 2}
-  attack1: {fileID: 11400000, guid: cf4ba7df8edb15444add0c5fe8581655, type: 2}
-  attack2: {fileID: 11400000, guid: 2eb88571a82aea64b8b0fdcf8904365e, type: 2}
-  attack3: {fileID: 11400000, guid: 33fed2d2b19c91743b6e1358cc170ce2, type: 2}
-  gettingHit: {fileID: 11400000, guid: 8b5f59a5629625b4eb908b1293631c81, type: 2}
-  death: {fileID: 11400000, guid: 73d9b804dca570948a20a765a5e8684b, type: 2}
-  win: {fileID: 11400000, guid: 778e28eb024013a4aa74d0e59af9422e, type: 2}
-  block: {fileID: 11400000, guid: 614ffac0f1d49454fa4536f673132ade, type: 2}
-  currentState: 
-  currentAnimation: 
-  handleDC: {fileID: 0}
-  att1: 0
-  att2: 0
-  att3: 0
-  blok: 0
-  gotHit: 0
-  isDead: 0
 --- !u!114 &6045256890730377904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,6 +527,84 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!95 &-8397751090704898613
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787970928093318169}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: abdefbcd90068f24f937c5e53a76eba5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-31242599115323250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787970928093318169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9db98c60740638449864eb028fbe7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 8a897d97971827b45b46d66a2bd7f782, type: 2}
+  initialSkinName: 
+  fixPrefabOverrideViaMeshFilter: 2
+  initialFlipX: 0
+  initialFlipY: 0
+  updateWhenInvisible: 3
+  separatorSlotNames: []
+  zSpacing: 0
+  useClipping: 1
+  immutableTriangles: 0
+  pmaVertexColors: 1
+  clearStateOnDisable: 0
+  tintBlack: 0
+  singleSubmesh: 0
+  fixDrawOrder: 0
+  addNormals: 0
+  calculateTangents: 0
+  maskInteraction: 0
+  maskMaterials:
+    materialsMaskDisabled: []
+    materialsInsideMask: []
+    materialsOutsideMask: []
+  disableRenderingOnOverride: 1
+  translator:
+    autoReset: 1
+    useCustomMixMode: 1
+    layerMixModes: 
+    layerBlendModes: 
+  updateTiming: 1
+--- !u!114 &4927315351239835472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787970928093318169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b08f77a0087d8c14d87851630aededc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  audioManager: {fileID: 0}
+  isDead: 0
+  attackRate: 0.3
 --- !u!1 &2050512616377710356
 GameObject:
   m_ObjectHideFlags: 0

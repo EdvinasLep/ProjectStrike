@@ -94,6 +94,17 @@
                 },
                 {
                     "name": "",
+                    "id": "d6b686cc-5f22-4108-8dc4-8de6573de35a",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Attack1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "b6f7a0f1-73a0-4dc1-9eae-287e0f97428e",
                     "path": "<Keyboard>/t",
                     "interactions": "",
@@ -110,6 +121,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardArrows",
+                    "action": "Attack2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "06d793e9-9bf3-4b0d-91dc-27248734f9f0",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
                     "action": "Attack2",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -138,6 +160,17 @@
                 },
                 {
                     "name": "",
+                    "id": "c7a96dc8-110f-4945-a725-01289dfdff82",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Attack3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "0598832c-6295-44ed-b82d-e92eaeb1c0f2",
                     "path": "<Keyboard>/q",
                     "interactions": "",
@@ -154,6 +187,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardArrows",
+                    "action": "Block",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7ca455aa-63aa-450a-a352-c4bbff8be4f1",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
                     "action": "Block",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -225,6 +269,39 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "2D Vector",
+                    "id": "ee832391-29a1-4e70-bb20-3e6b1f28563a",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "9626f376-8640-4505-a5df-3eed748e787c",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "f14ed3de-4294-46cd-b11d-013dfeba48da",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "140ac22a-5833-4bcb-b19b-d7f7a5e480c7",
                     "path": "<Keyboard>/s",
@@ -242,6 +319,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardArrows",
+                    "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c69ca883-2c87-4a24-9e0e-a9e411439956",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
                     "action": "Crouch",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -267,6 +355,17 @@
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ea1b390d-1994-4117-b838-20517f5eff27",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
@@ -289,6 +388,17 @@
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Controller",
+            "bindingGroup": "Controller",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
                     "isOptional": true,
                     "isOR": false
                 }

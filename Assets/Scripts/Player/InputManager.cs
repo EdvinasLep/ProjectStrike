@@ -28,8 +28,8 @@ public class InputManager : MonoBehaviour
     void Start()
     {
         states = GetComponent<StateManager>();
-        var playerInputs = GetComponent<PlayerInput>();
-        playerInputs.SwitchCurrentControlScheme(playerInputs.defaultControlScheme, Keyboard.current);
+        //var playerInputs = GetComponent<PlayerInput>();
+        //playerInputs.SwitchCurrentControlScheme(playerInputs.defaultControlScheme, Keyboard.current);
 
 
     }

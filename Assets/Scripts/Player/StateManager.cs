@@ -45,12 +45,12 @@ public class StateManager : MonoBehaviour
     public ChainAttack chainAttack;
     public TMP_Text chainCount;
     public BlockSystem blockSystem;
+    
 
     [HideInInspector]
     public HandleDamageColliders handleDC;
     [HideInInspector]
-    //public HandleAnimations handleAnim;
-    public SpineAnimHandler handleAnim;
+    public Animator anim;
     [HideInInspector]
     public HandleMovement handleMovement;
 
@@ -61,9 +61,9 @@ public class StateManager : MonoBehaviour
     void Start()
     {
         handleDC = GetComponent<HandleDamageColliders>();
-        handleAnim = GetComponent<SpineAnimHandler>();
+        //handleAnim = GetComponent<HandleAnimations>();
         handleMovement = GetComponent<HandleMovement>();
-
+        anim = GetComponent<Animator>();
         blood = GetComponentInChildren<ParticleSystem>();
         audioManager = AudioManager.GetInstance();
         chainAttack = GetComponent<ChainAttack>();
@@ -73,7 +73,11 @@ public class StateManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        if(health <= 0 && !isDead)
+        {
+            isDead = true;
+            anim.SetTrigger("IsDead");
+        }
         if (lookRight)
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         else

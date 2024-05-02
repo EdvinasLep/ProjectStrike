@@ -1126,6 +1126,14 @@ PrefabInstance:
       value: CharacterManager
       objectReference: {fileID: 0}
     - target: {fileID: 6807172164683175040, guid: c7a349685ebc3c546a792058c5197ac8, type: 3}
+      propertyPath: players.Array.data[0].inputId
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807172164683175040, guid: c7a349685ebc3c546a792058c5197ac8, type: 3}
+      propertyPath: players.Array.data[1].inputId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807172164683175040, guid: c7a349685ebc3c546a792058c5197ac8, type: 3}
       propertyPath: players.Array.data[0].playerType
       value: 0
       objectReference: {fileID: 0}
@@ -1136,19 +1144,19 @@ PrefabInstance:
     - target: {fileID: 6807172164683175040, guid: c7a349685ebc3c546a792058c5197ac8, type: 3}
       propertyPath: players.Array.data[0].playerPrefab
       value: 
-      objectReference: {fileID: 114948540150754297, guid: 2a641ca90e022be46ab792f31d5fe85f, type: 3}
+      objectReference: {fileID: 787970928093318169, guid: c91ec749c4265e84f9c2f0316b809be6, type: 3}
     - target: {fileID: 6807172164683175040, guid: c7a349685ebc3c546a792058c5197ac8, type: 3}
       propertyPath: players.Array.data[1].playerPrefab
       value: 
-      objectReference: {fileID: 787970928093318169, guid: c91ec749c4265e84f9c2f0316b809be6, type: 3}
+      objectReference: {fileID: 114948540150754297, guid: 2a641ca90e022be46ab792f31d5fe85f, type: 3}
     - target: {fileID: 6807172164683175040, guid: c7a349685ebc3c546a792058c5197ac8, type: 3}
       propertyPath: players.Array.data[0].portraitPrefab
       value: 
-      objectReference: {fileID: 2662661548141331952, guid: d1553713194717d41bd212002bf79917, type: 3}
+      objectReference: {fileID: 8484401764059374396, guid: 8961e9db9a675b2459846567a68ad432, type: 3}
     - target: {fileID: 6807172164683175040, guid: c7a349685ebc3c546a792058c5197ac8, type: 3}
       propertyPath: players.Array.data[1].portraitPrefab
       value: 
-      objectReference: {fileID: 8484401764059374396, guid: 8961e9db9a675b2459846567a68ad432, type: 3}
+      objectReference: {fileID: 2662661548141331952, guid: d1553713194717d41bd212002bf79917, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

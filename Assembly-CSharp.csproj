@@ -61,7 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\HandleAnimations.cs" />
+    <Compile Include="Assets\Scripts\Network\LobbyManager.cs" />
     <Compile Include="Assets\Scripts\Player\BlockSystem.cs" />
+    <Compile Include="Assets\Scripts\Util\SelectScale.cs" />
     <Compile Include="Assets\Scripts\Player\SpineAnimHandler.cs" />
     <Compile Include="Assets\Scripts\Player\ChainAttack.cs" />
     <Compile Include="Assets\Scripts\MainMenu\ButtonRef.cs" />
@@ -69,19 +71,19 @@
     <Compile Include="Assets\Scripts\MainMenu\PotraitInfo.cs" />
     <Compile Include="Assets\Scripts\Util\Shake.cs" />
     <Compile Include="Assets\Scripts\Util\TMPmanager.cs" />
+    <Compile Include="Assets\Scripts\Util\IndicatorPosition.cs" />
     <Compile Include="Assets\Scripts\Player\OpenDamageCollider.cs" />
     <Compile Include="Assets\Scripts\Player\InputHandler.cs" />
     <Compile Include="Assets\Scripts\Player\DoDamage.cs" />
     <Compile Include="Assets\Scripts\Level\LevelUI.cs" />
     <Compile Include="Assets\Scripts\Player\InputManager.cs" />
+    <Compile Include="Assets\Scripts\Util\CutoutMaskUI.cs" />
     <Compile Include="Assets\Scripts\Util\LightFlicker.cs" />
     <Compile Include="Assets\Scripts\Player\StateManager.cs" />
-    <Compile Include="Assets\CutoutMaskUI.cs" />
     <Compile Include="Assets\Scripts\Level\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Util\AudioManager.cs" />
-    <Compile Include="Assets\SelectScale.cs" />
     <Compile Include="Assets\Scripts\Util\Perlin.cs" />
-    <Compile Include="Assets\CanvasLayering.cs" />
+    <Compile Include="Assets\Scripts\Util\CanvasLayering.cs" />
     <Compile Include="Assets\Scripts\Player\HandleDamageColliders.cs" />
     <Compile Include="Assets\Scripts\MainMenu\SelectScreenManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu\CharacterManager.cs" />
@@ -90,7 +92,6 @@
     <Compile Include="Assets\Scripts\MainMenu\IntroSceneManager.cs" />
     <Compile Include="Assets\Scripts\Util\CameraManager.cs" />
     <Compile Include="Assets\Scripts\Player\AiController.cs" />
-    <Compile Include="Assets\IndicatorPosition.cs" />
     <Compile Include="Assets\Scripts\Player\ChangeBool.cs" />
     <Compile Include="Assets\Scripts\Player\HandleMovement.cs" />
   </ItemGroup>
