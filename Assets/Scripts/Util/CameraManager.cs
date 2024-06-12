@@ -26,8 +26,8 @@ public class CameraManager : MonoBehaviour
     public float xOffset = 0.3f;
     public float zOffset;
 
-    public float ambientMoveAmount = 0.5f;  
-    public float ambientMoveSpeed = 0.5f;   
+    public float ambientMoveAmount = 0.5f;
+    public float ambientMoveSpeed = 0.5f;
 
     private float ambientPhase = 0.0f;
 

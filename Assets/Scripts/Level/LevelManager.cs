@@ -26,7 +26,7 @@ public class LevelManager : MonoBehaviour
     float internalTimer;
 
     SmoothSlider smoothSlider;
-  
+
     void Start()
     {
         charM = CharacterManager.GetInstance();
@@ -60,13 +60,13 @@ public class LevelManager : MonoBehaviour
             charM.players[1].playerStates.lookRight = true;
         }
 
-        
+
 
     }
 
     private void Update()
     {
-        if(countdown)
+        if (countdown)
         {
             HandleTurnTimer();
         }
@@ -87,13 +87,13 @@ public class LevelManager : MonoBehaviour
 
         internalTimer += Time.deltaTime;
 
-        if(internalTimer > 1)
+        if (internalTimer > 1)
         {
             currentTimer--;
             internalTimer = 0;
         }
 
-        if(currentTimer <= 0)
+        if (currentTimer <= 0)
         {
             EndTurnFunction(true);
             countdown = false;
@@ -120,9 +120,9 @@ public class LevelManager : MonoBehaviour
 
     IEnumerator CreatePlayers()
     {
-        for(int i = 0; i < charM.players.Count; i++)
+        for (int i = 0; i < charM.players.Count; i++)
         {
-            GameObject go = Instantiate(charM.players[i].playerPrefab, 
+            GameObject go = Instantiate(charM.players[i].playerPrefab,
                 SpawnPositions[i].position,
                 Quaternion.identity) as GameObject;
 
@@ -146,7 +146,7 @@ public class LevelManager : MonoBehaviour
 
     IEnumerator InitPlayers()
     {
-        for(int i = 0; i < charM.players.Count; i++)
+        for (int i = 0; i < charM.players.Count; i++)
         {
             charM.players[i].playerStates.health = 100;
             charM.players[i].playerStates.isDead = false;
@@ -176,7 +176,7 @@ public class LevelManager : MonoBehaviour
         levelUI.AnnouncerTextLine1.text = "FIGHT!";
         levelUI.AnnouncerTextLine1.color = Color.red;
 
-        for(int i = 0; i < charM.players.Count; i++)
+        for (int i = 0; i < charM.players.Count; i++)
         {
             if (charM.players[i].playerType == PlayerBase.PlayerType.user)
             {
@@ -195,11 +195,11 @@ public class LevelManager : MonoBehaviour
 
         yield return oneSec;
         levelUI.AnnouncerTextLine1.gameObject.SetActive(false);
-        countdown = true;   
+        countdown = true;
     }
     void DisableControl()
     {
-        for(int i = 0; i < charM.players.Count; i++)
+        for (int i = 0; i < charM.players.Count; i++)
         {
             charM.players[i].playerStates.ResetStateInputs();
 
@@ -221,7 +221,7 @@ public class LevelManager : MonoBehaviour
 
         levelUI.LevelTimer.text = maxTurnTimer.ToString();
 
-        if(timeout)
+        if (timeout)
         {
             levelUI.AnnouncerTextLine1.gameObject.SetActive(true);
             levelUI.AnnouncerTextLine1.text = "Time Out!";
@@ -254,9 +254,9 @@ public class LevelManager : MonoBehaviour
 
         yield return new WaitForSeconds(2);
 
-        if(vPlayer != null)
+        if (vPlayer != null)
         {
-            if(vPlayer.playerStates.health == 100)
+            if (vPlayer.playerStates.health == 100)
             {
                 levelUI.AnnouncerTextLine2.gameObject.SetActive(true);
                 levelUI.AnnouncerTextLine2.text = "FLAWLESS VICTORY";
@@ -275,17 +275,17 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            for(int i = 0; i < charM.players.Count; i++)
+            for (int i = 0; i < charM.players.Count; i++)
             {
                 charM.players[i].score = 0;
                 charM.players[i].hasCharacter = false;
             }
-            if(charM.egypt)
+            if (charM.egypt)
             {
                 charM.egypt = false;
                 charM.siberia = true;
             }
-            else if( charM.siberia)
+            else if (charM.siberia)
             {
                 charM.siberia = false;
                 charM.egypt = true;
@@ -294,13 +294,13 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    
+
 
     bool IsMatchOver()
     {
         bool retVal = false;
 
-        for(int i = 0; i < charM.players.Count; i++)
+        for (int i = 0; i < charM.players.Count; i++)
         {
             if (charM.players[i].score >= maxTurns)
             {

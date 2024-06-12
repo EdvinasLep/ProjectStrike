@@ -2,12 +2,14 @@
 using UnityEngine.UI;
 using System.Collections;
 using TMPro;
+using Unity.Netcode;
 
 public class LevelUI : MonoBehaviour {
 
     public TMP_Text AnnouncerTextLine1;
     public TMP_Text AnnouncerTextLine2;
     public TMP_Text LevelTimer;
+    public NetworkVariable<int> timer = new NetworkVariable<int>();
 
     public TMP_Text[] ChainCounters;
 
@@ -27,24 +29,27 @@ public class LevelUI : MonoBehaviour {
         return instance;
     }
 
-    void Awake()
+
+    private void Awake()
     {
-        instance = this;
+        timer.OnValueChanged += UpdateTimerDisplay;
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void UpdateTimerDisplay(int oldVal, int newVal)
+    {
+        LevelTimer.text = newVal.ToString();
     }
 
     public void AddWinIndicator(int player, int score)
     {
-        //if (score == 0)
-        //{
-        //    Transform existingIndicator = winIndicatorGrids[player].transform.GetChild(0);
-        //    Destroy(existingIndicator.gameObject);
-        //    Debug.Log("INDICATOR REMOVED");
-        //}
-        //else if (score == 1)
-        //{
-        //    Transform existingIndicator = winIndicatorGrids[player].transform.GetChild(1);
-        //    Destroy(existingIndicator.gameObject);
-        //}
         Transform existingIndicator = winIndicatorGrids[player].transform.GetChild(0);
         Destroy(existingIndicator.gameObject);
         Debug.Log("INDICATOR REMOVED");

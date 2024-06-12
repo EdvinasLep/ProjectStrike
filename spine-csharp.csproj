@@ -61,15 +61,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Spine\Runtime\spine-csharp\IkConstraintData.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\SkeletonBinary.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\SkeletonJson.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\Skin.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\AnimationState.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\BoneData.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\IkConstraint.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\AtlasAttachmentLoader.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\Attachment.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\BoundingBoxAttachment.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\IHasTextureRegion.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\PathAttachment.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\AnimationStateData.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\ConstraintData.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\Animation.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\SkeletonBounds.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\ExposedList.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\IUpdatable.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\Bone.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\PathConstraint.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\Skeleton.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\Atlas.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\RegionAttachment.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\MathUtils.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\Triangulator.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\SkeletonBinary.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\Skin.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\BoneData.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-csharp\IkConstraint.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\Slot.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\SkeletonClipping.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\BlendMode.cs" />
@@ -77,33 +92,18 @@
     <Compile Include="Assets\Spine\Runtime\spine-csharp\TextureRegion.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\ClippingAttachment.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\PathConstraintData.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\IHasTextureRegion.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\PathAttachment.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\AnimationStateData.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\ConstraintData.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\Animation.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\SkeletonData.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\EventData.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\SkeletonBounds.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\SkeletonLoader.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\SlotData.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\ExposedList.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\Event.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\IUpdatable.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\Bone.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\PathConstraint.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\Json.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\TransformConstraint.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\Skeleton.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\VertexAttachment.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\Atlas.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\AttachmentLoader.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\AttachmentType.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\RegionAttachment.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\MathUtils.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\Sequence.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\MeshAttachment.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-csharp\Triangulator.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-csharp\TransformConstraintData.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -450,6 +450,10 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.18f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Library\PackageCache\com.unity.services.wire@1.2.5\Plugins\websocket-sharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
@@ -486,8 +490,16 @@
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.1\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4\Mono.Cecil.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

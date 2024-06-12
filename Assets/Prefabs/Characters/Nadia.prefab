@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 3864726799610166506}
   - component: {fileID: 514448953791502055}
   - component: {fileID: 4152928990225446344}
-  - component: {fileID: 1524311561107668126}
   - component: {fileID: 1342682316082165227}
   - component: {fileID: 8569282218927412048}
   - component: {fileID: 603078976891768604}
@@ -233,7 +232,7 @@ MonoBehaviour:
     m_ActionId: 9badf3ef-dde9-47c8-ad98-66c19882e9f8
     m_ActionName: Gameplay/Crouch[/Keyboard/s,/Keyboard/downArrow]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Controller
+  m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -338,38 +337,6 @@ MonoBehaviour:
   maxSpeed: 10
   jumpSpeed: 14
   jumpDuration: 150
---- !u!114 &1524311561107668126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114948540150754297}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34634942f6821914a918295b3cad7508, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRate: 0.3
-  idle: {fileID: 11400000, guid: c254ae6fb33a97048899410008958713, type: 2}
-  walkfwd: {fileID: 11400000, guid: 80bcfa699a0e2be4a9de14f9e8c9c5ab, type: 2}
-  walkback: {fileID: 11400000, guid: fa46ce2f80b383e4f9896469c22feb18, type: 2}
-  attack1: {fileID: 11400000, guid: 31b53c46f88c83143b3c034f960af15f, type: 2}
-  attack2: {fileID: 11400000, guid: b932ccad35652bb478672c36fb40f72b, type: 2}
-  attack3: {fileID: 11400000, guid: fd69095429276194d96e6121dcc51699, type: 2}
-  gettingHit: {fileID: 11400000, guid: d5e34bb00ee347249a48270eefd7b732, type: 2}
-  death: {fileID: 11400000, guid: d5e34bb00ee347249a48270eefd7b732, type: 2}
-  win: {fileID: 11400000, guid: e8f1ca4d74f8c0f4d9d055b876b5f0d1, type: 2}
-  block: {fileID: 11400000, guid: 3c795360d55e8e54f9ffd5dfffd7840e, type: 2}
-  currentState: 
-  currentAnimation: 
-  handleDC: {fileID: 0}
-  att1: 0
-  att2: 0
-  att3: 0
-  blok: 0
-  gotHit: 0
-  isDead: 0
 --- !u!114 &1342682316082165227
 MonoBehaviour:
   m_ObjectHideFlags: 0

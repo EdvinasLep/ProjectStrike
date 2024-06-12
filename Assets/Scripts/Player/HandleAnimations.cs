@@ -26,7 +26,11 @@ public class HandleAnimations : MonoBehaviour
     void FixedUpdate()
     {
         //states.dontMove = anim.GetBool("DontMove");
-        anim.SetBool("Damaged", states.gettingHit);
+        if(states.gettingHit)
+        {
+            anim.SetTrigger("Damaged");
+        }
+        
         //anim.SetBool("OnAir", !states.onGround);
         //anim.SetBool("Crouch", states.crouch);
         anim.SetBool("Attack1", states.attack1);

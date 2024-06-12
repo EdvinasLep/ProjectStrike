@@ -15,9 +15,9 @@ public class CharacterManager : MonoBehaviour
     {
         CharacterBase retVal = null;
 
-        for(int i = 0; i < characterList.Count; i++)
+        for (int i = 0; i < characterList.Count; i++)
         {
-            if (string.Equals(characterList[i].charId,id))
+            if (string.Equals(characterList[i].charId, id))
             {
                 retVal = characterList[i];
                 break;
@@ -31,7 +31,7 @@ public class CharacterManager : MonoBehaviour
     {
         PlayerBase retval = null;
 
-        for(int i = 0; i < players.Count;i++)
+        for (int i = 0; i < players.Count; i++)
         {
             if (players[i].playerStates == states)
             {
@@ -46,7 +46,7 @@ public class CharacterManager : MonoBehaviour
     {
         PlayerBase retVal = null;
 
-        for(int i = 0; i < players.Count; i++)
+        for (int i = 0; i < players.Count; i++)
         {
             if (players[i] != p1)
             {
@@ -54,7 +54,7 @@ public class CharacterManager : MonoBehaviour
                 break;
             }
         }
-        
+
         return retVal;
     }
 
