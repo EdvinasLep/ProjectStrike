@@ -12,6 +12,8 @@ public class LevelManager : MonoBehaviour
 {
     WaitForSeconds oneSec;
     public Transform[] SpawnPositions;
+    public string scene;
+    public GameObject endScreen;
 
     CameraManager camM;
     CharacterManager charM;
@@ -24,6 +26,8 @@ public class LevelManager : MonoBehaviour
     public int maxTurnTimer = 20;
     int currentTimer;
     float internalTimer;
+
+    public AudioClip backgroundMusic;
 
     SmoothSlider smoothSlider;
 
@@ -43,7 +47,24 @@ public class LevelManager : MonoBehaviour
 
         smoothSlider = GetComponent<SmoothSlider>();
 
+        
+
         StartCoroutine("StartGame");
+        //if (AudioManager.instance == null)
+        //{
+        //    Debug.LogError("AudioManager instance is null!");
+        //}
+        //else
+        //{
+        //    if (backgroundMusic == null)
+        //    {
+        //        Debug.LogError("Background music is not assigned!");
+        //    }
+        //    else
+        //    {
+        //        AudioManager.instance.PlayBg();
+        //    }
+        //}
     }
 
     void FixedUpdate()
@@ -141,6 +162,8 @@ public class LevelManager : MonoBehaviour
             levelUI.AddPortrait(i, charM.players[i].portraitPrefab);
             camM.players.Add(go.transform);
         }
+
+        AudioManager.GetInstance().GetAudioSource();
         yield return null;
     }
 
@@ -159,22 +182,18 @@ public class LevelManager : MonoBehaviour
     IEnumerator EnableControl()
     {
         levelUI.AnnouncerTextLine1.gameObject.SetActive(true);
-        levelUI.AnnouncerTextLine1.text = "Turn " + currentTurn;
+        levelUI.AnnouncerTextLine1.text = "Round " + currentTurn;
         levelUI.AnnouncerTextLine1.color = Color.white;
         yield return new WaitForSeconds(2);
 
         levelUI.AnnouncerTextLine1.text = "3";
-        levelUI.AnnouncerTextLine1.color = Color.green;
         yield return oneSec;
         levelUI.AnnouncerTextLine1.text = "2";
-        levelUI.AnnouncerTextLine1.color = Color.yellow;
         yield return oneSec;
         levelUI.AnnouncerTextLine1.text = "1";
-        levelUI.AnnouncerTextLine1.color = Color.red;
         yield return oneSec;
 
         levelUI.AnnouncerTextLine1.text = "FIGHT!";
-        levelUI.AnnouncerTextLine1.color = Color.red;
 
         for (int i = 0; i < charM.players.Count; i++)
         {
@@ -280,21 +299,25 @@ public class LevelManager : MonoBehaviour
                 charM.players[i].score = 0;
                 charM.players[i].hasCharacter = false;
             }
-            if (charM.egypt)
-            {
-                charM.egypt = false;
-                charM.siberia = true;
-            }
-            else if (charM.siberia)
-            {
-                charM.siberia = false;
-                charM.egypt = true;
-            }
-            SceneManager.LoadSceneAsync("select");
+            //if (charM.egypt)
+            //{
+            //    charM.egypt = false;
+            //    charM.siberia = true;
+            //}
+            //else if (charM.siberia)
+            //{
+            //    charM.siberia = false;
+            //    charM.egypt = true;
+            //}
+            //SceneManager.LoadSceneAsync("select");
+            endScreen.SetActive(true);
         }
     }
 
-
+    public void ContinueGame()
+    {
+        SceneManager.LoadSceneAsync(scene);
+    }
 
     bool IsMatchOver()
     {

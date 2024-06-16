@@ -7,38 +7,26 @@ public class AiController : MonoBehaviour
     StateManager states;
     public StateManager enemyStates;
 
-    public float closeCombatTolerance = 3;
+    public float closeCombatTolerance = 7f;
+    public float aggressiveRate = 0.1f;  // Reduced for quicker decisions
+    public float defensiveRate = 0.5f;  // Reduced for quicker defensive actions
+    public float blockRate = 0.3f;  // Reduced to be more responsive
 
-    public float normalRate = 1;
-    float nrmTimer;
+    private float aiTimer;
+    private float nrmTimer;
+    private float clTimer;
+    private float blTimer;
+    private bool initiateAI;
+    private bool closeCombat;
 
-    public float closeRate = 0.5f;
-    float clTimer;
+    private bool gotRandom;
+    private float storeRandom;
 
-    public float blockingRate = 1.5f;
-    float blTimer;
+    private bool blocking;
 
-    public float aiStateReset = 1;
-    float aiTimer;
-
-    bool initiateAI;
-    bool closeCombat;
-
-    bool gotRandom;
-    float storeRandom;
-
-    bool checkForBlocking;
-    bool blocking;
-    bool blockMultiplier;
-
-    bool randomizeAttacks;
-    int numberOfAttacks;
-    int curNumAttacks;
-
-    public float jumpRate = 1;
-    float jRate;
-    bool jump;
-    float jTimer;
+    private bool randomizeAttacks;
+    private int numberOfAttacks;
+    private int curNumAttacks;
 
     public AttackPatterns[] attackPatterns;
 
@@ -46,18 +34,19 @@ public class AiController : MonoBehaviour
     {
         closeState,
         normalState,
+        aggressiveState,
+        defensiveState,
         resetAI
     }
 
     public AIState currentState;
 
-    // Start is called before the first frame update
     void Start()
     {
         states = GetComponent<StateManager>();
+        currentState = AIState.normalState;
     }
 
-    // Update is called once per frame
     void Update()
     {
         CheckDistance();
@@ -67,7 +56,7 @@ public class AiController : MonoBehaviour
 
     void States()
     {
-        switch(currentState)
+        switch (currentState)
         {
             case AIState.closeState:
                 CloseState();
@@ -75,31 +64,34 @@ public class AiController : MonoBehaviour
             case AIState.normalState:
                 NormalState();
                 break;
+            case AIState.aggressiveState:
+                AggressiveState();
+                break;
+            case AIState.defensiveState:
+                DefensiveState();
+                break;
             case AIState.resetAI:
                 ResetAI();
                 break;
         }
 
         Blocking();
-        //Jumping(); Implement later
     }
-
-
 
     void AIAgent()
     {
-        if(initiateAI)
+        if (initiateAI)
         {
             currentState = AIState.resetAI;
             float multiplier = 0;
 
-            if(!gotRandom)
+            if (!gotRandom)
             {
                 storeRandom = ReturnRandom();
                 gotRandom = true;
             }
 
-            if(!closeCombat)
+            if (!closeCombat)
             {
                 multiplier += 30;
             }
@@ -108,7 +100,7 @@ public class AiController : MonoBehaviour
                 multiplier -= 30;
             }
 
-            if(storeRandom + multiplier <50)
+            if (storeRandom + multiplier < 50)
             {
                 Attack();
             }
@@ -121,37 +113,29 @@ public class AiController : MonoBehaviour
 
     void Attack()
     {
-        if(!gotRandom)
+        if (!gotRandom)
         {
             storeRandom = ReturnRandom();
-            gotRandom= true;
+            gotRandom = true;
         }
 
-        //Normal attacks
-        //if(storeRandom < 75)
-        //{
-            if(!randomizeAttacks)
-            {
-                numberOfAttacks = (int)Random.Range(1, 3);
-                randomizeAttacks = true;
-            }
-
-            if(curNumAttacks < numberOfAttacks)
+        if (!randomizeAttacks)
         {
-            //!!!implement random percentages for attacks later!!
+            numberOfAttacks = Random.Range(2, 4);  // Increased to 2-3 attacks in a sequence
+            randomizeAttacks = true;
+        }
+
+        if (curNumAttacks < numberOfAttacks)
+        {
             int attackNumber = Random.Range(0, attackPatterns.Length);
             StartCoroutine(OpenAttack(attackPatterns[attackNumber], 0));
             curNumAttacks++;
         }
-        //}
-        //else (special attacks not implemented yet!!
-        //{
-        //    if(curNumAttacks < 1)
-        //    {
-        //        states.SpecialAttack = true;
-        //        curNumAttacks++;
-        //    }
-        //}
+        else
+        {
+            randomizeAttacks = false;
+            curNumAttacks = 0;
+        }
     }
 
     void Movement()
@@ -162,28 +146,27 @@ public class AiController : MonoBehaviour
             gotRandom = true;
         }
 
-        if(storeRandom < 90)
+        if (storeRandom < 90)
         {
-            if (enemyStates.transform.position.x < transform.position.x) // move towards enemy
+            if (enemyStates.transform.position.x < transform.position.x)
             {
-                states.movement.x = -1;
+                states.movement.x = -1; // move towards enemy
             }
             else
             {
-                states.movement.x = 1;
+                states.movement.x = 1; // move towards enemy
             }
         }
         else
         {
-            if (enemyStates.transform.position.x < transform.position.x) // move away from enemy
+            if (enemyStates.transform.position.x < transform.position.x)
             {
-                states.movement.x = 1;
+                states.movement.x = 1; // move away from enemy
             }
             else
             {
-                states.movement.x = -1;
+                states.movement.x = -1; // move away from enemy
             }
-
         }
     }
 
@@ -191,16 +174,15 @@ public class AiController : MonoBehaviour
     {
         aiTimer += Time.deltaTime;
 
-        if(aiTimer > aiStateReset)
+        if (aiTimer > defensiveRate)
         {
             initiateAI = false;
             states.movement.x = 0;
-            //states.vertical = 0;
             aiTimer = 0;
             gotRandom = false;
 
             storeRandom = ReturnRandom();
-            if(storeRandom < 50)
+            if (storeRandom < 50)
             {
                 currentState = AIState.normalState;
             }
@@ -209,7 +191,7 @@ public class AiController : MonoBehaviour
                 currentState = AIState.closeState;
             }
 
-            curNumAttacks = 1;
+            curNumAttacks = 0;
             randomizeAttacks = false;
         }
     }
@@ -218,9 +200,9 @@ public class AiController : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, enemyStates.transform.position);
 
-        if(distance < closeCombatTolerance)
+        if (distance < closeCombatTolerance)
         {
-            if(currentState != AIState.resetAI)
+            if (currentState != AIState.resetAI)
             {
                 currentState = AIState.closeState;
             }
@@ -234,15 +216,15 @@ public class AiController : MonoBehaviour
                 currentState = AIState.normalState;
             }
 
-            if(closeCombat)
+            if (closeCombat)
             {
-                if(!gotRandom)
+                if (!gotRandom)
                 {
                     storeRandom = ReturnRandom();
                     gotRandom = true;
                 }
 
-                if(storeRandom < 60)
+                if (storeRandom < 40)
                 {
                     Movement();
                 }
@@ -261,11 +243,11 @@ public class AiController : MonoBehaviour
                 gotRandom = true;
             }
 
-            if (storeRandom < 50 && states.canBlock && states.blockHealth != 100)
+            if (storeRandom < blockRate * 100 && states.canBlock && states.blockHealth != 100)
             {
-                blocking = true;
-                states.gettingHit = false;
                 states.block = true;
+                states.gettingHit = false;
+                blocking = true;
             }
         }
 
@@ -273,18 +255,20 @@ public class AiController : MonoBehaviour
         {
             blTimer += Time.deltaTime;
 
-            if(blTimer > blockingRate)
+            if (blTimer > blockRate)
             {
                 states.block = false;
+                blocking = false;
                 blTimer = 0;
             }
         }
     }
+
     void NormalState()
     {
         nrmTimer += Time.deltaTime;
 
-        if(nrmTimer > normalRate)
+        if (nrmTimer > defensiveRate)
         {
             initiateAI = true;
             nrmTimer = 0;
@@ -295,60 +279,42 @@ public class AiController : MonoBehaviour
     {
         clTimer += Time.deltaTime;
 
-        if(clTimer > closeRate)
+        if (clTimer > aggressiveRate)  // Reduced for quicker close combat actions
         {
             clTimer = 0;
             initiateAI = true;
         }
     }
 
-    void Jumping()
+    void AggressiveState()
     {
-        if(!enemyStates.onGround)
-        {
-            int ranValue = (int)ReturnRandom();
+        aiTimer += Time.deltaTime;
 
-            if(ranValue < 50)
-            {
-                jump = true;
-            }
+        if (aiTimer > aggressiveRate)
+        {
+            initiateAI = true;
+            aiTimer = 0;
         }
+    }
 
-        if(jump)
-        {
-            //states.vertical = 1;
-            jRate = ReturnRandom();
-            jump = false;
-        }
-        else
-        {
-            //states.vertical = 0;
-        }
+    void DefensiveState()
+    {
+        aiTimer += Time.deltaTime;
 
-        jTimer = Time.deltaTime;
-        if(jTimer > jumpRate*10)
+        if (aiTimer > defensiveRate)
         {
-            if(jRate < 50)
-            {
-                jump = true;
-            }
-            else
-            {
-                jump = false;
-            }
-            jTimer = 0;
+            initiateAI = true;
+            aiTimer = 0;
         }
     }
 
     float ReturnRandom()
     {
-        float retVal = Random.Range(0, 101);
-        return retVal;
+        return Random.Range(0, 101);
     }
 
-    IEnumerator OpenAttack(AttackPatterns attackPattern, int i)
+    IEnumerator OpenAttack(AttackPatterns attackPattern, int index)
     {
-        int index = i;
         float delay = attackPattern.attacks[index].delay;
         states.attack1 = attackPattern.attacks[index].attack1;
         states.attack2 = attackPattern.attacks[index].attack2;
@@ -357,13 +323,13 @@ public class AiController : MonoBehaviour
         states.attack1 = false;
         states.attack2 = false;
 
-        if(index < attackPattern.attacks.Length -1)
+        if (index < attackPattern.attacks.Length - 1)
         {
             index++;
             StartCoroutine(OpenAttack(attackPattern, index));
         }
-
     }
+
     [System.Serializable]
     public class AttackPatterns
     {
@@ -371,10 +337,11 @@ public class AiController : MonoBehaviour
     }
 
     [System.Serializable]
-    public class AttacksBase 
+    public class AttacksBase
     {
         public bool attack1;
         public bool attack2;
+        public bool attack3;
         public float delay;
     }
 }

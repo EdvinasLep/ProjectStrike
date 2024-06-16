@@ -39,8 +39,8 @@ public class StateManager : MonoBehaviour
     public bool lookRight;
     public bool dontMove;
     public bool onGround;
+    public bool didBlock;
 
-    public AudioManager audioManager;
 
     public ChainAttack chainAttack;
     public TMP_Text chainCount;
@@ -65,7 +65,6 @@ public class StateManager : MonoBehaviour
         handleMovement = GetComponent<HandleMovement>();
         anim = GetComponent<Animator>();
         blood = GetComponentInChildren<ParticleSystem>();
-        audioManager = AudioManager.GetInstance();
         chainAttack = GetComponent<ChainAttack>();
         blockSystem = GetComponent<BlockSystem>();
     }
@@ -73,6 +72,7 @@ public class StateManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         if(health <= 0 && !isDead)
         {
             isDead = true;
@@ -203,6 +203,7 @@ public class StateManager : MonoBehaviour
             {
                 if (!gettingHit)
                 {
+                    gettingHit = true;
                     switch (damageType)
                     {
                         case HandleDamageColliders.DamageType.punch:
@@ -222,7 +223,7 @@ public class StateManager : MonoBehaviour
                                 , 0.5f
                                 );
 
-                            StartCoroutine(CloseImmortality(0.2f));
+                            StartCoroutine(CloseImmortality(0.1f));
                             break;
                     }
                     if (blood != null)
@@ -234,7 +235,7 @@ public class StateManager : MonoBehaviour
                     otherChar.chainAttack.attack = true;
                     chainAttack.attack = false;
                     chainAttack.interrupted = true;
-                    gettingHit = true;
+                    
                     //audioManager.getHit();
                 }
             }
@@ -247,8 +248,8 @@ public class StateManager : MonoBehaviour
     
     IEnumerator CloseImmortality(float timer)
     {
+        
         yield return new WaitForSeconds(timer);
-        gettingHit = false;
     }
 
 

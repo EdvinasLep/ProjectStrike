@@ -9,6 +9,7 @@ public class HandleAnimations : MonoBehaviour
     StateManager states;
     public AudioManager audioManager;
     public bool isDead;
+    public AudioController controller;
 
     public float attackRate = .3f;
     //public AttacksBase[] attacks = new AttacksBase[2];
@@ -18,6 +19,7 @@ public class HandleAnimations : MonoBehaviour
     {
         states = GetComponent<StateManager>();
         anim = GetComponent<Animator>();
+        controller = GetComponentInChildren<AudioController>();
         //audioManager = AudioManager.GetInstance();
 
     }
@@ -29,6 +31,9 @@ public class HandleAnimations : MonoBehaviour
         if(states.gettingHit)
         {
             anim.SetTrigger("Damaged");
+            controller.GetHit();
+            states.gettingHit = false;
+            
         }
         
         //anim.SetBool("OnAir", !states.onGround);
@@ -36,6 +41,7 @@ public class HandleAnimations : MonoBehaviour
         anim.SetBool("Attack1", states.attack1);
         anim.SetBool("Attack2", states.attack2);
         anim.SetBool("Attack3", states.attack3);
+        anim.SetBool("Ultimate", states.ultimateAbility);
         anim.SetBool("Block", states.block);
         anim.SetBool("Dead", states.isDead);
         

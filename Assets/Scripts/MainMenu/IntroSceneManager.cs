@@ -17,6 +17,7 @@ public class IntroSceneManager : MonoBehaviour
     public int activeElement;
     public GameObject menuObj;
     public ButtonRef[] menuOptions;
+    public GameObject settingsUi;
     void Start()
     {
         menuObj.SetActive(false);
@@ -24,11 +25,23 @@ public class IntroSceneManager : MonoBehaviour
         menuOptions[0].selected = true;
         menuOptions[1].selected = false;
         menuOptions[2].selected = false;
+        menuOptions[3].selected = false;
     }
 
     // Update is called once per frame
+
+    public void EnableSettignsUi()
+    {
+        settingsUi.active = true;
+    }
+
     void Update()
     {
+        if(Input.GetKeyUp(KeyCode.Escape))
+        {
+            settingsUi.active = false;
+            menuOptions[2].transform.localScale /= 1.2f;
+        }
         if(!init)
         {
             //flickers Press Start Text
@@ -85,16 +98,17 @@ public class IntroSceneManager : MonoBehaviour
                         break;
                     case 1:
                         loadingLevel = true;
-                        StartCoroutine("LoadLevel");
+                        StartCoroutine("SelectScreen");
                         menuOptions[activeElement].transform.localScale *= 1.2f;
-                        CharacterManager.GetInstance().siberia = true;
                         break;
                     case 2:
+                        EnableSettignsUi();
+                        menuOptions[activeElement].transform.localScale *= 1.2f;
+                        break;
+                    case 3:
                         Application.Quit();
                         break;
                 }
-                Debug.Log("load");
-                
             }
         }
     }

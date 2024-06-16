@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Player\SpineAnimHandler.cs" />
     <Compile Include="Assets\Scripts\Player\ChainAttack.cs" />
     <Compile Include="Assets\Scripts\MainMenu\ButtonRef.cs" />
+    <Compile Include="Assets\SpinLoad.cs" />
     <Compile Include="Assets\Scripts\MainMenu\PotraitInfo.cs" />
     <Compile Include="Assets\Scripts\Util\TMPmanager.cs" />
     <Compile Include="Assets\Scripts\Util\IndicatorPosition.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Scripts\Player\AiController.cs" />
     <Compile Include="Assets\Scripts\Util\SelectScale.cs" />
     <Compile Include="Assets\Scripts\Util\FollowTransform.cs" />
+    <Compile Include="Assets\AudioController.cs" />
     <Compile Include="Assets\Scripts\Util\Shake.cs" />
     <Compile Include="Assets\Scripts\Player\InputHandler.cs" />
     <Compile Include="Assets\Scripts\Player\DoDamage.cs" />
@@ -106,6 +108,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Animations\Nadia\Nadia\Nadia.atlas.txt" />
+    <None Include="Assets\Animations\Shaolin\Export\Shaolin.atlas.txt" />
     <None Include="Assets\Animations\Ivan\Export\Ivan.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />

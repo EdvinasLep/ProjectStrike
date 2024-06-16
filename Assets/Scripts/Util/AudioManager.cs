@@ -1,36 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource getHitSource;
-    public AudioSource punchSource;
-    public AudioClip hitClip;
-    public AudioClip punchClip;
-
     public static AudioManager instance;
+    public CharacterManager characterManager;
+    public float delay;
+    public AudioSource bgM;
+    public Slider masterVolume;
 
+    public AudioSource sfxSource1;
+    public AudioSource sfxSource2;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            //DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        characterManager = CharacterManager.GetInstance();
+        PlayBg();
+
+    }
     public static AudioManager GetInstance()
     {
         return instance;
     }
 
-    private void Awake()
+    public void GetAudioSource()
     {
-        instance = this;
+    }
+    public void PlayBg()
+    {
+        bgM.time = delay;
+        bgM.Play();
+        //bgmSource.Play();
     }
 
-
-    public void getHit()
+    public void PlaySFX(AudioClip clip)
     {
-        getHitSource.clip = hitClip;
-        getHitSource.Play();
+        //sfxSource.PlayOneShot(clip);
     }
 
-    public void punch()
+    public void ChangeMasterVolume()
     {
-        punchSource.clip = punchClip;
-        punchSource.Play();
+        bgM.volume = masterVolume.value;
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        //sfxSource.volume = volume;
     }
 }

@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
+    path: Assets/Scenes/Levels/NewYork.unity
+    guid: 337ff4625e7ff8f43a2a0e6240ca501f
+  - enabled: 0
+    path: Assets/Scenes/Levels/Siberia.unity
+    guid: ca31877917d04e446bc762660239d433
+  - enabled: 0
+    path: Assets/Scenes/Levels/Egyot.unity
+    guid: 1109ac653581fe2419e8b6360af7ba9e
+  - enabled: 0
+    path: Assets/Scenes/Levels/Japan.unity
+    guid: fa5fcfdc3df1b6f4ca65c087546333c2
+  - enabled: 0
     path: Assets/Scenes/test/intro.unity
     guid: 1d699732b6f44364bad52460fb51c46d
   - enabled: 0
@@ -15,13 +27,19 @@ EditorBuildSettings:
     path: Assets/Scenes/select.unity
     guid: 8afac8c9fe5dc544aaf3d8b41cf006a0
   - enabled: 0
-    path: Assets/Scenes/Levels/Siberia.unity
-    guid: 6c92d9bace0ce9042bf43dfeee25206e
-  - enabled: 1
-    path: Assets/Scenes/Levels/Egyot.unity
-    guid: 1109ac653581fe2419e8b6360af7ba9e
-  - enabled: 1
     path: Assets/Scenes/MainMenu 1.unity
     guid: f55394c9edd8416419f91eb30499cb49
+  - enabled: 0
+    path: Assets/Scenes/LoadingScreens/LoadingScreen.unity
+    guid: 92b556500b042b042a27e2655b2df694
+  - enabled: 0
+    path: Assets/Scenes/Cutscenes/CutsceneIntro.unity
+    guid: 907c1757386108242b70964ba19a101a
+  - enabled: 0
+    path: Assets/Scenes/Cutscenes/Cutscene3.unity
+    guid: 624102f49299afa4a9cf66947892344a
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/Cutscene1.unity
+    guid: 8a40eec52cf7a1b4cabe20f8d1a59253
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: fe9916462b3f12740b89e3911836a166, type: 2}
