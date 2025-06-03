@@ -1,9 +1,13 @@
 # ProjectStrike - 2D Arcade Fighter
 
-![ProjectStrike Banner](Assets/Graphics/LoadingIcon.png)
-
 ## 🎬 Demo Video
-[![ProjectStrike Gameplay Demo](https://img.shields.io/badge/▶️_Watch_Demo-YouTube-red?style=for-the-badge&logo=youtube)](https://youtu.be/twb9WMOnHXs?si=D_gvG_GMxfOJ1ezl)
+[![ProjectStrike Gameplay Demo](https://img.youtube.com/vi/twb9WMOnHXs/0.jpg)](https://www.youtube.com/watch?v=twb9WMOnHXs)
+
+## 📸 Screenshots
+<div align="center">
+  <img src="Assets/Graphics/PickScreen.png" width="45%" alt="Character Selection Screen">
+  <img src="Assets/Graphics/LvlScreen.png" width="45%" alt="Level Selection Screen">
+</div>
 
 ## Overview
 
